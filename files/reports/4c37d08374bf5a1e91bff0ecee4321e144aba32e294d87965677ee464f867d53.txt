@@ -1,0 +1,81 @@
+{
+  "binding": {
+    "content": {
+      "head_sha": "a2b6003145174f85578369d3f84908aa1ec86a9e",
+      "kind": "git"
+    },
+    "task_version": 2
+  },
+  "execution_report": {
+    "input_unchanged": true,
+    "invocation_id": "inv-40858df5c88c6fdce983f141658ee8098cd07dfa416182d82c43b4569534e239",
+    "output_truncated": false,
+    "process": {
+      "cancel_verified": false,
+      "exit_code": 0,
+      "identity": {
+        "argv_hash": "a993b31eae05cae55389d628c519d895c1dc4efc67dff59178ef823ce0c37d5e",
+        "executable": "/Users/lq/codex/lib/node_modules/@openai/codex/bin/codex.js",
+        "kernel_identity": {
+          "birth": {
+            "microseconds": 450172,
+            "platform": "macos",
+            "seconds": 1791100634
+          },
+          "boot_id": "24780ffc-8811-45d7-ba3e-967d4658257b",
+          "process_group_id": 28189,
+          "user_id": 501
+        },
+        "pid": 28189,
+        "started_at": "unix-nanos:1791100634452085000"
+      },
+      "output_errors": [],
+      "output_interrupted": false,
+      "process_group_verified": true,
+      "reason": "Completed",
+      "run_id": "inv-40858df5c88c6fdce983f141658ee8098cd07dfa416182d82c43b4569534e239",
+      "stop_detail": "child reaped and original Unix process group no longer exists"
+    },
+    "purpose": "review",
+    "schema": "xingshu/invocation-report/1",
+    "stderr": {
+      "bytes": 39,
+      "location": "artifacts/project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b/inv-40858df5c88c6fdce983f141658ee8098cd07dfa416182d82c43b4569534e239/stderr.txt",
+      "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721"
+    },
+    "stdout": {
+      "bytes": 16228,
+      "location": "artifacts/project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b/inv-40858df5c88c6fdce983f141658ee8098cd07dfa416182d82c43b4569534e239/stdout.txt",
+      "sha256": "3144f7e4e54f4b125e870486a4ea3bfebb6e71272de8189eb7944fbecfb51e57"
+    },
+    "stdout_redaction": "structured_stream"
+  },
+  "invocation_id": "inv-40858df5c88c6fdce983f141658ee8098cd07dfa416182d82c43b4569534e239",
+  "response": {
+    "acceptance": [
+      {
+        "id": "AC-DELIVERY-HASH",
+        "passed": true,
+        "reason": "已读取并校验 Runtime artifact-hash-report：报告 SHA-256 为 8bc280c91fad31452defa0b76286eaf0bc36f8ebabb829b0b049071b6e0e4fa6，绑定当前源提交与 task_version=2，对应 current 状态且 verification_succeeded=true 的 artifact 证据。独立读取源提交中的四文件，计算所得哈希全部符合声明，且与当前工作区及挂载批准依赖逐字节一致。此证据是 artifact 验证记录，不是 CLI 测试成功报告。"
+      },
+      {
+        "id": "AC-DELIVERY-INDEPENDENT-REVIEW",
+        "passed": true,
+        "reason": "源提交相对指定 base 仅新增四个声明文件，无额外脚本、报告或其他受跟踪路径变更。四文件与 .xingshu-inputs 中对应批准文件逐字节一致，无改写；工作区受跟踪文件与源提交一致。未发现原有 .xingshu 或只读输入内容受影响的证据；Git 差异范围不包含管理文件。本次审查仅绑定当前源提交，不作为候选审查或最终交付回执。"
+      }
+    ],
+    "binding": {
+      "content": {
+        "head_sha": "a2b6003145174f85578369d3f84908aa1ec86a9e",
+        "kind": "git"
+      },
+      "task_version": 2
+    },
+    "schema": "xingshu/independent-review/1",
+    "summary": "当前源提交满足两项阶段验收条件。此结论不表示已合入 main 或任务 Done；后续仍需候选 SHA 的新哈希证据与独立审查、具体候选批准、Runtime CAS 合并及本地 checkout 检查和真实交付回执。",
+    "verdict": "approved"
+  },
+  "schema": "xingshu/review-report/1",
+  "session_id": "01a105ea-c5be-7f92-9ee8-b7ce6c3cad49",
+  "status": "session_completed"
+}

@@ -1,0 +1,8 @@
+# Independent review
+
+Verdict: Approved
+
+当前源提交满足两项阶段验收条件。此结论不表示已合入 main 或任务 Done；后续仍需候选 SHA 的新哈希证据与独立审查、具体候选批准、Runtime CAS 合并及本地 checkout 检查和真实交付回执。
+
+- AC-DELIVERY-HASH: true — 已读取并校验 Runtime artifact-hash-report：报告 SHA-256 为 8bc280c91fad31452defa0b76286eaf0bc36f8ebabb829b0b049071b6e0e4fa6，绑定当前源提交与 task\_version=2，对应 current 状态且 verification\_succeeded=true 的 artifact 证据。独立读取源提交中的四文件，计算所得哈希全部符合声明，且与当前工作区及挂载批准依赖逐字节一致。此证据是 artifact 验证记录，不是 CLI 测试成功报告。
+- AC-DELIVERY-INDEPENDENT-REVIEW: true — 源提交相对指定 base 仅新增四个声明文件，无额外脚本、报告或其他受跟踪路径变更。四文件与 .xingshu-inputs 中对应批准文件逐字节一致，无改写；工作区受跟踪文件与源提交一致。未发现原有 .xingshu 或只读输入内容受影响的证据；Git 差异范围不包含管理文件。本次审查仅绑定当前源提交，不作为候选审查或最终交付回执。
