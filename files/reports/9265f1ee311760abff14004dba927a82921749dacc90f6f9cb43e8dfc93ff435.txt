@@ -1,0 +1,8 @@
+# Independent review
+
+Verdict: ChangesRequested
+
+文件与哈希验证通过，主要修订已落实；比较实验的防护条件和本地部署推论仍需原研究者准确限定，当前不批准进入写作交付。
+
+- AC-RESEARCH-FILES: true — 两个文件均已实际读取，内容完整；独立计算的 SHA-256 与声明的 content\_hash 分别一致。输入中的 Runtime artifact-hash-report 记录为 current 且 verification\_succeeded=true。此项为文件产物验证，不是代码测试。
+- AC-RESEARCH-QUALITY: false — complete\_trace 包含指定原文及六个额外来源的配对成功返回，支持本轮工具访问声明，但不代表全文阅读或事实自动成立。已落实 CAISI 失败标注、删除额外基准统计、集中核心数字、图2成功定义及中文标题；模拟响应率与真实攻击成功率已区分。仍须由 Claude 修正两处影响下游判断的问题：① F1 遗漏关键比较条件：\[原文图2图注\]\(https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\)明确 Claude 比较版本关闭了安全防护，应在该行补充，避免将实验能力直接等同于公开服务可获得能力。② 六主题第2项称权重公开后“厂商侧拒绝策略与账户封禁对本地副本失效”，混淆服务端控制与模型内置拒绝行为；应限定为厂商无法通过托管服务的账户封禁和监控控制离线副本，内置拒绝行为不会仅因本地部署自动消失，修改或绕过须另述。原文对原始模型和修改条件作了明确区分。审查侧未能重新取得 S6 页面正文，因此未把搜索结果或工具成功元数据当作其内容的独立复核。
