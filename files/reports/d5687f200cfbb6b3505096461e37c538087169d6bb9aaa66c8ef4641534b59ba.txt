@@ -1,0 +1,8 @@
+# Independent review
+
+Verdict: ChangesRequested
+
+文件完整性通过，内容验收暂不通过。访问证据充分支持工具返回，但不能替代计分口径和实验条件核验。请由原执行者 Claude 修正上述问题，再提交独立审查；当前资料包尚不应作为已验收依赖交给 Pi。
+
+- AC-RESEARCH-FILES: true — 两个声明文件存在、可完整读取；现场计算的 SHA-256 均与输入及共享 artifact-hash-report 一致，报告绑定也一致。Runtime 记录 verification\_succeeded=true。这是文件产物核验，不是代码测试或事实正确性的证明。
+- AC-RESEARCH-QUALITY: false — complete\_trace 中配对成功返回支持指定原文及八个额外一手页面的访问记录；文件如实披露仅阅读 WebFetch 摘要，未把失败的 NIST、NTIA 或 OpenAI 页面计作已核实。64%/92%/100%的模拟指标、Flash 单案例时间和成本、Mandiant 样本限制均已按要求修订，六个主题有覆盖，也未发现攻击教程。但仍需 Claude 修订：①S4/F11 将计分概括为41题×3修订版本取平均，漏掉官方脚注明确规定的每题跨修订版本能力取并集、再平均；应补全，避免把123个结果直接平均的误读，并继续区分端到端成功率。参见\[模型卡 Footnotes\]\(https://huggingface.co/zai-org/GLM-5.3\)。②S7/F16遗漏重要实验条件：Firefox每漏洞三次试验并取最快成功时间，利用阶段以已有PoC起步；Windows输入也不限于补丁diff。需分开记录两组实验条件，避免把8/18理解为单次成功率。参见\[N-days研究 Setup及图3\]\(https://www.anthropic.com/research/n-days\)。③S8把6,202项直接表述为高/严重漏洞，未保留模型初估严重度；1,752项复核后仅1,094项确认高/严重。530项披露同样混合模型估计与人工评估；75项修补还受观察窗口和漏计影响，不能仅用产能瓶颈解释。参见\[Glasswing的Open-source software节\]\(https://www.anthropic.com/research/glasswing-initial-update\)。④两个文件对S1反复展开直接概要，累计明显超过任务要求的约400汉字，应压缩并用来源ID交叉引用；S6—S10还需补充准确章节、表图或段落定位。
