@@ -1,0 +1,22 @@
+{
+  "artifacts": [
+    {
+      "content_hash": "25867460ad62fcd94d3de172e7fa733a1e113e1378d4e43b7d2f5c6c95c8a5a0",
+      "kind": "document",
+      "location": "articles/wechat.md"
+    },
+    {
+      "content_hash": "ea7a49f67ce02d74a6cbbe9126e625011275984d4d30fb5d5385767de56ae1b0",
+      "kind": "document",
+      "location": "articles/douyin.md"
+    }
+  ],
+  "binding": {
+    "content": {
+      "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+      "kind": "artifact"
+    },
+    "task_version": 8
+  },
+  "schema": "xingshu/artifact-input-manifest/1"
+}
