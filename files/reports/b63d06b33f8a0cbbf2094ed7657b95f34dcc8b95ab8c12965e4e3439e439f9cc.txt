@@ -1,0 +1,8 @@
+# Independent review
+
+Verdict: ChangesRequested
+
+文件完整性与哈希绑定通过；内容仍有原文结构误述和本地模型拒绝机制的过度概括，需由原研究者修订后复审。本轮未修改文件或启动后台工作。
+
+- AC-RESEARCH-FILES: true — 两个声明文件均存在、可完整读取；独立计算的 SHA-256 与 artifacts 声明逐一一致。输入中的 current Runtime artifact-hash-report 验证记录支持文件绑定；未将模型自述当作测试报告。
+- AC-RESEARCH-QUALITY: false — complete\_trace 包含指定原文及六个额外来源的配对成功返回，支持工具访问记录，但不等于全文阅读或事实认证。资料已明确摘要阅读范围、删除 CAISI 未核实结论，正确区分模拟响应指标与真实攻击成功率，并修正图2成功标准。仍需 Claude 修订两处：① sources.md S1 声称“首节前无导语”，实际原文在首个章节标题前有多段导语及图1，应删除该错误描述并准确定位，见\[Anthropic原文\]\(https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\)。② fact-check.md“可获得性”断言权重公开后“厂商侧拒绝策略、API监控与封号对本地副本不再起作用”，混淆服务端控制与模型内置拒绝行为；原文明确未修改模型仍会拒绝直接有害请求。应限定为厂商API监控和封号无法直接控制独立本地部署，内置拒绝仍可能存在但可被下游修改。六主题、引用形式及非操作性安全边界总体符合要求。S6 本次独立复查抓取失败，其配对访问元数据不能单独证明摘要事实准确，本审查不声称已独立核实该页面。
