@@ -1,0 +1,33 @@
+{
+  "all_declared_reports_valid": true,
+  "binding": {
+    "content": {
+      "artifact_hash": "d1d98d64d550755f07f9fb1e78f65fe1f5447dc58186e54e628acceafc3a3ed4",
+      "kind": "artifact"
+    },
+    "task_version": 6
+  },
+  "execution_report": {
+    "bytes": 1767,
+    "location": "artifacts/project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b/inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b/execution-report.json",
+    "sha256": "a0f859a2ea5f3a7409a6dce5ad25239b9cb1060aaa0b37cab2035ccf2b6100cd"
+  },
+  "invocation_id": "inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b",
+  "reports": [
+    {
+      "bytes": 4335,
+      "content_hash": "951fa1c41c10197f1e984de502f362250e0587b669213d8aa630facd26b650f1",
+      "format": "json",
+      "location": "quality/project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b/contracts/inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b/review.json",
+      "requirement": "review.json"
+    },
+    {
+      "bytes": 1645,
+      "content_hash": "2d3fc7a161cbb98e6681f7392948497defa6e95d29e6985961bf811a7b9dda28",
+      "format": "markdown",
+      "location": "quality/project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b/contracts/inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b/review.md",
+      "requirement": "review.md"
+    }
+  ],
+  "schema": "xingshu/evidence-contracts/1"
+}
