@@ -1,0 +1,30 @@
+{
+  "artifacts": [
+    {
+      "content_hash": "2932faa0916b6af04ab818ebfcaa86e1cdcb29d7e84854b0021022ea276fb53a",
+      "kind": "document",
+      "location": "research/sources.md"
+    },
+    {
+      "content_hash": "52df549dce93c435bd717afadbe627e573d98733a74ca198f545fa91c8e9adc4",
+      "kind": "document",
+      "location": "research/fact-check.md"
+    }
+  ],
+  "binding": {
+    "content": {
+      "artifact_hash": "4364d826f3ca51c79acee58eeaf860c917bd18890a056efcd215ad29c2c3862c",
+      "kind": "artifact"
+    },
+    "task_version": 1
+  },
+  "collected_at": "2026-10-03T17:22:18.781258+00:00",
+  "independent_review_verified": false,
+  "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+  "run_id": "run-83e9e30bebaa71cfc88ea825e9b610f662814e673642e900f5fa2ad6c6281a43",
+  "schema": "xingshu/output-observation/1",
+  "source": "runtime_filesystem_collector",
+  "target_base_sha": null,
+  "task_id": "TASK-RESEARCH",
+  "tests_verified": false
+}
