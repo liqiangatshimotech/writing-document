@@ -1,0 +1,8 @@
+# Independent review
+
+Verdict: Approved
+
+研究资料包通过独立审查，可作为后续 Pi 写作的受控依赖。本审查未修改文件，未代写文章，未执行交付或发布操作。
+
+- AC-RESEARCH-FILES: true — 已完整读取两个声明文件，内容完整可读；独立计算的 SHA-256 均与输入 content\_hash 一致。Runtime 提供当前绑定下 verification\_succeeded=true 的 artifact-hash-report 证据。此为文档产物校验，不冒充代码测试或命令执行报告。
+- AC-RESEARCH-QUALITY: true — Runtime complete\_trace 含七个指定来源的配对 tool\_reported\_success，支持本轮研究工具成功返回的主张；未将其等同来源真实性证明。另已独立读取七个来源核对，S6 经同一官方页面的 hl=en 参数成功读取。元数据、摘要范围及主要证据与来源相符。F1保留比较模型关闭防护及最高结果口径；F2明确每格50样本、模拟输出和代码不执行，不称真实攻击成功率；F3保留已知漏洞输入及单案例限制，与\[Anthropic原文\]\(https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\)一致。TTE样本、异常值处理和补丁时间口径与\[Mandiant原文\]\(https://cloud.google.com/blog/topics/threat-intelligence/time-to-exploit-trends-2023?hl=en\)一致。六主题齐全，区分来源陈述、推论和未知；未将其他模型的拒绝机制外推为GLM-5.3实证，未将本地部署等同自动消除拒绝。失败来源已排除，英文引用及S1概要保持限额，无攻击代码、漏洞复现或绕过教程。未发现阻断问题。

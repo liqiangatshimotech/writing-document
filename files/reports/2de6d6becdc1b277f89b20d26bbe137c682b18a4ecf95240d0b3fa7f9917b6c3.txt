@@ -1,0 +1,81 @@
+{
+  "binding": {
+    "content": {
+      "artifact_hash": "d1d98d64d550755f07f9fb1e78f65fe1f5447dc58186e54e628acceafc3a3ed4",
+      "kind": "artifact"
+    },
+    "task_version": 6
+  },
+  "execution_report": {
+    "input_unchanged": true,
+    "invocation_id": "inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b",
+    "output_truncated": false,
+    "process": {
+      "cancel_verified": false,
+      "exit_code": 0,
+      "identity": {
+        "argv_hash": "58752b5d1ea5d42a1c9c148d2285561e2a9dab64b40a920be97a7840c3f170e5",
+        "executable": "/Users/lq/codex/lib/node_modules/@openai/codex/bin/codex.js",
+        "kernel_identity": {
+          "birth": {
+            "microseconds": 226890,
+            "platform": "macos",
+            "seconds": 1791058633
+          },
+          "boot_id": "24780ffc-8811-45d7-ba3e-967d4658257b",
+          "process_group_id": 94866,
+          "user_id": 501
+        },
+        "pid": 94866,
+        "started_at": "unix-nanos:1791058633228835000"
+      },
+      "output_errors": [],
+      "output_interrupted": false,
+      "process_group_verified": true,
+      "reason": "Completed",
+      "run_id": "inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b",
+      "stop_detail": "child reaped and original Unix process group no longer exists"
+    },
+    "purpose": "review",
+    "schema": "xingshu/invocation-report/1",
+    "stderr": {
+      "bytes": 39,
+      "location": "artifacts/project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b/inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b/stderr.txt",
+      "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721"
+    },
+    "stdout": {
+      "bytes": 30825,
+      "location": "artifacts/project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b/inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b/stdout.txt",
+      "sha256": "3e4de535ee42463cd302ef404a837e58089e84f588e2aed264785b17a222711c"
+    },
+    "stdout_redaction": "structured_stream"
+  },
+  "invocation_id": "inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b",
+  "response": {
+    "acceptance": [
+      {
+        "id": "AC-RESEARCH-FILES",
+        "passed": true,
+        "reason": "已完整读取两个声明文件，内容完整可读；独立计算的 SHA-256 均与输入 content_hash 一致。Runtime 提供当前绑定下 verification_succeeded=true 的 artifact-hash-report 证据。此为文档产物校验，不冒充代码测试或命令执行报告。"
+      },
+      {
+        "id": "AC-RESEARCH-QUALITY",
+        "passed": true,
+        "reason": "Runtime complete_trace 含七个指定来源的配对 tool_reported_success，支持本轮研究工具成功返回的主张；未将其等同来源真实性证明。另已独立读取七个来源核对，S6 经同一官方页面的 hl=en 参数成功读取。元数据、摘要范围及主要证据与来源相符。F1保留比较模型关闭防护及最高结果口径；F2明确每格50样本、模拟输出和代码不执行，不称真实攻击成功率；F3保留已知漏洞输入及单案例限制，与[Anthropic原文](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)一致。TTE样本、异常值处理和补丁时间口径与[Mandiant原文](https://cloud.google.com/blog/topics/threat-intelligence/time-to-exploit-trends-2023?hl=en)一致。六主题齐全，区分来源陈述、推论和未知；未将其他模型的拒绝机制外推为GLM-5.3实证，未将本地部署等同自动消除拒绝。失败来源已排除，英文引用及S1概要保持限额，无攻击代码、漏洞复现或绕过教程。未发现阻断问题。"
+      }
+    ],
+    "binding": {
+      "content": {
+        "artifact_hash": "d1d98d64d550755f07f9fb1e78f65fe1f5447dc58186e54e628acceafc3a3ed4",
+        "kind": "artifact"
+      },
+      "task_version": 6
+    },
+    "schema": "xingshu/independent-review/1",
+    "summary": "研究资料包通过独立审查，可作为后续 Pi 写作的受控依赖。本审查未修改文件，未代写文章，未执行交付或发布操作。",
+    "verdict": "approved"
+  },
+  "schema": "xingshu/review-report/1",
+  "session_id": "01a10369-e27f-7241-b517-bbcf3cb9f712",
+  "status": "session_completed"
+}
