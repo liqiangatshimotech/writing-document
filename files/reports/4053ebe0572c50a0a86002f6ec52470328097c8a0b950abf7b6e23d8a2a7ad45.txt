@@ -1,0 +1,8 @@
+# Independent review
+
+Verdict: Approved
+
+当前候选满足两项验收条件。批准仅针对本次候选文件及证据；不代表已完成候选授权、CAS 合入 main、checkout 更新或最终交付，后续仍须由 Runtime 取得真实交付回执。
+
+- AC-DELIVERY-HASH: true — 已读取候选专属 artifact-hash-report，其 SHA-256 与 Runtime evidence 的 db3fe48d9654c160064e8146b8f449d95d43c519788c661d6ad19574da0e40fd 一致，绑定本次候选 SHA 和任务版本2。独立核验四文件均存在，提交内容、checkout 文件与挂载批准依赖逐字节一致，全部匹配指定哈希。此为 artifact 验证证据，不冒充命令测试报告。
+- AC-DELIVERY-INDEPENDENT-REVIEW: true — 本次只读审查直接检查绑定候选。相对指定 base 的 Git 变更恰为四个声明文件的新增；无额外脚本、报告或其他受管文件变更。四文件与批准依赖逐字节相同，无改写；只读输入哈希保持批准值，未发现对原有 .xingshu 或 Git 管理文件的业务变更。当前 checkout 的受管文件与候选一致。本结论为当前候选的新独立审查，未复用历史源审查。
