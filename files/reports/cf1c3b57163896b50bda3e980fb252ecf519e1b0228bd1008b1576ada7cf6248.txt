@@ -1,0 +1,8 @@
+# Independent review
+
+Verdict: ChangesRequested
+
+文件完整性与哈希绑定通过；联网工具成功返回有 Runtime 配对证据，但不等于来源内容已获独立证明。研究包仍存在未核验数字使用、原文定位与定义遗漏、重复概要及英文引用累计超限问题，本轮不批准交付下游写作。
+
+- AC-RESEARCH-FILES: true — 两个文件实际存在、可完整读取，独立计算的 SHA-256 均与声明一致。已读取材料载体中的 artifact-hash-report 副本，其文件哈希与 binding 匹配；Runtime 记录 verification\_succeeded=true。这是文档产物核验，不是代码测试报告。
+- AC-RESEARCH-QUALITY: false — complete\_trace 中存在 S1 及六个额外指定来源的配对成功返回，支持工具访问记录；NIST 获取失败已披露，不能视为直接阅读。资料正确区分模拟响应指标与现实攻击成功率，覆盖六个主题且无攻击教程。但仍未完成本轮明确收口要求：① S2/F4 继续保留并允许采用未直接核验的 CAISI“四个月”等结论，任务要求此来源只列访问情况和不确定性，不使用未核实数字。② S1 数字在表格、口径提醒、写作红线中反复出现，直接概要明显超过约400汉字，未做到数字集中一次、其余交叉引用。③ F1 将成功定义反复描述为不明，却遗漏原文 Figure 2 图注明确的“达到基准最高结果”；应准确记录该定义，再限定具体 flag 映射是否确认。F4 的“第四节”定位也不准确，CAISI 转述实际位于引言。原文核对依据：\[Anthropic 原文\]\(https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\)。④ 英文逐字文本需实际累计检查：例如 S10 标题与所列三个完整英文章节名合计已超过25词，应将章节定位改用中文描述，仅保留必要英文标题。上述问题须由原执行者 Claude 修订。
