@@ -1,0 +1,22 @@
+{
+  "artifacts": [
+    {
+      "content_hash": "c26b97b8c87b58b6522e9ffb23e5cf45e8dca50f45fce44538beeecafbdcecc9",
+      "kind": "document",
+      "location": "research/sources.md"
+    },
+    {
+      "content_hash": "500df819128f760ef9d8aca0bcb46769af8d0c7bcd5ec97019d1d253068680e7",
+      "kind": "document",
+      "location": "research/fact-check.md"
+    }
+  ],
+  "binding": {
+    "content": {
+      "artifact_hash": "f0b2ca302b0afbf145321baa8674c4beecf8fa81abb054ea5df26a2a8ef25c9d",
+      "kind": "artifact"
+    },
+    "task_version": 5
+  },
+  "schema": "xingshu/artifact-input-manifest/1"
+}

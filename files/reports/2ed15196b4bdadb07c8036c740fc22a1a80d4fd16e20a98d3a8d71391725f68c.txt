@@ -1,0 +1,8 @@
+# Independent review
+
+Verdict: ChangesRequested
+
+文件完整性与哈希绑定通过；内容已纠正主要指标误读，但仍有明确的去重复要求、来源定位和事实／推论边界未满足，暂不批准交付下游写作。
+
+- AC-RESEARCH-FILES: true — 已完整读取两个声明文件，实际 SHA-256 均与输入及载体内 artifact-hash-report 一致。Runtime 当前 artifact 证据绑定 task\_version 5，verification\_succeeded 为 true。此项为文件产物核验，不冒充代码测试结果。
+- AC-RESEARCH-QUALITY: false — complete\_trace 含 S1 及六个额外来源的配对成功工具返回；S2 失败已明确排除，未把摘要访问称为全文阅读。核心模拟指标及 Figure 2 成功标准已与原文核对一致，见 \[Anthropic 原文\]\(https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\)。但本轮明确修订要求 B 尚未完成：fact-check.md 能力提升段再次出现分母 410；评测局限段再次复述 F1/F2/F3 条件；补丁窗口和写作红线再次解释 F3，未做到表格外仅引用条目 ID。F3 本身也缺少准确段落定位，应注明原文端到端利用能力章节中 Flash 第二次实验的相邻两段。此外，开放权重主题把研究、审计便利性标为 F6 支持的事实，超出了 F6 模型卡可获取性证据，应标为综合推论；F10 的机制适用性不能仅由 F2 行为指标印证，应保留未核实限定。审查侧两次访问 S6 均超时，因此不据此否定 worker 的成功返回，也不声称已独立核实其页面内容。需由 Claude 完成上述定点修订并实际读取自查后复审。
