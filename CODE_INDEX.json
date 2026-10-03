@@ -1,7 +1,20 @@
 {
   "business_code_included": false,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "effective_bases": [],
+  "effective_bases": [
+    {
+      "artifact_inputs": [],
+      "dependencies": [],
+      "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+      "proof_digest": "56d6c70dc78e6ffec948a4f436b4007e4d5d5bb820d24f5dc616aa07c25ec294",
+      "source_control_rev": 7,
+      "source_event_watermark": 10728,
+      "task_id": "TASK-RESEARCH",
+      "task_version": 6
+    }
+  ],
   "material_commit_is_business_source": false,
   "omitted_effective_base_proofs": 0,
   "omitted_shared_material_refs": 0,
