@@ -7,8 +7,7 @@
   "live_resource_checks_required": true,
   "missing": [
     "full_report_bodies",
-    "business_rules",
-    "shared_materials_unavailable"
+    "business_rules"
   ],
   "name": "写作",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",

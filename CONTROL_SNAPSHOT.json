@@ -2,30 +2,12 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 1,
-  "snapshot_revision": 1,
-  "event_watermark": 64,
+  "snapshot_revision": 2,
+  "event_watermark": 126,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T16:38:17.335910+00:00",
+  "generated_at": "2026-10-03T16:48:59.847743+00:00",
   "source_event_ids": [
-    "config-d35864b8a0b2ff5d163217eddc71cd5af625c8f43f468dc4a34c34559029513c",
-    "config-b2263b146c51cb00b63a715f257146f861201d82cd2d0bc414140777c317b839",
-    "config-602f5da33d97d432b6917d4e1bd1222c0d1a30776a673fa5cb2f86b24b814273",
-    "config-5dee7258fc2080691e93f6e105671aeab19bf8d80533fbc075c6798f7cdb17a5",
-    "config-55fef4de6cb19aa5283504c4c3f5c1cb84e7a3c258845360547592377f23ece5",
-    "config-71692535c25d4bcf53d9934e76f8995c845422f2b7b73284580fd2a5d926dccd",
-    "config-21b835d7b9a49e804d184c13f1051f2fb6a131f69f6233db863397e1be36db6f",
-    "config-8fe0927bc5c7e8e8fa62656729da0fba69f623424e61de380eda986181f4ba31",
-    "config-4ee000d4b40e1494a76cb48d4740f814820ad3e0be10ce2761a2df65aacebbba",
-    "config-07abdbb56b6cc61cc243a66162bef16674d266d0df09406bb27d991980480bbe",
-    "config-c3ff6313124028f579d7ab47e04116c090cacfd66f5ebd285a9d928162700b7b",
-    "config-2b3af80ded5728df899287355ba044632571d52e022134c92f95affdd5e176eb",
-    "config-0f6e95f1b84ad466965e1f29fedc3312b9da9be821fe6472a72770f8330e9ad2",
-    "config-b30266af71b17aa36191d27f8566c6aca9c4f3fec7e975a7a25d2ca35a7f3db1",
-    "config-5ad963a6e64f4b76164fe09f02695f6075ecfde9f4fa477aff60a77046272e94",
-    "config-43efc192bc4a51089f81bf7ca2f9de97e6bce97b4cd228ef51a8c56361875987",
-    "config-1ed1065294a16fa1128e00a52c90d59bf5c31aeeca343194a432aa4e58b34aaa",
-    "config-965869bf41d9984a58561a28dc8b6fac082fe00ffcb8e85359e05b4ee4933ddb",
-    "config-c759783197ef9a4f18891586a99f272534356bcbf9b5b1279a7e6c7a09651b24"
+    "config-54b6de2c759d93d3a357530384db5c6f2a21c22d9e13397111e6620830711e6f"
   ],
   "documents": {
     "rules": null,
@@ -38,8 +20,7 @@
       "live_resource_checks_required": true,
       "missing": [
         "full_report_bodies",
-        "business_rules",
-        "shared_materials_unavailable"
+        "business_rules"
       ],
       "name": "写作",
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
@@ -167,7 +148,22 @@
       "omitted_effective_base_proofs": 0,
       "omitted_shared_material_refs": 0,
       "requires_live_dependency_revalidation": true,
-      "shared_materials": [],
+      "shared_materials": [
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "6a184072923d37971fa59442db242f4f86000a47",
+          "content_digest": "4961e90f673e63cf963f8ffb4c778dac215f69ab8719ce97b61ff8db846967ab",
+          "manifest_hash": "7b0730d2bd04318add0fa4576360e193083af4de65ca97528810cbf5b533b403",
+          "observed_at": "2026-10-03T16:48:54.936238+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/4961e90f673e63cf963f8ffb4c778dac215f69ab8719ce97b61ff8db846967ab",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "control_rev": 1,
+            "kind": "baseline"
+          },
+          "subject_hash": "b5ace6f8aa1b06ed37b92491ad3fc2317fc9138a3194604cfb5daa1e80225710"
+        }
+      ],
       "source": "fixed_project_baseline"
     },
     "feedback_index": {
@@ -175,7 +171,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 1,
-      "event_watermark": 64,
+      "event_watermark": 126,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
