@@ -5,7 +5,7 @@
   "control_ref": "ai-control",
   "goal_progress": {
     "plan_id": null,
-    "state": "authorized"
+    "state": "blocked"
   },
   "lifecycle": "active",
   "live_resource_checks_required": true,
