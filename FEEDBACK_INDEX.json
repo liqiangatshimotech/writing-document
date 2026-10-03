@@ -3,7 +3,7 @@
   "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 6,
-  "event_watermark": 10078,
+  "event_watermark": 10142,
   "history_count": 0,
   "missing": [
     "full_report_bodies"
@@ -16,7 +16,7 @@
       "task_version": 5
     }
   ],
-  "next_action": "wait_for_event",
+  "next_action": "wait_for_user_resume",
   "next_history_before_event_seq": null,
   "omitted_recent_entries": 0,
   "pending_results": [],
