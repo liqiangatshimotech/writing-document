@@ -2,42 +2,38 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 7,
-  "snapshot_revision": 78,
-  "event_watermark": 11765,
+  "snapshot_revision": 79,
+  "event_watermark": 11897,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T20:20:40.778572+00:00",
+  "generated_at": "2026-10-03T20:22:36.033735+00:00",
   "source_event_ids": [
-    "config-040d815e0c05fbdf17f45830d085a34ec14e7d030650d50c9cc145326cb221e9",
-    "invoke-f0a5571c434bdf1f056463448784e437868105ec7a47a6b442d87ac328202f4b",
-    "config-d6ae5089c06f740ff4ce87dd4e4cb48bebf62473c8d1aca62bd304d7ddb26892",
-    "config-a29a0de2e51d060fabd632351913fe62a9a51a3c7ab67faddab6de1d4d0b1055",
-    "invoke-0a8aa1eaee7026bea602c183b1a470d9923857fd2e80c24b60f8254193bfbba2",
-    "config-836d8d23ea9491617699d61416ec969da42644846053e48062d55828fae1a7e9",
-    "config-bdacc7851c5766f48f17a1d355dab42128f4b4d22bf1fe6f7e384ef50234abe5",
-    "invoke-85a97d8bebb5d1771495428231e829faa301d1f1c732fbc09a12b895e648d5a4",
-    "config-19e4e9a49d71f201670717c5d1da93e722639ce25921dea248d251189eda382e",
-    "invoke-8ca36b3548f8330c7a9c6aeccf10a4c45ef18412ded7b9550d6b0c877e1aae7d",
-    "config-3b65b9882f3ae3026354fae8efc077e08b538bf16dfa33cb8d243c3d5e6560e6",
-    "config-5bc7ad7aad66539029276dc860c9a8421331883ce8777c9d3ff4aaa06495dad9",
-    "invoke-862b162b7ad7f8ef6a70f820367c0c5c4b1bb8af0c71399472e3f71bf79e0ab7",
-    "config-27eba97d1084795c757f3b27082f3c43cf1c853f5251cbc666be301fdbece34a",
-    "config-ea0476db058efa8de8a33dc7f023e5c8b79b58c2889b04c04451c13bdd68097c",
-    "config-d13e0f09bd697dada5d7569b44a49f220d6db702ae0b6f22d3658952f15b9bf4",
-    "invoke-1d772adb9dedff3037695ee236c0a69c9e174d4657168f259cfa7039000d10a4",
-    "quality-65c85eae1246a053290c011b5cd848582eff36af7c45e3bff26190467e842a26",
-    "quality-a83bd7d0b79914dff4515adbffad68b4e8ff9554d4e7528ded696d5e7ea44bee",
-    "config-b88a19314c84871377835d90cbab63b337e25a885cabbb4739568dbd01dd7078",
-    "invoke-32d7225b868bdfb00a639c07a167d070fab9e3769eac78536bdc7a8950159a3e",
-    "config-476394b554318607ce1593c32d808ed86b49d9f5b3a5d469cf322619a19b440d",
-    "config-2d86cbe07ca1b924d1967d192b4b36eebd065aa856a2518b5af167b9103689a1",
-    "invoke-20910d808908e621efdb405d796527468b8e6d3ecd1cf4c8cb398db4806780e4",
-    "config-3b3301b5b06fad5b8723f9f38cc751685715e492a27dcd94f015e79f7bf24956",
-    "config-068ca0041f58fd576cca04b8da720d9642ebc6b231021314a169583ef99ed517",
-    "invoke-9c17334353febffce8f29cae9bbfedf3b2523266a4dafd0569e548f247dfd950",
-    "config-6810f9c108a4664f44f702d64eb7fc71b81e865a4a25309e4585964a77874134",
-    "config-d4f369a925e9403290f21f9a52492a4096d2878a32a6d6463a56db875b844218",
-    "config-e075aa809cb5461db966850fd679a3888433ab30e12c188f53fa642d965f3b52",
-    "config-5048f343b28e447bddb81597025cc21097dfbdb31c5b6a84fc24e7f226cc489d"
+    "config-13e1acfa82fedd714afe51487bd3d2f4bf6c4264ff902e4360dac84ca8657625",
+    "invoke-775913d3a33495d7affd34954133aa5dea062eb5e02b7274eca62b421fbf5c32",
+    "config-5fcb8892aca10e85892a2460e0f4abcf1771bbbe8c33e11d92316d9218d139b8",
+    "config-6fdd76bc2d13cd5c73394387130d1ad5300e74154fb8b3f32adb38b28c98e146",
+    "invoke-6471b89277a1cb0a9165b336cd517c34a9075877f91c0e1752cfedda6aa81912",
+    "config-669abfaabc6fbdb82aa4787d1f34482864ec3be8e58bed2f179d150678ce9fbb",
+    "config-86fe191e36eeede4ab62939eb3d7130eb792958d1d481be4f39ae3d35f09ae42",
+    "quality-ca9233f17543797cb4d38147c82b0052ec8669d17ed11854882dd6de7140cca3",
+    "config-51a34f33f764325954a64d551002ca78b0e5a8fd48c2211c0dea2235ef943dd6",
+    "invoke-ab510f019c5b46a46a5647cc941961e110125bd7f46df3443d54ba46263dff7a",
+    "config-ee274962104d21de3bf5cb73602fbf003ac627db8a1c9ce875a25313d291fb23",
+    "config-2f1cdf9a4689a24e67e854fa62c071bfbc06d2b1e7f7adf9434677e242f2a518",
+    "config-22ddad8510ae7a467179e19313a1739ab17ce712ac2bb2da1f0a335c63a07e0d",
+    "config-b2df1452ad21f77b5ef167808233fdd28cb1b8fe3abb711908ce65ef9ad49744",
+    "quality-36b037df73e4ee194931f6e710cc528e5b4bd0518c87973a50582ba49a6a4381",
+    "config-d77056aa18afbb674e4ec9b20e32eb11e87f350179768692d5d8543ce18d22de",
+    "effective-base-793d3aa25bd05bde188459fbe4479b690a0746171b370b5c35d84c0a03eeb779",
+    "invoke-48350bd48080661288e64fc4c36d9ca7c34f9f30ed8cb9832179e5ee6c75f43c",
+    "config-e098233148e1cf1d5a5f0965aaa9da9f17f32130d414f673a6feb7300fb23c62",
+    "config-a0ea6b8a84173e4d1c8a74f39f7e0db2559678992ddb6f9c3da9a44cc7c447f8",
+    "invoke-38f13b24d4b97e1d6033c6a367cc334d84a32e4e2186105113a1b1a7117cf217",
+    "config-bd2ef8f2f1a2208fb78b735ae8e69280f0ec04a81f0534f943292f07edd9ef3d",
+    "config-2f18edb0ec1a1451e26ed1c2dc1140a976c7b512ee88bba7fe561b878d7fc2c1",
+    "invoke-ba9882a29675124ad89918b42cd8fcc67702db374b177d9607d0001dcac14894",
+    "config-17bf6c04aa92ab51f2a829c60071b15d42715fa983ed17b0d764de1c344b5c83",
+    "config-bcd7e6979d8d0d8ae8c8c51984a1c89ea31069348647cb7a00886c2d98b95bf6",
+    "config-e7a4809e313d3c4c1ef11191a9b7a8f49ee7ebc0b68e72e96028df7b92547722"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -53,7 +49,8 @@
       "lifecycle": "active",
       "live_resource_checks_required": true,
       "missing": [
-        "full_report_bodies"
+        "full_report_bodies",
+        "artifact_input_contents"
       ],
       "name": "写作",
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
@@ -362,7 +359,7 @@
             "fact_checking"
           ],
           "spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
-          "state": "AWAITING_APPROVAL",
+          "state": "DONE",
           "task_id": "TASK-RESEARCH",
           "task_version": 6,
           "title": "Claude 联网研究与事实核查资料包",
@@ -450,7 +447,7 @@
             },
             "title": "Claude 联网研究与事实核查资料包"
           },
-          "state": "AWAITING_APPROVAL",
+          "state": "DONE",
           "task_id": "TASK-RESEARCH",
           "task_version": 6
         },
@@ -526,11 +523,37 @@
       ]
     },
     "results_reviews": {
-      "authorized_ready_candidates": [],
+      "authorized_ready_candidates": [
+        "TASK-WRITING"
+      ],
       "needs_attention": [],
-      "next_action": "review_existing_results_first",
+      "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
       "omitted_quality_summaries": 0,
       "quality_index": [
+        {
+          "action": "deliver",
+          "approval_id": "approval-ca9233f17543797cb4d38147c82b0052ec8669d17ed11854882dd6de7140cca3",
+          "approved_at": "2026-10-03T20:21:28.935924+00:00",
+          "binding": {
+            "content": {
+              "artifact_hash": "7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "kind": "artifact"
+            },
+            "task_version": 6
+          },
+          "current_status": "consumed",
+          "fact_kind": "approval",
+          "invalidated": false,
+          "object_version": 3,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": null,
+          "status": "active",
+          "task_id": "TASK-RESEARCH",
+          "verification": {
+            "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
+            "target_base_sha": null
+          }
+        },
         {
           "attempt": 2,
           "binding": {
@@ -630,7 +653,7 @@
             "task_version": 6
           },
           "change_summary": "Runtime observed 2 declared output files",
-          "current_status": "submitted",
+          "current_status": "accepted",
           "fact_kind": "result",
           "failure": null,
           "invalidated": false,
@@ -1462,9 +1485,7 @@
       ],
       "report_bodies_included": false,
       "shared_materials_index": "CODE_INDEX.json",
-      "waiting_review": [
-        "TASK-RESEARCH"
-      ]
+      "waiting_review": []
     },
     "decisions": null,
     "code_index": {
@@ -1481,6 +1502,38 @@
           "source_control_rev": 7,
           "source_event_watermark": 10728,
           "task_id": "TASK-RESEARCH",
+          "task_version": 6
+        },
+        {
+          "artifact_inputs": [
+            {
+              "content_included": false,
+              "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "file_count": 2,
+              "identity_digest": "96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a",
+              "manifest_hash": "7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "mount_root": ".xingshu-inputs/96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a/",
+              "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
+              "task_id": "TASK-RESEARCH",
+              "task_version": 6
+            }
+          ],
+          "dependencies": [
+            {
+              "delivery_digest": "d9caae0acc36e8cbabffc39aa87507c43837fc9e0cd7f4ac5105fe58b18b6205",
+              "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "task_id": "TASK-RESEARCH",
+              "task_spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
+              "task_version": 6
+            }
+          ],
+          "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+          "proof_digest": "793d3aa25bd05bde188459fbe4479b690a0746171b370b5c35d84c0a03eeb779",
+          "source_control_rev": 7,
+          "source_event_watermark": 11885,
+          "task_id": "TASK-WRITING",
           "task_version": 6
         }
       ],
@@ -1577,29 +1630,135 @@
       "source": "fixed_project_baseline"
     },
     "feedback_index": {
-      "archive_references": [],
-      "authorized_candidates": [],
-      "authorized_repairs": [],
-      "control_rev": 7,
-      "event_watermark": 11765,
-      "history_count": 0,
-      "missing": [
-        "full_report_bodies"
-      ],
-      "needs_attention": [],
-      "next_action": "review_existing_results_first",
-      "next_history_before_event_seq": null,
-      "omitted_recent_entries": 0,
-      "pending_results": [
+      "archive_references": [
         {
-          "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
-          "state": "AWAITING_APPROVAL",
+          "completed_at": "2026-10-03T20:21:55.209088+00:00",
+          "completion_type": "artifact_delivered",
+          "current_task_version": true,
+          "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+          "done_event_seq": 11884,
+          "feedback_id": "delivery-feedback-b863258a7477cf6add6166e6816fdfafc76de46842e2788982fb2a1a31e3106c",
           "task_id": "TASK-RESEARCH",
           "task_version": 6
         }
       ],
+      "authorized_candidates": [
+        {
+          "result_id": null,
+          "state": "READY",
+          "task_id": "TASK-WRITING",
+          "task_version": 6
+        }
+      ],
+      "authorized_repairs": [],
+      "control_rev": 7,
+      "event_watermark": 11897,
+      "history_count": 1,
+      "missing": [
+        "full_report_bodies"
+      ],
+      "needs_attention": [],
+      "next_action": "consider_only_authorized_tasks_after_live_checks",
+      "next_history_before_event_seq": null,
+      "omitted_recent_entries": 0,
+      "pending_results": [],
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-      "recent_deliveries": [],
+      "recent_deliveries": [
+        {
+          "approval_id": "approval-ca9233f17543797cb4d38147c82b0052ec8669d17ed11854882dd6de7140cca3",
+          "attempt": 2,
+          "completed_at": "2026-10-03T20:21:55.209088+00:00",
+          "completion_type": "artifact_delivered",
+          "delivery_binding": {
+            "content": {
+              "artifact_hash": "7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "kind": "artifact"
+            },
+            "task_version": 6
+          },
+          "delivery_digest": "d9caae0acc36e8cbabffc39aa87507c43837fc9e0cd7f4ac5105fe58b18b6205",
+          "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+          "done_event_id": "quality-36b037df73e4ee194931f6e710cc528e5b4bd0518c87973a50582ba49a6a4381",
+          "done_event_seq": 11884,
+          "evidence": [
+            {
+              "acceptance_ids": [
+                "AC-RESEARCH-FILES"
+              ],
+              "binding": {
+                "content": {
+                  "artifact_hash": "d1d98d64d550755f07f9fb1e78f65fe1f5447dc58186e54e628acceafc3a3ed4",
+                  "kind": "artifact"
+                },
+                "task_version": 6
+              },
+              "command_id": null,
+              "command_registry_revision": null,
+              "evidence_id": "artifact-evidence-a0ce70466311f1ee2065a43b0d23080d1fdbe3f1a4ab2b58d9d1f24f6866daf8",
+              "exit_code": null,
+              "integration_proposal_id": null,
+              "invocation_id": null,
+              "report_bytes": 595,
+              "report_hash": "113832ae2e7344b3a833f17f3f77eea7fba0dbae6642326dedeee44e5f94057d",
+              "review_conclusion": null,
+              "reviewer_config_version": null,
+              "reviewer_id": null,
+              "source": "artifact",
+              "verification_succeeded": true
+            },
+            {
+              "acceptance_ids": [
+                "AC-RESEARCH-FILES",
+                "AC-RESEARCH-QUALITY"
+              ],
+              "binding": {
+                "content": {
+                  "artifact_hash": "d1d98d64d550755f07f9fb1e78f65fe1f5447dc58186e54e628acceafc3a3ed4",
+                  "kind": "artifact"
+                },
+                "task_version": 6
+              },
+              "command_id": null,
+              "command_registry_revision": null,
+              "evidence_id": "verification-evidence-fb3f00d3b60037dff2884adeb5c5a2b46302c8389308217bbac9102cc64f638d",
+              "exit_code": null,
+              "integration_proposal_id": null,
+              "invocation_id": "inv-f58cfe8e14f3297f46842b32267bc0f2d7e39530937e3dff2042190a5d1f745b",
+              "report_bytes": 1450,
+              "report_hash": "af9622b7f5f41ec4a91637818f7e18df18cee5ec27a70f8c6b29072a6a1b7782",
+              "review_conclusion": "approved",
+              "reviewer_config_version": 1,
+              "reviewer_id": "worker-3",
+              "source": "independent_review",
+              "verification_succeeded": true
+            }
+          ],
+          "feedback_id": "delivery-feedback-b863258a7477cf6add6166e6816fdfafc76de46842e2788982fb2a1a31e3106c",
+          "merge_sha": null,
+          "missing": [
+            "full_report_bodies"
+          ],
+          "object_version": 3,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "pull_request": null,
+          "recorded_at": "2026-10-03T20:21:55.212Z",
+          "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
+          "run_id": "run-0b3f31e1bb4ffa4a925d1720fc645d0d8c8d09855bc9c4d954e8213eb8816740",
+          "schema": "xingshu/delivery-feedback/1",
+          "source_binding": {
+            "content": {
+              "artifact_hash": "d1d98d64d550755f07f9fb1e78f65fe1f5447dc58186e54e628acceafc3a3ed4",
+              "kind": "artifact"
+            },
+            "task_version": 6
+          },
+          "target_branch": null,
+          "task_id": "TASK-RESEARCH",
+          "task_spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
+          "task_title": "Claude 联网研究与事实核查资料包",
+          "task_version": 6
+        }
+      ],
       "requires_live_checks": true,
       "schema": "xingshu/feedback-index/1"
     }

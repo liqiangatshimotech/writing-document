@@ -1,9 +1,35 @@
 {
-  "authorized_ready_candidates": [],
+  "authorized_ready_candidates": [
+    "TASK-WRITING"
+  ],
   "needs_attention": [],
-  "next_action": "review_existing_results_first",
+  "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
   "omitted_quality_summaries": 0,
   "quality_index": [
+    {
+      "action": "deliver",
+      "approval_id": "approval-ca9233f17543797cb4d38147c82b0052ec8669d17ed11854882dd6de7140cca3",
+      "approved_at": "2026-10-03T20:21:28.935924+00:00",
+      "binding": {
+        "content": {
+          "artifact_hash": "7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+          "kind": "artifact"
+        },
+        "task_version": 6
+      },
+      "current_status": "consumed",
+      "fact_kind": "approval",
+      "invalidated": false,
+      "object_version": 3,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": null,
+      "status": "active",
+      "task_id": "TASK-RESEARCH",
+      "verification": {
+        "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
+        "target_base_sha": null
+      }
+    },
     {
       "attempt": 2,
       "binding": {
@@ -103,7 +129,7 @@
         "task_version": 6
       },
       "change_summary": "Runtime observed 2 declared output files",
-      "current_status": "submitted",
+      "current_status": "accepted",
       "fact_kind": "result",
       "failure": null,
       "invalidated": false,
@@ -935,7 +961,5 @@
   ],
   "report_bodies_included": false,
   "shared_materials_index": "CODE_INDEX.json",
-  "waiting_review": [
-    "TASK-RESEARCH"
-  ]
+  "waiting_review": []
 }
