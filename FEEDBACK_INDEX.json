@@ -3,7 +3,7 @@
   "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 7,
-  "event_watermark": 11614,
+  "event_watermark": 11765,
   "history_count": 0,
   "missing": [
     "full_report_bodies"
@@ -15,7 +15,7 @@
   "pending_results": [
     {
       "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
-      "state": "VERIFYING",
+      "state": "AWAITING_APPROVAL",
       "task_id": "TASK-RESEARCH",
       "task_version": 6
     }
