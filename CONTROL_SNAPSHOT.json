@@ -2,15 +2,12 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 5,
-  "snapshot_revision": 45,
-  "event_watermark": 7813,
+  "snapshot_revision": 46,
+  "event_watermark": 7874,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T19:03:05.639588+00:00",
+  "generated_at": "2026-10-03T19:03:48.470502+00:00",
   "source_event_ids": [
-    "pause-aeddf46f037f8cf02731415721e410925ec280b9477c72d4a07ab68af9de8614",
-    "config-0c86ba5941337492bf99e3a723c35abb0595ca35193b647495de764b3787a79f",
-    "config-00ab205706e223bdd1aa13900f530afd39499592f4efe279144a272962b5eb41",
-    "config-c85bbc56799cba3ae07a54f152bc9701e5fa46fef8fefd6667fa116b514fab30"
+    "config-ea54b1062929918d3d03abaaa605c8d7195ced2e18e02f0f17377e0fe6e8b390"
   ],
   "documents": {
     "rules": null,
@@ -851,7 +848,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 5,
-      "event_watermark": 7813,
+      "event_watermark": 7874,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
