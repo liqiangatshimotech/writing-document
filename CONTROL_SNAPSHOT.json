@@ -2,20 +2,12 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 4,
-  "snapshot_revision": 31,
-  "event_watermark": 5634,
+  "snapshot_revision": 32,
+  "event_watermark": 5698,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T18:25:27.319771+00:00",
+  "generated_at": "2026-10-03T18:26:14.279222+00:00",
   "source_event_ids": [
-    "config-f48575b1b35cf4ef6c0df5ae864f7edced1f0478ccf8cf993b34c66a3f75831c",
-    "config-633937cdfe0baa2ab825a34de05925fe322098e7a23160623428d19a9e8d7110",
-    "config-b4a2b85eea2a71d9c7778b737fab31729e892bcecbf265bade7f07ec9ac61ea9",
-    "pause-5777ec03bb963990f6a7beb7aafb3b83ffd72f8e357be70de05f1c46c244d76e",
-    "config-9f0888c49279ab1bddda8e69d622517522f5772cb2188a5a07a5e0e807a40019",
-    "effective-base-90dc71e574ef4e1757a25185303f7f9882a379f6579a6622060f469cdf5e5a22",
-    "config-56ebf3f796a37076e2f024e17556852c001ca3cde2616c5aaca5f0b7db4ac042",
-    "config-071a0afedfb1f85d5af8806110306584e34b875d11e91243e0a8ead7a560f224",
-    "config-b6fd311426455578865220cc64548623b7d97d976d7f8323cfddebd17f5446f5"
+    "config-42fe9d7e62dac053c99ee0bb0cbcda35b76aa4095f73fbc2a980394404e5965c"
   ],
   "documents": {
     "rules": null,
@@ -676,6 +668,22 @@
       "shared_materials": [
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "ccbafa804579787038c7d5b60d92f13da33660ef",
+          "content_digest": "46e5b006103b9f5cb066b368f1ca6cca5203b94fc1ef55454a0c61eb8bb83954",
+          "manifest_hash": "0cf5294a7bdab91daf8b464a78f4fc4287f8270f0b28084200821ec69b19babb",
+          "observed_at": "2026-10-03T18:26:04.845924+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/46e5b006103b9f5cb066b368f1ca6cca5203b94fc1ef55454a0c61eb8bb83954",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "kind": "execution_base",
+            "proof_digest": "90dc71e574ef4e1757a25185303f7f9882a379f6579a6622060f469cdf5e5a22",
+            "task_id": "TASK-RESEARCH",
+            "task_version": 3
+          },
+          "subject_hash": "4b396b3203b135520534454968e25d0c162bf94855692d27de6e15c1f37cfda9"
+        },
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "6a184072923d37971fa59442db242f4f86000a47",
           "content_digest": "4961e90f673e63cf963f8ffb4c778dac215f69ab8719ce97b61ff8db846967ab",
           "manifest_hash": "7b0730d2bd04318add0fa4576360e193083af4de65ca97528810cbf5b533b403",
@@ -703,7 +711,7 @@
       ],
       "authorized_repairs": [],
       "control_rev": 4,
-      "event_watermark": 5634,
+      "event_watermark": 5698,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
