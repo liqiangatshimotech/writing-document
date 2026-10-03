@@ -2,7 +2,8 @@
   "agents": [
     {
       "capabilities": [
-        "planning"
+        "planning",
+        "coordination"
       ],
       "duties": "负责本次 GLM-5.3 网络安全能力议题的任务规划、依赖、质量控制和交付。必须调度 Claude 搜索与核实资料，再由 Pi 撰写公众号深度文及抖音科普口播稿；不得用自己的正文替代指定执行者。区分厂商主张、独立证据和评论；只做公开资料研究与科普，不运行攻击或发布内容。",
       "enabled": true,
@@ -12,7 +13,7 @@
       "model": "",
       "name": "Codex 总编调度",
       "role": "coordinator",
-      "version": 1
+      "version": 2
     },
     {
       "capabilities": [
@@ -87,5 +88,5 @@
     }
   ],
   "primary_agent_id": "main",
-  "revision": 1
+  "revision": 2
 }
