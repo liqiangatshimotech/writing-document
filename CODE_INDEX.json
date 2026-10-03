@@ -22,23 +22,6 @@
   "shared_materials": [
     {
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "commit_sha": "62449b89354563bf44c62e473b19be58d64d85d7",
-      "content_digest": "53405e91758042c96c2010ef7bdedd8212f6146a815ac7bccc1181d19642fba5",
-      "manifest_hash": "f5784fe001731237622cfcd75b093d45259a2909a64133cd07a8728191aa1dfc",
-      "observed_at": "2026-10-03T19:18:57.838286+00:00",
-      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/53405e91758042c96c2010ef7bdedd8212f6146a815ac7bccc1181d19642fba5",
-      "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "subject": {
-        "kind": "repair_base",
-        "next_attempt": 2,
-        "proof_digest": "3b838b9f0fa01c31fae5cda93f28bd0bdd19c1f2b1ffa09ed379343dc5fdd16b",
-        "task_id": "TASK-RESEARCH",
-        "task_version": 5
-      },
-      "subject_hash": "5139886bcedb9c961ab563f72f58d9351b3cd83761a63eb29f013d4a7cc3c911"
-    },
-    {
-      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "commit_sha": "a8f2e5bb095801e034fe1456613426a389a207ad",
       "content_digest": "1a05cb39f1eb0e6b373124255e1e2254fc49b502c06fc3b96962002d8fb7b0f6",
       "manifest_hash": "50b5912da768ece8f144fda795ac9d98674423305255678544684fd0b62e836f",
