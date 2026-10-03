@@ -1,7 +1,9 @@
 {
   "authorized_ready_candidates": [],
-  "needs_attention": [],
-  "next_action": "review_existing_results_first",
+  "needs_attention": [
+    "TASK-RESEARCH"
+  ],
+  "next_action": "wait_for_event",
   "omitted_quality_summaries": 0,
   "quality_index": [
     {
@@ -14,11 +16,11 @@
         "task_version": 1
       },
       "collected_at": "2026-10-03T17:22:19.150968+00:00",
-      "current_status": "current",
+      "current_status": "stale",
       "evidence_id": "artifact-evidence-efd8f4b0b5a46446eaf5cf92a65bfa74cc077fbaa7d53443a1b1858307fd9242",
       "exit_code": null,
       "fact_kind": "evidence",
-      "invalidated": false,
+      "invalidated": true,
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
       "report_digest": "274baffd86fb61a8954438abe2c1eb01e35f64dd78d58e8e58fb299706478d26",
       "run_id": null,
@@ -52,11 +54,11 @@
         "task_version": 1
       },
       "collected_at": "2026-10-03T17:26:42.937098+00:00",
-      "current_status": "current",
+      "current_status": "stale",
       "evidence_id": "verification-evidence-b340f3f88d09e0036c044b3c9149b20766c9250ea45ca062abbff73a61bb7ad5",
       "exit_code": null,
       "fact_kind": "evidence",
-      "invalidated": false,
+      "invalidated": true,
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
       "report_digest": "4221ada7caf3bfbd9aa447849a9af0cbcebd97b2e9b9fc2c6209d9dbdcac813a",
       "run_id": "inv-ea88fc0cfc31431419a3b5470a756262f5964720ff75958797f3a0afa5f989d7",
@@ -103,10 +105,10 @@
         "task_version": 1
       },
       "change_summary": "Runtime observed 2 declared output files",
-      "current_status": "submitted",
+      "current_status": "rejected",
       "fact_kind": "result",
       "failure": null,
-      "invalidated": false,
+      "invalidated": true,
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
       "report_digest": "cd44b50ce57f42f3828a9ec63a0992978df7adf96d28e787243241db66b2a1d4",
       "result_id": "result-441a8c0adf4746ebf0d5f63a8a617b3b5d720fba65d33e91503b30a17530f766",
@@ -123,7 +125,5 @@
   ],
   "report_bodies_included": false,
   "shared_materials_index": "CODE_INDEX.json",
-  "waiting_review": [
-    "TASK-RESEARCH"
-  ]
+  "waiting_review": []
 }
