@@ -6,6 +6,20 @@
     {
       "agent_config_version": 1,
       "agent_id": "worker-1",
+      "attempt": 2,
+      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "ended_at": "2026-10-03T20:13:33.109442+00:00",
+      "exit_reason": "completed",
+      "observed_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "run_id": "run-0b3f31e1bb4ffa4a925d1720fc645d0d8c8d09855bc9c4d954e8213eb8816740",
+      "started_at": "2026-10-03T20:12:10.484247+00:00",
+      "state": "FINISHED",
+      "task_id": "TASK-RESEARCH",
+      "task_version": 6
+    },
+    {
+      "agent_config_version": 1,
+      "agent_id": "worker-1",
       "attempt": 1,
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "ended_at": "2026-10-03T20:00:50.256311+00:00",
@@ -119,7 +133,7 @@
   "runs_omitted": 0,
   "task_index": [
     {
-      "attempt": 1,
+      "attempt": 2,
       "depends_on": [],
       "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
       "required_capabilities": [
@@ -127,7 +141,7 @@
         "fact_checking"
       ],
       "spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
-      "state": "NEEDS_CHANGES",
+      "state": "VERIFYING",
       "task_id": "TASK-RESEARCH",
       "task_version": 6,
       "title": "Claude 联网研究与事实核查资料包",
@@ -153,7 +167,7 @@
   ],
   "tasks": [
     {
-      "attempt": 1,
+      "attempt": 2,
       "spec": {
         "acceptance": [
           {
@@ -215,7 +229,7 @@
         },
         "title": "Claude 联网研究与事实核查资料包"
       },
-      "state": "NEEDS_CHANGES",
+      "state": "VERIFYING",
       "task_id": "TASK-RESEARCH",
       "task_version": 6
     },

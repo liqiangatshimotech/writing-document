@@ -22,20 +22,21 @@
   "shared_materials": [
     {
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "commit_sha": "548ac70e7fb6a299c2113a710b8bc1ed65a1bcaf",
-      "content_digest": "80166467303fec69db01ba51a14495102b04ab2dd0cf7563de1f293e7dbf55cb",
-      "manifest_hash": "a9c95dcf8620fcb90399342275b6207a0f08c7cb3d570135f02a668afb7d3454",
-      "observed_at": "2026-10-03T20:10:57.173446+00:00",
-      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/80166467303fec69db01ba51a14495102b04ab2dd0cf7563de1f293e7dbf55cb",
+      "commit_sha": "5d37f4e206ad7537282fed80a56f1ac0fe2ddaf1",
+      "content_digest": "87232052234f9651f0740cf403fa1328e063dc4c44daa20b4da7e5af2d627c17",
+      "manifest_hash": "362a4c287fe75a748e93072d18437e6c3a7192ce8caee1af61415fa4ecda1d70",
+      "observed_at": "2026-10-03T20:14:46.533398+00:00",
+      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/87232052234f9651f0740cf403fa1328e063dc4c44daa20b4da7e5af2d627c17",
       "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "subject": {
-        "kind": "repair_base",
-        "next_attempt": 2,
-        "proof_digest": "93fc858e59f19948e3141756305a6aee77b50b19de91890190ecf0aae3d59fbd",
+        "kind": "task_result",
+        "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
+        "run_id": "run-0b3f31e1bb4ffa4a925d1720fc645d0d8c8d09855bc9c4d954e8213eb8816740",
+        "stage": "source",
         "task_id": "TASK-RESEARCH",
         "task_version": 6
       },
-      "subject_hash": "4766361c9dcfd972a3ff416efa441351e6d1447b1cff640b0e6e033d252bb4c1"
+      "subject_hash": "f39a3a4954c60a99938c7d5ca9d7e9ce26f4d33b7ccc5394a6316683c50bcbe3"
     },
     {
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
