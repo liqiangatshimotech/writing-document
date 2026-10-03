@@ -10,8 +10,7 @@
   "lifecycle": "active",
   "live_resource_checks_required": true,
   "missing": [
-    "full_report_bodies",
-    "business_rules"
+    "full_report_bodies"
   ],
   "name": "写作",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
@@ -82,5 +81,5 @@
   },
   "runtime_paused": true,
   "shared_context_redacted_fields": [],
-  "shared_context_revision": null
+  "shared_context_revision": 1
 }

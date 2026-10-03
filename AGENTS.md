@@ -8,4 +8,10 @@
 规划提案使用 xingshu/repository-proposal/1，唯一文件 PROPOSAL.json；字段 schema、project_id、proposal_id、observed_control_commit、plan（agentplan/1，observed_control_commit 与外层相同）。独立不可变 ref 为 refs/heads/xingshu/inbox/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/<proposal_id 的 UTF-8 SHA-256>；只创建，不覆盖或删除旧提案。提案需绑定所读控制修订和代码基线，不得携带状态、审批、结果或任意执行命令。Git 作者不是 Agent 身份。Runtime 自动发现后核验权限与当前版本；只有其正式派发才允许执行。读取代码和成果时，先在同一固定控制提交读取 CODE_INDEX.json.shared_materials；RESULTS_REVIEWS.json.shared_materials_index 指向该目录。只读取其中对应主体的不可变 reference/commit_sha 和 MANIFEST.json，核对文件摘要；真实业务代码提交是 source_head_sha。材料载体 commit 只用于传递代码对象和有界报告，不能作为业务执行基线或合入业务分支。未列出所需共享材料时等待 Runtime 发布，不能只凭 SHA 或报告索引声称已取得正文。读取失败应报告缺失，不能声称已读。
 
 
-用户业务规则缺失；此入口不是用户规则，不得声称已读取未提供的规则。
+## 用户业务规则（原文）
+
+本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。
+
+调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。
+
+当前TASK-RESEARCH v5已保存next_attempt=2的修复授权，材料已发布，作者为worker-1；修复仅需落实现有独立review的具体意见，不增加资料主题。worker修订应保留正文来源访问证据；目前Runtime按当前Run记录访问，研究者本次仍需实际读取所用七个已指定来源，不伪称继承了不存在的访问证明。所有产物使用当前cwd相对路径并Read核对。
