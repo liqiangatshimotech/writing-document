@@ -105,17 +105,17 @@
   "runs_omitted": 0,
   "task_index": [
     {
-      "attempt": 3,
+      "attempt": 0,
       "depends_on": [],
       "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
       "required_capabilities": [
         "research",
         "fact_checking"
       ],
-      "spec_digest": "84a1046c53e65ce8446ebb83ab293c18d7369d38e4634bf67105559ba5b0ec63",
-      "state": "BLOCKED",
+      "spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
+      "state": "READY",
       "task_id": "TASK-RESEARCH",
-      "task_version": 5,
+      "task_version": 6,
       "title": "Claude 联网研究与事实核查资料包",
       "title_truncated": false
     },
@@ -132,14 +132,14 @@
       "spec_digest": "5059653931df2abab65d7bd3205639d07bb603b25626f16ce2dd08253a9923b1",
       "state": "READY",
       "task_id": "TASK-WRITING",
-      "task_version": 5,
+      "task_version": 6,
       "title": "Pi 撰写公众号深度文与抖音科普口播稿",
       "title_truncated": false
     }
   ],
   "tasks": [
     {
-      "attempt": 3,
+      "attempt": 0,
       "spec": {
         "acceptance": [
           {
@@ -171,7 +171,7 @@
           "type": "artifact_delivered"
         },
         "depends_on": [],
-        "description": "第4版独立审查的四项问题必须全部纠正，本轮不新增信息：\nA. NIST/CAISI仅在来源索引写“本次访问失败，不采用此来源结论”，删除S2/F4所有四个月、领先开放模型、日期等转引事实，也不要允许下游使用；不拿搜索摘要当核验。\nB. sources.md的S1摘要限60汉字；fact-check.md仅用一个紧凑表格记录S1三组核心数字及必要限定，另列一次简短评测定义。两文件所有直接转述S1（包含表格、提醒、主题映射、红线）总计不超过400汉字；数字只出现一次，其余地方只写F1/F2/F3条目ID，不再复述。不要单开F1/F2/F3口径提醒段落重复内容。六主题以多源综合推论为主，不重复S1概要。\nC. 重读原文Figure 2图注：记录其成功标准为达到基准最高结果，不再说原文完全没有定义成功；若具体flag映射未核实，单独准确限定。来源定位严格使用真实图号/中文章节描述。\nD. 英文引用总数计算应包含英文文章标题和复制的章节标题；S10等长标题译成中文，所有章节定位用中文描述/图表编号，仅保留必要专名、URL。每来源逐字英文≤25词，不把标题列重复英文。结束前对这四点及两文件实际Read自查，不能只声称已修正。\n\n执行纠错：上次未完成原因只是第二次Write误写到父目录。所有Write/Edit/Read的文件路径必须使用当前cwd下的相对路径 research/sources.md、research/fact-check.md；不要自行拼接任何绝对worktrees路径、不要用../、不要访问旧run目录。先把两个文件都创建为实际内容，然后分别Read核对存在和完整性再结束。若提示outside allowed working directories，先核对file_path确为上述相对路径，再用正确相对路径重试，不申请扩大权限、不把未写成当完成。\n\n由 worker-1 Claude 资料研究员完成本次针对性修订，保留已核实的核心事实，勿继续扩大材料范围或加入新的统计。只产出research/sources.md和research/fact-check.md，供Pi撰稿；后续仍由worker-3 Codex独立审查，再以产物包交付。\n仅保留以下指定原文与六个额外一手来源作为主要已核实论据，实际重新访问并给出准确章节/表图/段落定位；访问失败须标明且不计作已读，可用同机构等价官方页面补足：\nS1 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\nS3 https://arxiv.org/abs/2605.14153\nS4 https://huggingface.co/zai-org/GLM-5.3\nS5 https://docs.z.ai/guides/llm/glm-5.3\nS6 https://cloud.google.com/blog/topics/threat-intelligence/time-to-exploit-trends-2023\nS9 https://arxiv.org/abs/2406.11717\nS10 https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai\nNIST/CAISI若依然无法直接核验，只列访问情况和不确定性，不使用未核实数字。\n按第二轮独立审查收口：\n1. 去掉S4/F11的54.4等基准分数论据，不必为文章解释尚有误读风险的汇总分。S4只保留直接可核验的权重可获取性/许可/模型卡信息；不以仓库创建日期推断发布日期。S3用于说明分层能力评分与端到端成功率不同，不混用不同口径。\n2. 从两个文件删除S7/F16的N-days额外实验统计，以及S8 Glasswing初步更新的6202/1752/1094/530/75等额外数字和因果解释。这些不是本次成稿所必需，防守主题由S6与S10支撑；如保留为拓展链接须注明不作论据，不扩写。\n3. 压缩S1的重复复述：sources.md仅放元数据、原文位置和约120字简述；S1必要数字只在fact-check.md集中出现一次，其他主题只交叉引用条目ID。两文件S1直接概要总计约400汉字以内。保留50/410与56/410的特定评测语境；64%/92%/100%明确是GLM-5.3的模拟有害请求指标、不是现实攻击成功率；Flash单案例20分钟人工+8小时模型及20.40美元估算不等于披露窗口/平均攻击成本，研究者提供两项已知漏洞信息。其他S1统计可删，避免堆砌。\n4. 保留已改正的Mandiant口径：138分析样本，剔除15异常值后123个的平均TTE为5天，不剔除为47天；TTE相对补丁发布前后，非所有漏洞披露后的平均。给出Time-to-Exploit章节定位。\n5. 所有其余来源均补准确原文章节/表图/段落位置，区分厂商说法、独立证据、事实、推论和限制；S10在野案例不是GLM-5.3滥用证据。每来源英文逐字引用合计不超25词，尽量中文转述。访问证据由本次Runtime配对工具调用与返回提供；不要自编访问次数、完整PDF阅读页数，不把WebFetch摘要当逐字全文。\n资料要足以支持能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示的原创分析，无攻击代码或操作教程。不要生成Runtime验收报告，不改articles/或扩大任务。",
+        "description": "由worker-1 Claude完成研究与所有修订；供worker-2 Pi写稿，后续由worker-3 Codex独立审查。本版将先前重复叠加的说明整理为下列唯一执行清单，验收标准及产物不变。\n\n输出仅为当前cwd相对路径 research/sources.md 和 research/fact-check.md。所有文件工具只用这两个相对路径，不拼绝对worktrees路径、不用../。结束前Read两文件核对实际内容与完整性。不要生成Runtime验收报告，不改articles/或权限。\n\n每次运行真实访问以下指定原文及六个额外一手来源，留下Runtime可配对的WebFetch/WebSearch记录。区分摘要页、网页摘要与全文，不虚构阅读范围。访问失败明确排除，可用同机构等价官方页面补足。不要扩展资料主题或增加非必要数字：\nS1 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\nS3 https://arxiv.org/abs/2605.14153\nS4 https://huggingface.co/zai-org/GLM-5.3\nS5 https://docs.z.ai/guides/llm/glm-5.3\nS6 https://cloud.google.com/blog/topics/threat-intelligence/time-to-exploit-trends-2023\nS9 https://arxiv.org/abs/2406.11717\nS10 https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai\nNIST/CAISI此前访问失败，不采用其任何转引、四个月等数字或结论；无需为它增加搜索开销。删除S7/S8及所有额外基准汇总分、Glasswing统计。\n\nsources.md：每来源给中文标题、发布者、实际核实日期或未知、URL、访问范围、准确定位及简短证据/局限。英文章节标题译成中文，用图号或段落主题定位；不要猜第几节，不声称原文有没有导语。S1确有首节前导语及图1；不得再写“首节前无导语”。S1简述不超60汉字。每来源逐字英文累计含标题/章节不超25词，优先中文表达。\n\nfact-check.md：仅一个紧凑表格记录S1核心信息及限定，其他地方只引用F1/F2/F3条目ID，不重复这些数字或条件。两文件对S1的直接概要总计不超400汉字：\nF1：50/410与56/410为特定评测结果；成功按图2图注达到基准最高结果；必须在本条注明比较中的Claude关闭了安全防护，不能等同公开服务可获得能力。\nF2：64%/92%/100%对应GLM-5.3三种修改/提示条件下的模拟有害请求参与指标，每格50样本；代码不实际执行，非现实攻击成功率。不提供具体绕过方法。\nF3：Flash单案例20分钟人工、8小时模型、估算20.40美元，研究者提供两项已知漏洞信息；非平均成本、非披露到利用窗口。定位为原文端到端利用能力部分Flash第二次实验的相邻两段。\n\nS6若采用TTE：2023年138样本剔除15异常值后123个平均5天，未剔除47天；是相对补丁发布前后的利用时间，不是所有漏洞披露后平均。S3分层能力分数与端到端占比不混用。S4/S5仅采用直接核实的权重可获取性、API信息；许可或发布日期未核实就标未知，不以仓库创建日期推断。S9结论限其2024年实验模型，不能用F2行为结果证明该机制适用于GLM-5.3。S10在野案例不指称GLM-5.3被滥用，不增加案例统计。\n\n六主题以多源分析简述：能力、可获得性、补丁窗口、开放权重利弊、评测局限、防守启示。区分事实、厂商说法、独立证据、推论、不确定性。特别限定：厂商的API监控和账户封禁无法直接控制独立本地副本；模型内置拒绝行为不会因本地部署自动消失，仍可能存在但可被下游修改。开放权重便于审计/研究/自托管的收益应标为推论，不能装成模型卡验证的事实。不要反复复述S1概要。\n\n修订时优先读取Runtime提供的完整独立review意见，逐项定点修改，不重写无关段落、不引入新事实。交付前自查全部清单，特别是原文定位、比较的防护条件、拒绝机制区别；无攻击代码、漏洞复现或操作教程。",
         "forbidden_paths": [
           ".git/",
           ".xingshu/",
@@ -196,14 +196,14 @@
           "fact_checking"
         ],
         "retry_policy": {
-          "max_attempts": 4,
+          "max_attempts": 6,
           "max_concurrency": 1
         },
         "title": "Claude 联网研究与事实核查资料包"
       },
-      "state": "BLOCKED",
+      "state": "READY",
       "task_id": "TASK-RESEARCH",
-      "task_version": 5
+      "task_version": 6
     },
     {
       "attempt": 0,
@@ -272,7 +272,7 @@
       },
       "state": "READY",
       "task_id": "TASK-WRITING",
-      "task_version": 5
+      "task_version": 6
     }
   ]
 }
