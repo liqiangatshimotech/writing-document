@@ -2,12 +2,12 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 7,
-  "snapshot_revision": 80,
-  "event_watermark": 11973,
+  "snapshot_revision": 81,
+  "event_watermark": 12092,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T20:23:43.338767+00:00",
+  "generated_at": "2026-10-03T20:24:53.380375+00:00",
   "source_event_ids": [
-    "config-369008ff7a471869a498ed45158d613087dd04cb9de6bbca5cbc16bc81a44fe1"
+    "config-30e68bffd65c7f6213631d43421a5a9112a4944195547a15ae549a944eb41c30"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -1518,6 +1518,22 @@
       "shared_materials": [
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "a7ffa1ca316d5874236f3a69a4aa724da95406c3",
+          "content_digest": "291a7ae87ceaa78f1fd167b7c390db8368bfe87efde7d2455b98f126931a80db",
+          "manifest_hash": "cac9668dea43b057b5624f622a65c2e17b96339879f93a9c48b4414c2b5f14d6",
+          "observed_at": "2026-10-03T20:24:33.484462+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/291a7ae87ceaa78f1fd167b7c390db8368bfe87efde7d2455b98f126931a80db",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "kind": "execution_base",
+            "proof_digest": "793d3aa25bd05bde188459fbe4479b690a0746171b370b5c35d84c0a03eeb779",
+            "task_id": "TASK-WRITING",
+            "task_version": 6
+          },
+          "subject_hash": "05271d378a70bbf131a821dead23e01b9b9b167f314bdb5ded7f9eeadbfdd39e"
+        },
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "977cf7b5dac1a8a98189c3b74875b51ab16d8640",
           "content_digest": "e7c010f7692ac57690d1274b7e5f8abb23f3fce039532f260dc1a12d9b724f49",
           "manifest_hash": "687700a8bcb264543f9eb9770d6d36e93326ce96b4f82b7b50a7a3907987c543",
@@ -1644,7 +1660,7 @@
       ],
       "authorized_repairs": [],
       "control_rev": 7,
-      "event_watermark": 11973,
+      "event_watermark": 12092,
       "history_count": 1,
       "missing": [
         "full_report_bodies"
