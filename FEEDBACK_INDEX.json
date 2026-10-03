@@ -3,7 +3,7 @@
   "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 3,
-  "event_watermark": 4401,
+  "event_watermark": 4507,
   "history_count": 0,
   "missing": [
     "full_report_bodies"
