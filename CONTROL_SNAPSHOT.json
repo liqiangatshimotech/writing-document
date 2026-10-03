@@ -1,16 +1,15 @@
 {
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-  "control_rev": 4,
-  "snapshot_revision": 37,
-  "event_watermark": 6927,
+  "control_rev": 5,
+  "snapshot_revision": 38,
+  "event_watermark": 6990,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T18:47:06.263360+00:00",
+  "generated_at": "2026-10-03T18:47:53.142749+00:00",
   "source_event_ids": [
-    "pause-e90a87cf03068b7e75056f2653cc6808292c08eb17cfc645c38d3e5d4abe0691",
-    "config-30e11c9d679fc61aa3b077981d37cd1b117c40fa7d401fca168d2e7d022422a9",
-    "config-cbe925adf732424f74e464b9f31a32c2b891cf689e0a2a854423b9b090c1eb23",
-    "config-0175502fcceb69c3ad7f75ee92c27f3eadd6ab28606b3e32bdaf862c6010cb83"
+    "quality-f55e96efb7d083dceaab4395677c2a71f3579db09a8046c2cb7e95bc52408842",
+    "quality-e0290f1affb54b0db30e8b7f0917fd7a9afcebc86d7debc250b3e6d16aa58804",
+    "config-66b91bea3bd1a6cd53c0acbc6c751419122e3b4e551b5b9e2df4eba298422c5b"
   ],
   "documents": {
     "rules": null,
@@ -244,17 +243,17 @@
       "runs_omitted": 0,
       "task_index": [
         {
-          "attempt": 1,
+          "attempt": 0,
           "depends_on": [],
           "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
           "required_capabilities": [
             "research",
             "fact_checking"
           ],
-          "spec_digest": "5a59aec13cf564efaedc3b09f2fdd7929da6b2237aeca68d203f0035d82d43db",
-          "state": "FAILED",
+          "spec_digest": "97ddef13a23ab9cc498bad5aa83c7e8ffc155a4fd7a60ad8051f5b49ccae7f13",
+          "state": "READY",
           "task_id": "TASK-RESEARCH",
-          "task_version": 3,
+          "task_version": 4,
           "title": "Claude 联网研究与事实核查资料包",
           "title_truncated": false
         },
@@ -271,14 +270,14 @@
           "spec_digest": "5059653931df2abab65d7bd3205639d07bb603b25626f16ce2dd08253a9923b1",
           "state": "READY",
           "task_id": "TASK-WRITING",
-          "task_version": 3,
+          "task_version": 4,
           "title": "Pi 撰写公众号深度文与抖音科普口播稿",
           "title_truncated": false
         }
       ],
       "tasks": [
         {
-          "attempt": 1,
+          "attempt": 0,
           "spec": {
             "acceptance": [
               {
@@ -310,7 +309,7 @@
               "type": "artifact_delivered"
             },
             "depends_on": [],
-            "description": "由 worker-1 Claude 资料研究员完成本次针对性修订，保留已核实的核心事实，勿继续扩大材料范围或加入新的统计。只产出research/sources.md和research/fact-check.md，供Pi撰稿；后续仍由worker-3 Codex独立审查，再以产物包交付。\n仅保留以下指定原文与六个额外一手来源作为主要已核实论据，实际重新访问并给出准确章节/表图/段落定位；访问失败须标明且不计作已读，可用同机构等价官方页面补足：\nS1 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\nS3 https://arxiv.org/abs/2605.14153\nS4 https://huggingface.co/zai-org/GLM-5.3\nS5 https://docs.z.ai/guides/llm/glm-5.3\nS6 https://cloud.google.com/blog/topics/threat-intelligence/time-to-exploit-trends-2023\nS9 https://arxiv.org/abs/2406.11717\nS10 https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai\nNIST/CAISI若依然无法直接核验，只列访问情况和不确定性，不使用未核实数字。\n按第二轮独立审查收口：\n1. 去掉S4/F11的54.4等基准分数论据，不必为文章解释尚有误读风险的汇总分。S4只保留直接可核验的权重可获取性/许可/模型卡信息；不以仓库创建日期推断发布日期。S3用于说明分层能力评分与端到端成功率不同，不混用不同口径。\n2. 从两个文件删除S7/F16的N-days额外实验统计，以及S8 Glasswing初步更新的6202/1752/1094/530/75等额外数字和因果解释。这些不是本次成稿所必需，防守主题由S6与S10支撑；如保留为拓展链接须注明不作论据，不扩写。\n3. 压缩S1的重复复述：sources.md仅放元数据、原文位置和约120字简述；S1必要数字只在fact-check.md集中出现一次，其他主题只交叉引用条目ID。两文件S1直接概要总计约400汉字以内。保留50/410与56/410的特定评测语境；64%/92%/100%明确是GLM-5.3的模拟有害请求指标、不是现实攻击成功率；Flash单案例20分钟人工+8小时模型及20.40美元估算不等于披露窗口/平均攻击成本，研究者提供两项已知漏洞信息。其他S1统计可删，避免堆砌。\n4. 保留已改正的Mandiant口径：138分析样本，剔除15异常值后123个的平均TTE为5天，不剔除为47天；TTE相对补丁发布前后，非所有漏洞披露后的平均。给出Time-to-Exploit章节定位。\n5. 所有其余来源均补准确原文章节/表图/段落位置，区分厂商说法、独立证据、事实、推论和限制；S10在野案例不是GLM-5.3滥用证据。每来源英文逐字引用合计不超25词，尽量中文转述。访问证据由本次Runtime配对工具调用与返回提供；不要自编访问次数、完整PDF阅读页数，不把WebFetch摘要当逐字全文。\n资料要足以支持能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示的原创分析，无攻击代码或操作教程。不要生成Runtime验收报告，不改articles/或扩大任务。",
+            "description": "执行纠错：上次未完成原因只是第二次Write误写到父目录。所有Write/Edit/Read的文件路径必须使用当前cwd下的相对路径 research/sources.md、research/fact-check.md；不要自行拼接任何绝对worktrees路径、不要用../、不要访问旧run目录。先把两个文件都创建为实际内容，然后分别Read核对存在和完整性再结束。若提示outside allowed working directories，先核对file_path确为上述相对路径，再用正确相对路径重试，不申请扩大权限、不把未写成当完成。\n\n由 worker-1 Claude 资料研究员完成本次针对性修订，保留已核实的核心事实，勿继续扩大材料范围或加入新的统计。只产出research/sources.md和research/fact-check.md，供Pi撰稿；后续仍由worker-3 Codex独立审查，再以产物包交付。\n仅保留以下指定原文与六个额外一手来源作为主要已核实论据，实际重新访问并给出准确章节/表图/段落定位；访问失败须标明且不计作已读，可用同机构等价官方页面补足：\nS1 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\nS3 https://arxiv.org/abs/2605.14153\nS4 https://huggingface.co/zai-org/GLM-5.3\nS5 https://docs.z.ai/guides/llm/glm-5.3\nS6 https://cloud.google.com/blog/topics/threat-intelligence/time-to-exploit-trends-2023\nS9 https://arxiv.org/abs/2406.11717\nS10 https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai\nNIST/CAISI若依然无法直接核验，只列访问情况和不确定性，不使用未核实数字。\n按第二轮独立审查收口：\n1. 去掉S4/F11的54.4等基准分数论据，不必为文章解释尚有误读风险的汇总分。S4只保留直接可核验的权重可获取性/许可/模型卡信息；不以仓库创建日期推断发布日期。S3用于说明分层能力评分与端到端成功率不同，不混用不同口径。\n2. 从两个文件删除S7/F16的N-days额外实验统计，以及S8 Glasswing初步更新的6202/1752/1094/530/75等额外数字和因果解释。这些不是本次成稿所必需，防守主题由S6与S10支撑；如保留为拓展链接须注明不作论据，不扩写。\n3. 压缩S1的重复复述：sources.md仅放元数据、原文位置和约120字简述；S1必要数字只在fact-check.md集中出现一次，其他主题只交叉引用条目ID。两文件S1直接概要总计约400汉字以内。保留50/410与56/410的特定评测语境；64%/92%/100%明确是GLM-5.3的模拟有害请求指标、不是现实攻击成功率；Flash单案例20分钟人工+8小时模型及20.40美元估算不等于披露窗口/平均攻击成本，研究者提供两项已知漏洞信息。其他S1统计可删，避免堆砌。\n4. 保留已改正的Mandiant口径：138分析样本，剔除15异常值后123个的平均TTE为5天，不剔除为47天；TTE相对补丁发布前后，非所有漏洞披露后的平均。给出Time-to-Exploit章节定位。\n5. 所有其余来源均补准确原文章节/表图/段落位置，区分厂商说法、独立证据、事实、推论和限制；S10在野案例不是GLM-5.3滥用证据。每来源英文逐字引用合计不超25词，尽量中文转述。访问证据由本次Runtime配对工具调用与返回提供；不要自编访问次数、完整PDF阅读页数，不把WebFetch摘要当逐字全文。\n资料要足以支持能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示的原创分析，无攻击代码或操作教程。不要生成Runtime验收报告，不改articles/或扩大任务。",
             "forbidden_paths": [
               ".git/",
               ".xingshu/",
@@ -340,9 +339,9 @@
             },
             "title": "Claude 联网研究与事实核查资料包"
           },
-          "state": "FAILED",
+          "state": "READY",
           "task_id": "TASK-RESEARCH",
-          "task_version": 3
+          "task_version": 4
         },
         {
           "attempt": 0,
@@ -411,15 +410,15 @@
           },
           "state": "READY",
           "task_id": "TASK-WRITING",
-          "task_version": 3
+          "task_version": 4
         }
       ]
     },
     "results_reviews": {
-      "authorized_ready_candidates": [],
-      "needs_attention": [
+      "authorized_ready_candidates": [
         "TASK-RESEARCH"
       ],
+      "needs_attention": [],
       "next_action": "wait_for_user_resume",
       "omitted_quality_summaries": 0,
       "quality_index": [
@@ -664,41 +663,12 @@
     "code_index": {
       "business_code_included": false,
       "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "effective_bases": [
-        {
-          "artifact_inputs": [],
-          "dependencies": [],
-          "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-          "proof_digest": "90dc71e574ef4e1757a25185303f7f9882a379f6579a6622060f469cdf5e5a22",
-          "source_control_rev": 4,
-          "source_event_watermark": 5630,
-          "task_id": "TASK-RESEARCH",
-          "task_version": 3
-        }
-      ],
+      "effective_bases": [],
       "material_commit_is_business_source": false,
       "omitted_effective_base_proofs": 0,
       "omitted_shared_material_refs": 0,
       "requires_live_dependency_revalidation": true,
       "shared_materials": [
-        {
-          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "commit_sha": "ccbafa804579787038c7d5b60d92f13da33660ef",
-          "content_digest": "46e5b006103b9f5cb066b368f1ca6cca5203b94fc1ef55454a0c61eb8bb83954",
-          "manifest_hash": "0cf5294a7bdab91daf8b464a78f4fc4287f8270f0b28084200821ec69b19babb",
-          "observed_at": "2026-10-03T18:26:04.845924+00:00",
-          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/46e5b006103b9f5cb066b368f1ca6cca5203b94fc1ef55454a0c61eb8bb83954",
-          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "subject": {
-            "kind": "execution_base",
-            "proof_digest": "90dc71e574ef4e1757a25185303f7f9882a379f6579a6622060f469cdf5e5a22",
-            "task_id": "TASK-RESEARCH",
-            "task_version": 3
-          },
-          "subject_hash": "4b396b3203b135520534454968e25d0c162bf94855692d27de6e15c1f37cfda9"
-        },
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "6a184072923d37971fa59442db242f4f86000a47",
@@ -718,22 +688,22 @@
     },
     "feedback_index": {
       "archive_references": [],
-      "authorized_candidates": [],
+      "authorized_candidates": [
+        {
+          "result_id": null,
+          "state": "READY",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 4
+        }
+      ],
       "authorized_repairs": [],
-      "control_rev": 4,
-      "event_watermark": 6927,
+      "control_rev": 5,
+      "event_watermark": 6990,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
       ],
-      "needs_attention": [
-        {
-          "result_id": null,
-          "state": "FAILED",
-          "task_id": "TASK-RESEARCH",
-          "task_version": 3
-        }
-      ],
+      "needs_attention": [],
       "next_action": "wait_for_user_resume",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
