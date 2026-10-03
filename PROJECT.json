@@ -5,7 +5,7 @@
   "control_ref": "ai-control",
   "goal_progress": {
     "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-    "state": "stopped"
+    "state": "coordinating"
   },
   "lifecycle": "active",
   "live_resource_checks_required": true,
@@ -80,7 +80,7 @@
     "request_id": "PLANREQ-04d0d0cf06cdf3ae6ac90ffb",
     "schema": "xingshu/repository-goal/1"
   },
-  "runtime_paused": true,
+  "runtime_paused": false,
   "shared_context_redacted_fields": [],
   "shared_context_revision": null
 }
