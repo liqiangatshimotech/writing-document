@@ -1,22 +1,22 @@
 {
   "archive_references": [],
-  "authorized_candidates": [
-    {
-      "result_id": null,
-      "state": "READY",
-      "task_id": "TASK-RESEARCH",
-      "task_version": 3
-    }
-  ],
+  "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 4,
-  "event_watermark": 6244,
+  "event_watermark": 6424,
   "history_count": 0,
   "missing": [
     "full_report_bodies"
   ],
-  "needs_attention": [],
-  "next_action": "wait_for_user_resume",
+  "needs_attention": [
+    {
+      "result_id": null,
+      "state": "FAILED",
+      "task_id": "TASK-RESEARCH",
+      "task_version": 3
+    }
+  ],
+  "next_action": "wait_for_event",
   "next_history_before_event_seq": null,
   "omitted_recent_entries": 0,
   "pending_results": [],
