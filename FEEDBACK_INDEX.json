@@ -1,25 +1,25 @@
 {
   "archive_references": [],
   "authorized_candidates": [],
-  "authorized_repairs": [
-    {
-      "result_id": null,
-      "state": "NEEDS_CHANGES",
-      "task_id": "TASK-RESEARCH",
-      "task_version": 5
-    }
-  ],
+  "authorized_repairs": [],
   "control_rev": 6,
-  "event_watermark": 9617,
+  "event_watermark": 9758,
   "history_count": 0,
   "missing": [
     "full_report_bodies"
   ],
   "needs_attention": [],
-  "next_action": "consider_only_authorized_tasks_after_live_checks",
+  "next_action": "review_existing_results_first",
   "next_history_before_event_seq": null,
   "omitted_recent_entries": 0,
-  "pending_results": [],
+  "pending_results": [
+    {
+      "result_id": "result-9de14fb4d087c72c3e4678b4dfcb40131c9434191817f387ac5166a07c94f61a",
+      "state": "VERIFYING",
+      "task_id": "TASK-RESEARCH",
+      "task_version": 5
+    }
+  ],
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "recent_deliveries": [],
   "requires_live_checks": true,
