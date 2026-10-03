@@ -2,12 +2,15 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 1,
-  "snapshot_revision": 3,
-  "event_watermark": 317,
+  "snapshot_revision": 4,
+  "event_watermark": 391,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T16:51:06.873290+00:00",
+  "generated_at": "2026-10-03T16:52:35.528443+00:00",
   "source_event_ids": [
-    "config-f3572bd5b44e4f2536c613f783211d5d2044e14ba033615ead62acc29b112990"
+    "config-c6adf490ed5332bc4154a88ce13e6a6a6780e699e6ce632e46f55eda3f42cc65",
+    "config-9163229cc3c59e8888c064be0518256e4bc62ef9b8fc1a4f6111ff5712da19f2",
+    "config-3d70f347680ced1afd0bd7611d5d81cb4a997ff6cce46107b09c8751339b0c47",
+    "config-2a71df64fe02de730a78eea04cb529e45c793484e23748ae437c9418e62c157f"
   ],
   "documents": {
     "rules": null,
@@ -171,7 +174,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 1,
-      "event_watermark": 317,
+      "event_watermark": 391,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
