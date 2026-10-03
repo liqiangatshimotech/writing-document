@@ -2,12 +2,41 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 5,
-  "snapshot_revision": 42,
-  "event_watermark": 7410,
+  "snapshot_revision": 43,
+  "event_watermark": 7548,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T18:55:47.952475+00:00",
+  "generated_at": "2026-10-03T18:59:36.153008+00:00",
   "source_event_ids": [
-    "config-392896f6c473b24394222d3a8e1050369c0e9e68cc15259faa86387ea8c35c70"
+    "config-0694ce5dcad15d2464624a9a66277fa52557f577ef7aae44a4f126f046663e5b",
+    "invoke-19b1b00b01cde9474592c2fe8e6fa47585ad8dd2b338a31e4f378638c2b57888",
+    "config-e2f4a9b440e73357d1d05b5f29d2428a975f153bba9acac84579b1dd4c761acb",
+    "config-28d6de885789ba889b891f870d3dbf768f91f8afc71f44f5de4b04dfc954ca89",
+    "invoke-9335d48d8d5e61d3a198e4c582149792fd06e4a9741018b58a6f2246098fc739",
+    "config-c1945f8b397b161f3ab6aef7a533831a3fada39434d989e25d1ebdc2707cda1c",
+    "config-92eea42ca8305934c0559894673361e9f833e718b6e2f5870327d20e4f8fb995",
+    "invoke-833eed1056f0669bb95cc9daf25574bc17b490e7508aff152115d3b8865d1308",
+    "config-b9a42979ac242b5d1347a809447e1b1e835680868477102b241c7f9244b76b0f",
+    "invoke-79c9e3abf2105eee8e68634645012285ebf71907bb50962e8d83bcc5de0e7663",
+    "config-cdf3eaf9692d1e2c13604e42067584df58321385892e918873352728251310e6",
+    "config-c33db0c903a5b56a0b24d46fe27094e1d7ffb1668d421d0c70798a8f0e41815f",
+    "invoke-1c941b562d85b86d3d218e1ab5c5767db86e60019da9a3f0048b5a092ce16e5b",
+    "config-50ee6bfa572e4533d9063ae0fb788b8b92dde02809f2792b2abf1ee80b5eb4df",
+    "config-92a503188b9e6018563190a2998fe4c20780aa741e5c9d29565f9a4df3f07d0b",
+    "config-9ae2e9774e9051d3ccfff76db3da2af961b08e8f4dd823b68361cc59ca43637f",
+    "invoke-7112dd2c8244a5d1cf4702716626765b559602e3cfad1e35761fa9ae2bad85df",
+    "quality-97ba737a16951e28a22c5909a6755bfeee2b7c165dcdeb32250a09b4395521f8",
+    "config-e863205c90623881ec12e0287fd0329f09982d107a4e701f97878aca56a6b359",
+    "invoke-e2b0624be8b12f5ebb19b2041e966843a2920c63e7f64bae4ab013526e00af47",
+    "config-182ed5e6687c08ebfe6308a97d17ab15ff94299b52d4d6a82f8db471e058c4fc",
+    "config-411f3677ebbd18fde5aa8b73a823e11862483a2c4535e1c4abff8d74f3f7c20f",
+    "invoke-a666aca0feaf88bf8cbb93ab187b980e3039d594a51549fc82a2adec438333a9",
+    "config-5b3f74f3eb945cc91d9fe2b343d8b9980dd4780b6e522fb7fb9c39746876546a",
+    "config-08cc3fbfed80c9f73551ae7ef84d2a2b6248b1ce16f105a5cc56aaba56bb530a",
+    "invoke-ec9117bd934bf0382be8eb96a2cb2a2145b35b4b7ff8ed141374cb5c485664f3",
+    "config-6c1b9d8c3cd744b959e1a4857352cc5195138b1d518d478210f9afaff2894d21",
+    "config-538c0dd3e38e2a27aa8b3bdd15ff93249e66fb95707ef75f88a31546b1ea99a5",
+    "config-9a2736a7d661ff9d3462d5632d9f8c396dbe64f6be9c529124b043843a444349",
+    "config-ef3dec77a277157a8fb186d3dda19034e422a88cc4fbe0bb3c2f4234b97d090c"
   ],
   "documents": {
     "rules": null,
@@ -471,6 +500,45 @@
           }
         },
         {
+          "attempt": 1,
+          "binding": {
+            "content": {
+              "artifact_hash": "5e3e1519a02d7c3d2d418304fee87cdf7ae6b0fa8a1c4bd35cc087751796b45a",
+              "kind": "artifact"
+            },
+            "task_version": 4
+          },
+          "collected_at": "2026-10-03T18:58:18.663434+00:00",
+          "current_status": "current",
+          "evidence_id": "verification-evidence-d2526a3901b469add97661f7e2dac3b4fbf52605093b0c666c3fe7b4baa4963b",
+          "exit_code": null,
+          "fact_kind": "evidence",
+          "invalidated": false,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "09fdf990ca7147fe4b19191e25b26503e2d97c2773f89693248e9467481dfa36",
+          "run_id": "inv-a9de5e857b3aaeaa728a189d4630d6aaae2adc46358f1d458b084660b2a9603c",
+          "source": "independent_review",
+          "status": "current",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 4,
+          "verification": {
+            "acceptance_ids": [
+              "AC-RESEARCH-FILES",
+              "AC-RESEARCH-QUALITY"
+            ],
+            "command_id": null,
+            "covered_requirements": [
+              "review.md"
+            ],
+            "result_id": "result-7697a0de1a3bce88fe3c74eae696e682cd3f8aacc7617871400b3a27737ff73a",
+            "review_conclusion": "changes_requested",
+            "reviewer_config_version": 1,
+            "reviewer_id": "worker-3",
+            "target_base_sha": null,
+            "verification_succeeded": true
+          }
+        },
+        {
           "artifacts": [
             {
               "content_hash": "7a5c0fe05ef8de2e933fd68ef8a0cacaa25ab944041421ba41b82b12dd64a791",
@@ -773,6 +841,24 @@
       "shared_materials": [
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "8ff3b711938eb3698720defc2a8cfe583bf1c546",
+          "content_digest": "2b94590d31d6dea789c75c219d145b5539eaa6a5ec50474237eb71e8de89ba37",
+          "manifest_hash": "8b2b65df4e32ab6c02231f372bcc60a80e9d1b97917ea5269a87e8edd9d0520b",
+          "observed_at": "2026-10-03T18:59:17.387322+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/2b94590d31d6dea789c75c219d145b5539eaa6a5ec50474237eb71e8de89ba37",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "kind": "task_result",
+            "result_id": "result-7697a0de1a3bce88fe3c74eae696e682cd3f8aacc7617871400b3a27737ff73a",
+            "run_id": "run-18f9bd744703d394158fb8855c8b9212e2cc908bb292b3cbd51c83a26dbb9b02",
+            "stage": "verification",
+            "task_id": "TASK-RESEARCH",
+            "task_version": 4
+          },
+          "subject_hash": "d209791e58f6233287a7519721daa3ec795e52ec7243f47a9371271630140ef1"
+        },
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "802e2a0aaad4556cd87293c610eeef05fde1bd6b",
           "content_digest": "9b8ce8617874d71da70552dceb2e0b47dc4b2295912cef256585a53fa8383f05",
           "manifest_hash": "09395d4bf7fc8b1f87b2fa7df31148a8c623eb4a42a56c2490f788a2ab8f8146",
@@ -845,7 +931,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 5,
-      "event_watermark": 7410,
+      "event_watermark": 7548,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
