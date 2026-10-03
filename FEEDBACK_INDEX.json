@@ -10,7 +10,7 @@
   ],
   "authorized_repairs": [],
   "control_rev": 3,
-  "event_watermark": 3130,
+  "event_watermark": 4128,
   "history_count": 0,
   "missing": [
     "full_report_bodies"
