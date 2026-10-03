@@ -2,22 +2,15 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 1,
-  "snapshot_revision": 7,
-  "event_watermark": 694,
+  "snapshot_revision": 8,
+  "event_watermark": 1220,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T16:58:06.597065+00:00",
+  "generated_at": "2026-10-03T17:05:44.857112+00:00",
   "source_event_ids": [
-    "invoke-ffe1ed479e7309fcf87e19b962c91db86073a9a73690f5b6383bfed3e3ef8c9f",
-    "config-b71212b16fb24262771912a4dc5951c3b68aec276072299833f58158e80c9545",
-    "config-9e6996057f95b8ab5b98df47d521fbb96467a79906dc0ab7c548821d66116f5a",
-    "invoke-342f279b4491edfbf28108b6c27f7f5b3df02255b9dfc886d4bbb1b2628b10de",
-    "config-248bc95f9a0090ca9005e231ba00e8d336a0a93faa0d06db0719a0ef575f63bc",
-    "config-e3458d8511c92d49e2bdcb9d9c17ffeae7ec662f2d1130a5e2b44d3f7b3a9cb9",
-    "config-5d0a630751b25a608d648bdd3c02aacfa6cccd2179f0e9717651b101394713ed",
-    "invoke-3f37b7071ec5abc554d4ec4d993444d93d5a186d384c3db40a64be9ced1564c7",
-    "config-8d18ad11dc22c605641fe97ea74e04be930adc804129dcb011777a5a6852f584",
-    "config-e2317a292152b08941ff6e60c11a8f12e6f7438f45d301370d40f63171ad38c0",
-    "config-2783c5543054e11a70bc89ad6a3632198284f04d7e9dce467e6a9ff3f6e0c747"
+    "config-8f95037e3e1ac16325bdcf76baa3b2a079c571c66278229433df269e46c2d1fc",
+    "config-d2e98fdb2bd76b652a9142f9587fd6fe93882be6486de28fad73cfefd94cb124",
+    "config-78b615c9ad61033b8fb683cc03b2bbd409f9c5456bfee84ad9a215eabaa2df8e",
+    "config-f5a887c448b9c3253d46034097fdc355ffed60e50aeadbd2fff6879d9a13f0f6"
   ],
   "documents": {
     "rules": null,
@@ -28,7 +21,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": null,
-        "state": "blocked"
+        "state": "authorized"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -93,7 +86,7 @@
           ".xingshu/"
         ],
         "goal": "围绕 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities 的议题完成原创中文深度研究和两份成稿。严格由Codex总编调度，worker-1 Claude资料研究员实际联网搜索核实，worker-2 Pi主笔写作，worker-3 Codex独立编辑审查验收；主Agent不得代替指定作者写正文。\n仅规划两个有依赖的纯documentation任务、document输出，以文件产物包artifact_delivered交付：\n任务1交给research能力的Claude：阅读指定原文，检索至少6个相关一手来源，优先Anthropic、NIST/CAISI、ExploitBench论文、Z.ai官方资料与可信防守建议。输出research/sources.md（标题、发布者、日期、URL、证据摘要与局限）和research/fact-check.md（关键数字/分母、实测与模拟区别、争议与不确定性）。无法访问来源应如实标注，不伪造阅读或引用。\n任务2依赖任务1验收交付，交给writing能力的Pi，依据受控依赖资料输出：articles/wechat.md，3000至4500中文字符的公众号深度文，含3个备选标题、摘要、完整正文与参考来源；articles/douyin.md，约3至5分钟的科普口播稿，含3个标题、前5秒开场、完整可朗读正文、分段画面提示与来源。\n讨论能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示。原创综合分析，不逐段翻译或改写单篇来源；英文逐字引用每个来源不超过25词。数字可追溯，区分厂商说法/独立证据、事实/推论。特别核对64%/92%/100%的模拟有害请求响应指标，不能称为真实攻击成功率；不同评测分数/分母不可混用，不写“人人一键攻破所有系统”。不提供攻击代码、复现漏洞或绕过安全措施的操作教程。\n写入范围仅research/与articles/。验收采用artifact文件哈希（artifact-hash-report）与独立内容审查（review.md），核对来源、事实、长度、可读性和文件完整性；纯文档不需虚构代码测试命令。研究先验收交付，Pi再写作；修改由原执行者完成。不合并main、不部署，不向公众号或抖音发布。最终提供两篇成稿和研究资料位置。",
-        "goal_run_id": "goal-e0b1cb599c019d6b3bb9b0a31c09c1c946ffd8e9001d5310d4e70eda67220ed6",
+        "goal_run_id": "goal-8f95037e3e1ac16325bdcf76baa3b2a079c571c66278229433df269e46c2d1fc",
         "instructions": "Propose only this bounded goal through the repository inbox. This request does not grant process, shell, approval or delivery authority.",
         "max_attempts": 2,
         "max_parallel": 1,
@@ -250,7 +243,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 1,
-      "event_watermark": 694,
+      "event_watermark": 1220,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
