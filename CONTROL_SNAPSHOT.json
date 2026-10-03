@@ -2,24 +2,15 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 3,
-  "snapshot_revision": 28,
-  "event_watermark": 4934,
+  "snapshot_revision": 29,
+  "event_watermark": 5208,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T18:16:16.847746+00:00",
+  "generated_at": "2026-10-03T18:19:27.402954+00:00",
   "source_event_ids": [
-    "config-305016aa3a0db7bdb9eb27cdf69ed75d35646ec4afdd75862f3b075594e98ae5",
-    "invoke-3861d0ce990ae05f191ced07c8edecba5e992d83db1adfcb74ac447666680b25",
-    "config-e4145993c2c611b1ddb77891f239f10564fd7785aca42a23883d7fde84148385",
-    "config-a9bdf52da322aae746809bb40142d4f6e91285e6186cfdf953699095755d07e6",
-    "invoke-bfc84b7fd03594799f5b09933e2ca9af0c448d7048783dd1a155fbefd76c2739",
-    "config-cac7f3ec0eea880c6413b11c37e911262cca62f175b140df30035e32953314bb",
-    "config-197ec05c3a092d7bded1596490833ea3ea0d0a2e5737602f886fb77b8edf9442",
-    "invoke-a9dc30bc6951d974c6490942c7fd36f5532025cfd32ebae2ae01e86d4b6fc543",
-    "config-ed3c6e278e344a5602ecceba13ec3aa91a86a57137b56e792bb287190109d41c",
-    "quality-2df42288cb48f2c571d08c63bcfe1c95cb99de2f66d4f8891b7236973f5bdd07",
-    "config-5e235304bd8ef01a973b39a1fb2ef188716c47339477572b44814179eeb1adef",
-    "config-221dfec7aed2c2dc73cd866cfff3b9cce0efb11df973dad8e0c39f0c4ae1d163",
-    "config-2e2f9ef6d2cb43fcf9fcb080ce3805ca8485925be7d66fdec19de58881fe5a7c"
+    "pause-d226eebc828d549cd0aa0f08343ff53fdd3252a752a2c9a2b2c3c100cf5fbd32",
+    "config-9c8fa6bfb23493bbda08966b1ac71da60a92996c2ee060a9fd04f630fffdb631",
+    "config-d5c14701850ad958b3d1f2f6def0e6d3b895c8ba65fde4ffbb04ec7fc7a6f324",
+    "config-425f467a848aebd3e24853695f5e70a7ea2b1da79ed6aff97665c70965c6f786"
   ],
   "documents": {
     "rules": null,
@@ -30,7 +21,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-        "state": "coordinating"
+        "state": "stopped"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -105,7 +96,7 @@
         "request_id": "PLANREQ-04d0d0cf06cdf3ae6ac90ffb",
         "schema": "xingshu/repository-goal/1"
       },
-      "runtime_paused": false,
+      "runtime_paused": true,
       "shared_context_redacted_fields": [],
       "shared_context_revision": null
     },
@@ -415,7 +406,7 @@
       "needs_attention": [
         "TASK-RESEARCH"
       ],
-      "next_action": "wait_for_event",
+      "next_action": "wait_for_user_resume",
       "omitted_quality_summaries": 0,
       "quality_index": [
         {
@@ -716,7 +707,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 3,
-      "event_watermark": 4934,
+      "event_watermark": 5208,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
@@ -729,7 +720,7 @@
           "task_version": 2
         }
       ],
-      "next_action": "wait_for_event",
+      "next_action": "wait_for_user_resume",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
       "pending_results": [],
