@@ -22,57 +22,20 @@
   "shared_materials": [
     {
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "commit_sha": "b8ce3f32988d73b7b7fb8ed324e7552310881c92",
-      "content_digest": "71cff4c06ca4bd7b13665e4507c85adfcab97700496b898ecfac00304bd612c5",
-      "manifest_hash": "1bc926e4e4fb05c4c6835dac170abfafb3e95a3e21b29b492e0474ef0b439646",
-      "observed_at": "2026-10-03T19:16:48.054157+00:00",
-      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/71cff4c06ca4bd7b13665e4507c85adfcab97700496b898ecfac00304bd612c5",
+      "commit_sha": "62449b89354563bf44c62e473b19be58d64d85d7",
+      "content_digest": "53405e91758042c96c2010ef7bdedd8212f6146a815ac7bccc1181d19642fba5",
+      "manifest_hash": "f5784fe001731237622cfcd75b093d45259a2909a64133cd07a8728191aa1dfc",
+      "observed_at": "2026-10-03T19:18:57.838286+00:00",
+      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/53405e91758042c96c2010ef7bdedd8212f6146a815ac7bccc1181d19642fba5",
       "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "subject": {
-        "kind": "task_result",
-        "result_id": "result-4e066ad91ec1fd4f3fffa4f36a2e82b03050d714435d84c999ae033cebf85814",
-        "run_id": "run-fa9320f15929206e197b520e22e7f197c8ab7d99a266269f2dfadc0a0251a0b9",
-        "stage": "verification",
+        "kind": "repair_base",
+        "next_attempt": 2,
+        "proof_digest": "3b838b9f0fa01c31fae5cda93f28bd0bdd19c1f2b1ffa09ed379343dc5fdd16b",
         "task_id": "TASK-RESEARCH",
         "task_version": 5
       },
-      "subject_hash": "a47d4ad2b1631131f60fdfc460a0383fa79bbebd6c8e3d145e70e79d5d24c73c"
-    },
-    {
-      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "commit_sha": "31991574ed793afdd61fdd964f8a4e4bb3028b9a",
-      "content_digest": "1a51e44d3ccf6f1a190d3076ea6f708dc855e8214f04d7db7d33e90a51dc006a",
-      "manifest_hash": "ca4e74ed4d9618b81d67a8708f9808364ff658ffe9ee12ab49e2c55e56b2c30b",
-      "observed_at": "2026-10-03T19:12:53.229519+00:00",
-      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/1a51e44d3ccf6f1a190d3076ea6f708dc855e8214f04d7db7d33e90a51dc006a",
-      "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "subject": {
-        "kind": "task_result",
-        "result_id": "result-4e066ad91ec1fd4f3fffa4f36a2e82b03050d714435d84c999ae033cebf85814",
-        "run_id": "run-fa9320f15929206e197b520e22e7f197c8ab7d99a266269f2dfadc0a0251a0b9",
-        "stage": "verification",
-        "task_id": "TASK-RESEARCH",
-        "task_version": 5
-      },
-      "subject_hash": "d126fe762b46dda9e1c6f29defc558b13620b3bcce542500278357e7f3a19aa4"
-    },
-    {
-      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "commit_sha": "cb44b61cc33288228995d81db813c71fa686ab23",
-      "content_digest": "028441e4368d44f01dd6c5cc71951c9a8bd0818cfaffac6ded266a776e3d0168",
-      "manifest_hash": "70208a9855f7b77c4bab2b66c670cf88ff98d5ec2f00a0597fc5de58f28e0530",
-      "observed_at": "2026-10-03T19:11:57.339868+00:00",
-      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/028441e4368d44f01dd6c5cc71951c9a8bd0818cfaffac6ded266a776e3d0168",
-      "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "subject": {
-        "kind": "task_result",
-        "result_id": "result-4e066ad91ec1fd4f3fffa4f36a2e82b03050d714435d84c999ae033cebf85814",
-        "run_id": "run-fa9320f15929206e197b520e22e7f197c8ab7d99a266269f2dfadc0a0251a0b9",
-        "stage": "source",
-        "task_id": "TASK-RESEARCH",
-        "task_version": 5
-      },
-      "subject_hash": "3c44a82a0d9d0b3c5a04e7552553c994b2fd19cda90e7f8c001730eaa45df933"
+      "subject_hash": "5139886bcedb9c961ab563f72f58d9351b3cd83761a63eb29f013d4a7cc3c911"
     },
     {
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
