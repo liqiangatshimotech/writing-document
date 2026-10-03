@@ -5,7 +5,7 @@
   "control_ref": "ai-control",
   "goal_progress": {
     "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-    "state": "awaiting_publication"
+    "state": "blocked"
   },
   "lifecycle": "active",
   "live_resource_checks_required": true,
