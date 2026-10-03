@@ -1,0 +1,5 @@
+{
+  "schema": "xingshu-control/1",
+  "code_ref": "refs/heads/main",
+  "control_ref": "refs/heads/ai-control"
+}
