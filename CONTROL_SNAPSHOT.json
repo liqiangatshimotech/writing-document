@@ -2,15 +2,50 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 3,
-  "snapshot_revision": 22,
-  "event_watermark": 4128,
+  "snapshot_revision": 23,
+  "event_watermark": 4401,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T17:58:41.451854+00:00",
+  "generated_at": "2026-10-03T18:08:58.298995+00:00",
   "source_event_ids": [
-    "config-1b8b56600f573da9a03b467681bb4b717c733599349b94b4667b60093c8f0833",
-    "config-5ad1eb21201f79229153b23c9e591735ed07f1766e7b699566cb61a1fd981d7a",
-    "config-a65266bef146f1f9825e597411d1262bcc0ad6ed69835b0f7d9133f0242a2c54",
-    "config-1c34a4a652237c905b179cfb968323d34c9c35e2d452990c12699b967122c005"
+    "config-e9b9b7bbbca147d12c813ddbf7e0dcbbac345a6e1dc989467a2e51c9f230c9fa",
+    "config-c0f5c0b2eee640f59c5679b13474a310fc920498582f86fae73553eb92fff7a1",
+    "config-bce13b6b7201d1c3f04ecdae1fde32c24a8e07343bca4ac00161490fb8502354",
+    "pause-08df7f717fbaa0bf7d70245dc1412ed2d46df93df76dca7170b98d441e3cf90a",
+    "config-45e30e29cec54b24c43f5acf159d97769a6c62abb75783e6faece12e2e9b733b",
+    "effective-base-68b4e7f2b67c9ffe591069c0a8bb1f345499ebfe7c8f8583d91577f8fa742890",
+    "invoke-f4ec0b27f5443ff395203a5ecfd52441d926ebfe35a681623508d5fbd0dbdb4c",
+    "config-328a48028100095a5f18972bd9e2bac63ad98029a9b70b5a2996f05eb477c5fe",
+    "config-8322a1037aea5ed55b8cba012bef4663522ba1816a3d852d5c15033a114645d5",
+    "invoke-21e10cbc0b49221904b901d8d0cec89e4782458f5a40913a3090b34c2db4b230",
+    "config-00140f3a9190b6a2aabf539bea6736e2a4eb40c24749e6fa07ce935a8ec283a2",
+    "config-0444eb440d0381ad3d1e333b6fb6e44d40a120b1ea992994660522da3fcce540",
+    "config-bdf22ea3004d274f642fce40f2c884198249034fca9ca3151bf947ce85caad77",
+    "config-9abcbbf5f9140988e883979e25045257a6469116fee1dba5b61bf63fea8e0322",
+    "invoke-a910bd458359a1ca3d0210b44afe7f53a9d280b4ac18717656b6f2b84f64cf9e",
+    "config-be04f01b3c5b6b78fbbe1f47386654bdbae95af2efcc9075b0d04c6eecc19fa4",
+    "launch-91ddce0f10a4a3a8c6954f4505c2fc2b63ee87f608c194365b337a5681ff574e",
+    "config-98b05d9b88c04e520a85a504068507be3ed46fd7c37ccd5086dd869b0d0239cf",
+    "config-63189f506b06e77c0a196c8e0d072be1c3f91a35a34a9463231b3813ce766e8d",
+    "config-95c897394e4a022d52106ca35bdf76cab11c23ca73eb1dcb5369981ac70ace15",
+    "launch-7be3616bac3b746cc4c48e525c95216af98533613c41cc9067165c76dc20d97d",
+    "config-18935e89bd0e56d64e662cebffe55dd4510032f30dee43e5c6201e2b473a5e3d",
+    "config-76f96a92888d73afc825e4798a95932cf711c8245b6ffcb75b6c422b2d00f484",
+    "config-f951079bd5328f8602beb7ce061188685984ae4c4da327767cde410f46e62888",
+    "config-603890bd36bfc1ccdb2fd0a116ba72d58e38bc945722099bc7e86a001c7cc960",
+    "config-934093b6b7774759f76f926920a713cb026ba5df171e27947d447770dc0d96a6",
+    "launch-5e7f47d98fc688e88b2e93f3a326d38f0049eda285e53a33920892608fa49f85",
+    "quality-b577ae9011e17d4734c93ba4901f1c523b79591dc8937e649092d896483023ee",
+    "quality-4cce0ed825cfc5ef6084658c36a6ecc5fbef3c974f1500d714f4d4c788db22d0",
+    "invoke-553b4ad76185e8bfe414f54060f596705e252a576e3c1c44dd5c265803757b13",
+    "config-4a7d04b31c4a04ba439c2474895ba596857659d24d48348d6002bada661dcf4a",
+    "config-1095f59246a3f660bb424aa66e948b8066625588a37a02975fb23f6ffddf21dd",
+    "invoke-660370b4ad3e1d4150b224aa072c931f67591e821b900956ab588fa7e96e4812",
+    "config-21604c1929440f2bc557a451230a7b49ff9adf21eb5a941fa81f95177e5d506e",
+    "config-9caafcf3b7a21887ab043326bd5c91cb07d4829a2f2c020a5ceba0296c4d4380",
+    "invoke-9e6d2c2b9c530fda48ebd2a5ecf1dfc5ea3b21eb9cc168ea76e36657dff9e479",
+    "config-88cc8d4e5d26b6f5ba700e83ea0e0c7b513d8f420d597dd910c70df353e86e5e",
+    "config-2b820840ee40d2f48b50f688a20c418b91bbc47f757f9bde2890643fa5db2776",
+    "config-fa034edffc7f682dca8dc198a37bbb14132f1d3d5df275c859fe9f9f6d1a2c97"
   ],
   "documents": {
     "rules": null,
@@ -21,7 +56,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-        "state": "stopped"
+        "state": "coordinating"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -96,7 +131,7 @@
         "request_id": "PLANREQ-04d0d0cf06cdf3ae6ac90ffb",
         "schema": "xingshu/repository-goal/1"
       },
-      "runtime_paused": true,
+      "runtime_paused": false,
       "shared_context_redacted_fields": [],
       "shared_context_revision": null
     },
@@ -203,6 +238,20 @@
           "agent_id": "worker-1",
           "attempt": 1,
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "ended_at": "2026-10-03T18:08:17.501961+00:00",
+          "exit_reason": "completed",
+          "observed_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "run_id": "run-ae691ec5d55163bfff7c7205493a896525613f184effce2fe5b47bd3e7607966",
+          "started_at": "2026-10-03T18:02:21.386183+00:00",
+          "state": "FINISHED",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 2
+        },
+        {
+          "agent_config_version": 1,
+          "agent_id": "worker-1",
+          "attempt": 1,
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "ended_at": "2026-10-03T17:22:18.266445+00:00",
           "exit_reason": "completed",
           "observed_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
@@ -216,7 +265,7 @@
       "runs_omitted": 0,
       "task_index": [
         {
-          "attempt": 0,
+          "attempt": 1,
           "depends_on": [],
           "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
           "required_capabilities": [
@@ -224,7 +273,7 @@
             "fact_checking"
           ],
           "spec_digest": "5983408c66248413272501481a8f0d8f44cc9869060992d374f573cb38b55cc8",
-          "state": "READY",
+          "state": "VERIFYING",
           "task_id": "TASK-RESEARCH",
           "task_version": 2,
           "title": "Claude 联网研究与事实核查资料包",
@@ -250,7 +299,7 @@
       ],
       "tasks": [
         {
-          "attempt": 0,
+          "attempt": 1,
           "spec": {
             "acceptance": [
               {
@@ -312,7 +361,7 @@
             },
             "title": "Claude 联网研究与事实核查资料包"
           },
-          "state": "READY",
+          "state": "VERIFYING",
           "task_id": "TASK-RESEARCH",
           "task_version": 2
         },
@@ -388,13 +437,88 @@
       ]
     },
     "results_reviews": {
-      "authorized_ready_candidates": [
-        "TASK-RESEARCH"
-      ],
+      "authorized_ready_candidates": [],
       "needs_attention": [],
-      "next_action": "wait_for_user_resume",
+      "next_action": "review_existing_results_first",
       "omitted_quality_summaries": 0,
       "quality_index": [
+        {
+          "attempt": 1,
+          "binding": {
+            "content": {
+              "artifact_hash": "a76be4cec842e939cd991a5cd7b1a0e43f60a07be6a62524f3c4b048195296bc",
+              "kind": "artifact"
+            },
+            "task_version": 2
+          },
+          "collected_at": "2026-10-03T18:08:18.723563+00:00",
+          "current_status": "current",
+          "evidence_id": "artifact-evidence-b053c2b0c891defbd9e3195591e7b8b8210f67d9c85e806126178bf6cffb1f54",
+          "exit_code": null,
+          "fact_kind": "evidence",
+          "invalidated": false,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "29ac7cd81a1c11f1908dafc00c6478a2266f2510e432ab35c603b4ea860456e7",
+          "run_id": null,
+          "source": "artifact",
+          "status": "current",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 2,
+          "verification": {
+            "acceptance_ids": [
+              "AC-RESEARCH-FILES"
+            ],
+            "command_id": null,
+            "covered_requirements": [
+              "artifact-hash-report"
+            ],
+            "result_id": "result-e13e36f3e5ebc6280fadd74646d35cf3db1d2407140e9403c0328a97147310ca",
+            "review_conclusion": null,
+            "reviewer_config_version": null,
+            "reviewer_id": null,
+            "target_base_sha": null,
+            "verification_succeeded": true
+          }
+        },
+        {
+          "artifacts": [
+            {
+              "content_hash": "96f734505355918e48d83e39e7ea254cf1862ec67a0257469784e8120c4683cf",
+              "kind": "document",
+              "location": "research/sources.md"
+            },
+            {
+              "content_hash": "6565960d6bab468779a5650a2d702264d6e14b488460e8944f6deb66e6e9e307",
+              "kind": "document",
+              "location": "research/fact-check.md"
+            }
+          ],
+          "attempt": 1,
+          "binding": {
+            "content": {
+              "artifact_hash": "a76be4cec842e939cd991a5cd7b1a0e43f60a07be6a62524f3c4b048195296bc",
+              "kind": "artifact"
+            },
+            "task_version": 2
+          },
+          "change_summary": "Runtime observed 2 declared output files",
+          "current_status": "submitted",
+          "fact_kind": "result",
+          "failure": null,
+          "invalidated": false,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "ed5d59f3dcb1714508f59ff3d3b367e328ec35c622e29a6fdd6d4c787492699b",
+          "result_id": "result-e13e36f3e5ebc6280fadd74646d35cf3db1d2407140e9403c0328a97147310ca",
+          "risks": [],
+          "run_id": "run-ae691ec5d55163bfff7c7205493a896525613f184effce2fe5b47bd3e7607966",
+          "status": "submitted",
+          "submitted_at": "2026-10-03T18:08:18.417952+00:00",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 2,
+          "verification": {
+            "target_base_sha": null
+          }
+        },
         {
           "attempt": 1,
           "binding": {
@@ -514,13 +638,28 @@
       ],
       "report_bodies_included": false,
       "shared_materials_index": "CODE_INDEX.json",
-      "waiting_review": []
+      "waiting_review": [
+        "TASK-RESEARCH"
+      ]
     },
     "decisions": null,
     "code_index": {
       "business_code_included": false,
       "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "effective_bases": [],
+      "effective_bases": [
+        {
+          "artifact_inputs": [],
+          "dependencies": [],
+          "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+          "proof_digest": "68b4e7f2b67c9ffe591069c0a8bb1f345499ebfe7c8f8583d91577f8fa742890",
+          "source_control_rev": 3,
+          "source_event_watermark": 4366,
+          "task_id": "TASK-RESEARCH",
+          "task_version": 2
+        }
+      ],
       "material_commit_is_business_source": false,
       "omitted_effective_base_proofs": 0,
       "omitted_shared_material_refs": 0,
@@ -545,26 +684,26 @@
     },
     "feedback_index": {
       "archive_references": [],
-      "authorized_candidates": [
-        {
-          "result_id": null,
-          "state": "READY",
-          "task_id": "TASK-RESEARCH",
-          "task_version": 2
-        }
-      ],
+      "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 3,
-      "event_watermark": 4128,
+      "event_watermark": 4401,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
       ],
       "needs_attention": [],
-      "next_action": "wait_for_user_resume",
+      "next_action": "review_existing_results_first",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
-      "pending_results": [],
+      "pending_results": [
+        {
+          "result_id": "result-e13e36f3e5ebc6280fadd74646d35cf3db1d2407140e9403c0328a97147310ca",
+          "state": "VERIFYING",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 2
+        }
+      ],
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
       "recent_deliveries": [],
       "requires_live_checks": true,
