@@ -1,16 +1,15 @@
 {
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-  "control_rev": 2,
-  "snapshot_revision": 20,
-  "event_watermark": 2941,
+  "control_rev": 3,
+  "snapshot_revision": 21,
+  "event_watermark": 3130,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T17:39:08.882366+00:00",
+  "generated_at": "2026-10-03T17:41:25.298428+00:00",
   "source_event_ids": [
-    "pause-728f644c4a38d835811dbc345bd9ffc966e7d00fc90ac8fbadc280723eb933b0",
-    "config-4ea33235f9ab029e76ee46fdf54449bca986f8c6531a508af0fd909fd804d465",
-    "config-1cb1afd2597a5604132221cdcf87a8fcbd2f63f8a11c985e29b07a7cb6855e4d",
-    "config-8c0bdc4b47ba2c9026eca315463c62122746201f11cb9145cc96bca29d0b6f0a"
+    "quality-72cf975efa2b13ce5b34f6404ee8b6fbb360bb6e80b354e930243d3798a6f9be",
+    "quality-4ca596deb741b420250dbead8588e7a9136393ef250120eb4ad885f7c4b2a780",
+    "config-71ec92a1b5beaee3a713242c2685bc983f8a1be62bcbbc79e1283f4325cd7ee6"
   ],
   "documents": {
     "rules": null,
@@ -216,17 +215,17 @@
       "runs_omitted": 0,
       "task_index": [
         {
-          "attempt": 1,
+          "attempt": 0,
           "depends_on": [],
           "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
           "required_capabilities": [
             "research",
             "fact_checking"
           ],
-          "spec_digest": "2ae360ad96ecc81a52cdd8f6b4323bf490521613153b4c15f8cb65880935db67",
-          "state": "NEEDS_CHANGES",
+          "spec_digest": "5983408c66248413272501481a8f0d8f44cc9869060992d374f573cb38b55cc8",
+          "state": "READY",
           "task_id": "TASK-RESEARCH",
-          "task_version": 1,
+          "task_version": 2,
           "title": "Claude 联网研究与事实核查资料包",
           "title_truncated": false
         },
@@ -243,14 +242,14 @@
           "spec_digest": "5059653931df2abab65d7bd3205639d07bb603b25626f16ce2dd08253a9923b1",
           "state": "READY",
           "task_id": "TASK-WRITING",
-          "task_version": 1,
+          "task_version": 2,
           "title": "Pi 撰写公众号深度文与抖音科普口播稿",
           "title_truncated": false
         }
       ],
       "tasks": [
         {
-          "attempt": 1,
+          "attempt": 0,
           "spec": {
             "acceptance": [
               {
@@ -282,7 +281,7 @@
               "type": "artifact_delivered"
             },
             "depends_on": [],
-            "description": "由 worker-1 Claude 资料研究员执行，main 仅负责调度。实际访问并阅读指定 Anthropic 原文，另检索至少 6 个相关一手来源，优先覆盖 Anthropic、NIST/CAISI、ExploitBench 论文、Z.ai 官方资料及可信防守建议。记录来源元数据、证据摘要、对应论点和局限；访问失败须如实记录，不得将未读来源计入已核实证据。逐项核对关键数字、分母、评测设置、实测与模拟差异及证据归属，特别查明 64%/92%/100% 的模拟有害请求响应指标，无法确认的内容明确保留不确定性。形成能力提升、可获得性、补丁窗口、开放权重利弊、评测局限及防守启示的研究依据。仅输出两个研究业务文件；Runtime 收集文件、生成哈希报告并交由 worker-3 Codex 独立审查。审查所需修订仍由 worker-1 完成。研究资料须先验收并以受控产物交付，再供 TASK-WRITING 使用。",
+            "description": "由 worker-1 Claude 资料研究员执行，main 仅负责调度。实际访问并阅读指定 Anthropic 原文 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities ，另检索至少6个相关一手来源，优先覆盖NIST/CAISI、ExploitBench论文、Z.ai官方资料及可信防守建议。仅输出 research/sources.md 和 research/fact-check.md，供 Pi 后续创作。记录准确元数据、证据摘要、对应论点、局限和原文章节/表图定位；访问失败不得当作已核实。数字可追溯，区分模拟/实测、厂商/独立、事实/推论；覆盖能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示。不要长篇复述单一来源，两个文件去重使用来源ID交叉引用；每一来源的直接概要合计控制在约400汉字以内，英文逐字引用每个来源合计不超过25词。不提供攻击代码或操作教程。\n本次须针对上轮独立审查逐项修订并真实重新核验：\n1. Mandiant 2023数据：138个漏洞是分析样本；5天平均TTE剔除15个异常值，实际纳入123个；不剔除时47天。TTE相对补丁发布前后计算，不要写成所有漏洞披露后平均5天。写出这些限制。\n2. Anthropic原文正文与图5已明确64%/92%/100%归属GLM-5.3，消除“型号未确认”的内部矛盾；这些是模拟恶意请求响应/接触目标指标，不是真实攻击成功率。\n3. GLM-5.3-Flash案例的8小时是模型工作时长，不是从公开披露到可用攻击的日历窗口；研究者给了两个已知漏洞的信息；20.40美元是按API价格估算的单次案例成本，不是平均攻击成本。\n4. Z.ai自报54.4的具体计分口径若无一手证据，不得断言是分级分数或等同端到端成功率；不把推论升级为事实。\n5. 修正不精确的逐字引用，可改成明确归属的中文转述。\n6. 实际访问依据以本次Runtime记录的工具调用及配对返回为准，不能自己编造调用次数或已阅PDF页数。每项来源在文内给真实URL、访问情况、关键原文位置及必要短摘录；若只读到WebFetch摘要就如实注明，不声称完整原文/PDF逐页阅读。核验失败或来源内容冲突必须明确保留不确定性。\nRuntime采集文件和访问摘要，由 worker-3 Codex 独立审查。需修改仍由Claude执行。只有资料通过审查并以受控产物包交付后，Pi才可使用。",
             "forbidden_paths": [
               ".git/",
               ".xingshu/",
@@ -312,9 +311,9 @@
             },
             "title": "Claude 联网研究与事实核查资料包"
           },
-          "state": "NEEDS_CHANGES",
+          "state": "READY",
           "task_id": "TASK-RESEARCH",
-          "task_version": 1
+          "task_version": 2
         },
         {
           "attempt": 0,
@@ -383,15 +382,15 @@
           },
           "state": "READY",
           "task_id": "TASK-WRITING",
-          "task_version": 1
+          "task_version": 2
         }
       ]
     },
     "results_reviews": {
-      "authorized_ready_candidates": [],
-      "needs_attention": [
+      "authorized_ready_candidates": [
         "TASK-RESEARCH"
       ],
+      "needs_attention": [],
       "next_action": "wait_for_user_resume",
       "omitted_quality_summaries": 0,
       "quality_index": [
@@ -520,58 +519,12 @@
     "code_index": {
       "business_code_included": false,
       "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-      "effective_bases": [
-        {
-          "artifact_inputs": [],
-          "dependencies": [],
-          "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-          "proof_digest": "0b8d7690785508c21861668a77139d795475d53f67a10614df8329231ca7217f",
-          "source_control_rev": 2,
-          "source_event_watermark": 1314,
-          "task_id": "TASK-RESEARCH",
-          "task_version": 1
-        }
-      ],
+      "effective_bases": [],
       "material_commit_is_business_source": false,
       "omitted_effective_base_proofs": 0,
       "omitted_shared_material_refs": 0,
       "requires_live_dependency_revalidation": true,
       "shared_materials": [
-        {
-          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "commit_sha": "b0c3220a3e6fcbb15906fbefef24d9fd1e5599bb",
-          "content_digest": "ed20fa4cc67e0a040879ae8f82d2b7b19bcc4358b4e274a773890a77761a969a",
-          "manifest_hash": "e88696ca28b3e02bf2a6c6daf1bb1f4a6d2e1a47f3d1af301ad7167b5ada0c58",
-          "observed_at": "2026-10-03T17:29:34.934809+00:00",
-          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/ed20fa4cc67e0a040879ae8f82d2b7b19bcc4358b4e274a773890a77761a969a",
-          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "subject": {
-            "kind": "repair_base",
-            "next_attempt": 2,
-            "proof_digest": "ca66e843fe25cb36bff281b89366278265b5c67b0a38bf5013732bd810ee91cb",
-            "task_id": "TASK-RESEARCH",
-            "task_version": 1
-          },
-          "subject_hash": "5452bb833e41f3dbaec0dafcbc7a0e54f5bb3cdcaa2321bef3bfb9d13a1b018f"
-        },
-        {
-          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "commit_sha": "cce6bcaca4087e4b8995b69444003a63cef72593",
-          "content_digest": "9f031b50231622928e2f7b51870e3f7d39f1ba02626a5c25728f7cc43184b663",
-          "manifest_hash": "903f18bba5c725c65c08dae3a935a84ad0f0ddc299449a14c4403269d4b72e09",
-          "observed_at": "2026-10-03T17:09:15.041700+00:00",
-          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/9f031b50231622928e2f7b51870e3f7d39f1ba02626a5c25728f7cc43184b663",
-          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "subject": {
-            "kind": "execution_base",
-            "proof_digest": "0b8d7690785508c21861668a77139d795475d53f67a10614df8329231ca7217f",
-            "task_id": "TASK-RESEARCH",
-            "task_version": 1
-          },
-          "subject_hash": "50c6286ba4801440ffcbf2868d4896ce75774a2bb874711470ece2cd6c6d0bc5"
-        },
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "6a184072923d37971fa59442db242f4f86000a47",
@@ -591,17 +544,17 @@
     },
     "feedback_index": {
       "archive_references": [],
-      "authorized_candidates": [],
-      "authorized_repairs": [
+      "authorized_candidates": [
         {
           "result_id": null,
-          "state": "NEEDS_CHANGES",
+          "state": "READY",
           "task_id": "TASK-RESEARCH",
-          "task_version": 1
+          "task_version": 2
         }
       ],
-      "control_rev": 2,
-      "event_watermark": 2941,
+      "authorized_repairs": [],
+      "control_rev": 3,
+      "event_watermark": 3130,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
