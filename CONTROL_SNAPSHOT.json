@@ -2,12 +2,41 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 2,
-  "snapshot_revision": 16,
-  "event_watermark": 1946,
+  "snapshot_revision": 17,
+  "event_watermark": 2084,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T17:24:17.816506+00:00",
+  "generated_at": "2026-10-03T17:27:54.100595+00:00",
   "source_event_ids": [
-    "config-8dd45a90f6b8344a57f1c35b00e6032a59abcf72a3aad45d2b5694076b553a99"
+    "config-6221b90a040f4ff0f555c275b4e128e1412c2f217918f006f593018e346b8169",
+    "invoke-85f8ffb13456c5b01de8f59b7dbf5133cdda5b102cdf1a1af3fcee2251e81b7c",
+    "config-d885f4c9f60e9e54f0ddb61d790934b5bc968a3ad19d492b7f1d1c18d3d20d21",
+    "config-fbbf5e55fe0906afbcb03019671046c7ae8f2455f45323f6924cecb76df15277",
+    "invoke-cdd2fd32bd1be74bfa6c5993990b027ff876150ead64272dd70fab814e62d259",
+    "config-535c5d278e0e7edf150011a534ab726eee9d5205237cff7a1e43bff6d84d915f",
+    "config-b3dc3b1307e2533cfa73bb53b7ff4886ed0a3b7cb8a1f40254b9714ae9759639",
+    "invoke-92cdfd957028df9d6788ce30339555b1d0e4c6e35856ca2621089f8788088b5f",
+    "config-0d680579d26971113f6e4416f5a6e57863a862adb2e4c72a3b515d3085efabc2",
+    "invoke-40ac8e76e2f868f844ef704fa6658d2478dd45520c55dba94e3a262fc5c102ab",
+    "config-32bca654a75da8f1a0de83d412633370c0745884ef24a5d760eb9ce255eaffb4",
+    "config-56d71f5967791c74215b8b6721d19e4b7df44ef4c6f35dae6ac027956f5ec303",
+    "invoke-916bd1a9b9212c3f17ba0a3c089032ff24c2be6ca4a525ec12ce2725b5bde85f",
+    "config-13a9f05d6a061788a446c3c413770fa96f164fe151ffd869b166644a7016598c",
+    "config-610b23787a4ebca28ec737b79e3482ddfeed92ec151e3135bce063e8a90ceb23",
+    "config-dee1d9309a298c4661fd804705aba2522e2e47836d58a5c07fc61c38a8617742",
+    "invoke-454e536e2b80da4c93ff59597afab09399b96ccc4a4b0c15376f450fdb803ce7",
+    "quality-bc9c59e6cc4c3a1cf493826bdf5d3cb925570bf6270aa7464b0a1f009a4e49e7",
+    "config-23dba8ace7f3bd36940d3f2fa0c9ac5674601cf64a04eaba8fce38578efed4f2",
+    "invoke-30c3de902b100240d27ab34c155afcdcf2b7338216e334398ba1fa1d4774c862",
+    "config-ab58eb03ec1c45907525641e93961942612f35763edc33c60550a7e4d7e78125",
+    "config-7554e6ad5f7d8df3630fe0090a465eb6c412ecb4200daaf85c2227f9a23803be",
+    "invoke-3bdb9829661a22cc56e9ab1e0d811401869410f53c46d3cff8bf943e3fa3e7d2",
+    "config-4823f864b1336e32bddabaf215904ebf05aa43ab1088838b22e4eaedf4c0410c",
+    "config-a076512af1a54df0721beb4835233047a8cd628737eac894e57b14617935389a",
+    "invoke-b0baca911778b2fec343ddc7ad0cd1a80c854716f98561ac9d47327f52231796",
+    "config-edea921d6f500a1271200607c2022a58ee049d0999f72fd74730ecafcffb6dfc",
+    "config-9d89b023adbfa9104ba723f4f233986a01626722d4634ffcf3f7f207e5e30eea",
+    "config-98b18313574e0812c98bae974c988d1247606a5576ba61565cedc4dfc24e778a",
+    "config-98752a39d261b6f5fe57e945ab982d3b672a42cab3c45316294908298da4d014"
   ],
   "documents": {
     "rules": null,
@@ -429,6 +458,45 @@
           }
         },
         {
+          "attempt": 1,
+          "binding": {
+            "content": {
+              "artifact_hash": "4364d826f3ca51c79acee58eeaf860c917bd18890a056efcd215ad29c2c3862c",
+              "kind": "artifact"
+            },
+            "task_version": 1
+          },
+          "collected_at": "2026-10-03T17:26:42.937098+00:00",
+          "current_status": "current",
+          "evidence_id": "verification-evidence-b340f3f88d09e0036c044b3c9149b20766c9250ea45ca062abbff73a61bb7ad5",
+          "exit_code": null,
+          "fact_kind": "evidence",
+          "invalidated": false,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "4221ada7caf3bfbd9aa447849a9af0cbcebd97b2e9b9fc2c6209d9dbdcac813a",
+          "run_id": "inv-ea88fc0cfc31431419a3b5470a756262f5964720ff75958797f3a0afa5f989d7",
+          "source": "independent_review",
+          "status": "current",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 1,
+          "verification": {
+            "acceptance_ids": [
+              "AC-RESEARCH-FILES",
+              "AC-RESEARCH-QUALITY"
+            ],
+            "command_id": null,
+            "covered_requirements": [
+              "review.md"
+            ],
+            "result_id": "result-441a8c0adf4746ebf0d5f63a8a617b3b5d720fba65d33e91503b30a17530f766",
+            "review_conclusion": "changes_requested",
+            "reviewer_config_version": 1,
+            "reviewer_id": "worker-3",
+            "target_base_sha": null,
+            "verification_succeeded": true
+          }
+        },
+        {
           "artifacts": [
             {
               "content_hash": "2932faa0916b6af04ab818ebfcaa86e1cdcb29d7e84854b0021022ea276fb53a",
@@ -497,6 +565,24 @@
       "omitted_shared_material_refs": 0,
       "requires_live_dependency_revalidation": true,
       "shared_materials": [
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "4871dadc1c4ca8fb096cc534b8b3b37d8e67cf5d",
+          "content_digest": "69a1b3b478791ab15bfb6775a2cb54772cac5788766171c9589e7e9288bbf540",
+          "manifest_hash": "44ed8bbbe1a374a0caaf5967fe0f8b62b13e4cd8a79852dba2207dc41262a1a3",
+          "observed_at": "2026-10-03T17:27:43.486575+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/69a1b3b478791ab15bfb6775a2cb54772cac5788766171c9589e7e9288bbf540",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "kind": "task_result",
+            "result_id": "result-441a8c0adf4746ebf0d5f63a8a617b3b5d720fba65d33e91503b30a17530f766",
+            "run_id": "run-83e9e30bebaa71cfc88ea825e9b610f662814e673642e900f5fa2ad6c6281a43",
+            "stage": "verification",
+            "task_id": "TASK-RESEARCH",
+            "task_version": 1
+          },
+          "subject_hash": "6dd468bd98e3aa00820aab57a27ba215d1dc363c2eedc6d310dbcda14e192d26"
+        },
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "bd7467beec72e184486b481cbe9bed1f730b2234",
@@ -571,7 +657,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 2,
-      "event_watermark": 1946,
+      "event_watermark": 2084,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
