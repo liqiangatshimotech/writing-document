@@ -22,6 +22,24 @@
   "shared_materials": [
     {
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "commit_sha": "964a33ebe512eb7a840029d5f90b42366484540f",
+      "content_digest": "39480236ef313aaf372cd9a28bdd0cd38acc2eea1151496cb053b5b68d21d76b",
+      "manifest_hash": "eeb89d187348af267c34f352d6c109548742d2d1023e9fcd8f0523304d1bed69",
+      "observed_at": "2026-10-03T19:42:38.785915+00:00",
+      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/39480236ef313aaf372cd9a28bdd0cd38acc2eea1151496cb053b5b68d21d76b",
+      "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "subject": {
+        "kind": "task_result",
+        "result_id": "result-9de14fb4d087c72c3e4678b4dfcb40131c9434191817f387ac5166a07c94f61a",
+        "run_id": "run-b6ddeaa7c3871b1f5c5b26114d7680c8bb7dbcd16e8250e6a7ea3a22f521a721",
+        "stage": "verification",
+        "task_id": "TASK-RESEARCH",
+        "task_version": 5
+      },
+      "subject_hash": "2a036f7bc308fa347122218271bfd8e1876cd125ef9b532f286d0959663f9ef8"
+    },
+    {
+      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "commit_sha": "60c302ad4921394ea59fb2326c87aba4adee230a",
       "content_digest": "1bc51ed49f9ca5d89d349ed19a05f0ac79fb82f636006a5acc1523b0539e0f00",
       "manifest_hash": "c5da631119b08212dc8207b1d7d56bc5655a706fdb27b50351ae97c49a60f65c",
