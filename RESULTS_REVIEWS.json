@@ -1,7 +1,9 @@
 {
-  "authorized_ready_candidates": [],
+  "authorized_ready_candidates": [
+    "TASK-RESEARCH"
+  ],
   "needs_attention": [],
-  "next_action": "wait_for_event",
+  "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
   "omitted_quality_summaries": 0,
   "quality_index": [],
   "report_bodies_included": false,

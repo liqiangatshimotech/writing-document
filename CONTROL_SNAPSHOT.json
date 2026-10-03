@@ -1,27 +1,38 @@
 {
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-  "control_rev": 1,
-  "snapshot_revision": 8,
-  "event_watermark": 1220,
+  "control_rev": 2,
+  "snapshot_revision": 9,
+  "event_watermark": 1253,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T17:05:44.857112+00:00",
+  "generated_at": "2026-10-03T17:08:24.342388+00:00",
   "source_event_ids": [
-    "config-8f95037e3e1ac16325bdcf76baa3b2a079c571c66278229433df269e46c2d1fc",
-    "config-d2e98fdb2bd76b652a9142f9587fd6fe93882be6486de28fad73cfefd94cb124",
-    "config-78b615c9ad61033b8fb683cc03b2bbd409f9c5456bfee84ad9a215eabaa2df8e",
-    "config-f5a887c448b9c3253d46034097fdc355ffed60e50aeadbd2fff6879d9a13f0f6"
+    "invoke-2cdbefcad74de766d3e23f6511971d02d7c7aaa8633ecffa79e688facc74f78e",
+    "config-57b8a65ea918749e5236813909f2612fc4013efefd831c864edc14cd206756de",
+    "config-95690cdd8ff7ec07e7ab9a4ecad43ec8c2c45a9dc50e9d99c1c158f484ccc561",
+    "invoke-5d9fef81bef8ceb352decf42ea1076b55f2ed54bc867c809efc7a531f2bfceec",
+    "config-6a287c1a079dd210a43ce38f6b536c6795b0f9d01c899059881db4ac90363324",
+    "config-d6c5f47f9b22c4c1804b27f5f1a60432db063ba4332429b910d5dbc485947f92",
+    "config-aa2246340fe47ef4f93eb54390b2c1257d798a70e6d40c2afca90214748c5d7f",
+    "invoke-7e1348e4de916494e4021951dc3da834cf559c84410ec06de1c2fa55eb8b2b4a",
+    "config-f7c60c753e2a7e0034cf21bf95ec6cf92f4e198fe638834248d19b27d6bdd09d",
+    "config-2fc420fc98e2697c10880e8a29cfc5c9f5a2516482b3582f79d992d979ba1bcb",
+    "config-96d670627d1d38499c77395b95b36b6bd54be783fac9ac2a89131ba94db64796",
+    "config-53112a301c459792faee553d32dd4e91c06c59d5f06fceae83725581f77cb0d3",
+    "plan-25d5e48faeeb87870aefb53d703273592f959ec016ef71793b0bba0d7c51c98f",
+    "config-6d131ee48aebfeebe6966b0d96ef4eeabbcdc03fd671ac55c5cebd7a136a097d",
+    "config-9a6b7798cbf6a6bbecab7cb22de25f3214dd3a5cbdf5903e96261cd44e6c7bf7"
   ],
   "documents": {
     "rules": null,
     "project": {
-      "active_plan_id": null,
+      "active_plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
       "code_ref": "main",
       "collaboration_entry": "共享任务入口（project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b）：先固定读取 Runtime 发布的控制提交及其 AGENTS.md/CONTROL_SNAPSHOT.json；不得修改控制分支或从快照自行领取租约。\n规划提案使用 xingshu/repository-proposal/1，唯一文件 PROPOSAL.json；字段 schema、project_id、proposal_id、observed_control_commit、plan（agentplan/1，observed_control_commit 与外层相同）。独立不可变 ref 为 refs/heads/xingshu/inbox/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/<proposal_id 的 UTF-8 SHA-256>；只创建，不覆盖或删除旧提案。提案需绑定所读控制修订和代码基线，不得携带状态、审批、结果或任意执行命令。Git 作者不是 Agent 身份。Runtime 自动发现后核验权限与当前版本；只有其正式派发才允许执行。读取代码和成果时，先在同一固定控制提交读取 CODE_INDEX.json.shared_materials；RESULTS_REVIEWS.json.shared_materials_index 指向该目录。只读取其中对应主体的不可变 reference/commit_sha 和 MANIFEST.json，核对文件摘要；真实业务代码提交是 source_head_sha。材料载体 commit 只用于传递代码对象和有界报告，不能作为业务执行基线或合入业务分支。未列出所需共享材料时等待 Runtime 发布，不能只凭 SHA 或报告索引声称已取得正文。读取失败应报告缺失，不能声称已读。\n",
       "control_ref": "ai-control",
       "goal_progress": {
-        "plan_id": null,
-        "state": "authorized"
+        "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+        "state": "awaiting_publication"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -100,7 +111,7 @@
       "shared_context_redacted_fields": [],
       "shared_context_revision": null
     },
-    "roadmap": null,
+    "roadmap": "# 当前已接受路线\n计划：PLAN-04d0d0cf06cdf3ae6ac90ffb\n目标：围绕 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities 的议题完成原创中文深度研究和两份成稿。严格由Codex总编调度，worker-1 Claude资料研究员实际联网搜索核实，worker-2 Pi主笔写作，worker-3 Codex独立编辑审查验收；主Agent不得代替指定作者写正文。\n仅规划两个有依赖的纯documentation任务、document输出，以文件产物包artifact_delivered交付：\n任务1交给research能力的Claude：阅读指定原文，检索至少6个相关一手来源，优先Anthropic、NIST/CAISI、ExploitBench论文、Z.ai官方资料与可信防守建议。输出research/sources.md（标题、发布者、日期、URL、证据摘要与局限）和research/fact-check.md（关键数字/分母、实测与模拟区别、争议与不确定性）。无法访问来源应如实标注，不伪造阅读或引用。\n任务2依赖任务1验收交付，交给writing能力的Pi，依据受控依赖资料输出：articles/wechat.md，3000至4500中文字符的公众号深度文，含3个备选标题、摘要、完整正文与参考来源；articles/douyin.md，约3至5分钟的科普口播稿，含3个标题、前5秒开场、完整可朗读正文、分段画面提示与来源。\n讨论能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示。原创综合分析，不逐段翻译或改写单篇来源；英文逐字引用每个来源不超过25词。数字可追溯，区分厂商说法/独立证据、事实/推论。特别核对64%/92%/100%的模拟有害请求响应指标，不能称为真实攻击成功率；不同评测分数/分母不可混用，不写“人人一键攻破所有系统”。不提供攻击代码、复现漏洞或绕过安全措施的操作教程。\n写入范围仅research/与articles/。验收采用artifact文件哈希（artifact-hash-report）与独立内容审查（review.md），核对来源、事实、长度、可读性和文件完整性；纯文档不需虚构代码测试命令。研究先验收交付，Pi再写作；修改由原执行者完成。不合并main、不部署，不向公众号或抖音发布。最终提供两篇成稿和研究资料位置。\n授权范围：仅提议两个串行、有依赖的纯 documentation 任务，由 main Codex 总编调度，worker-1 Claude 实际联网研究并核实，worker-2 Pi 根据研究验收交付的受控文件撰写两份成稿，worker-3 Codex 通过 Runtime 独立审查两阶段产物。主 Agent 不代写正文，修改由原执行者完成。业务文件写入仅限 research/ 与 articles/，交付类型仅为 artifact_delivered；不合并 main、不部署、不向公众号或抖音发布。Runtime 收集真实业务文件并生成 artifact-hash-report 和 review.md，工作者不制作验收报告。当前反馈未提供待处理审查或授权事项；执行调度与实时依赖核查以 SQLite Runtime 为准，本计划不授予进程、shell、审批或交付权限。\n\n先处理现有待审结果；只推进已接受任务。没有可执行任务时等待事件。\n",
     "agent_registry": {
       "agents": [
         {
@@ -198,13 +209,185 @@
       "omitted_spec_task_ids": [],
       "recent_runs": [],
       "runs_omitted": 0,
-      "task_index": [],
-      "tasks": []
+      "task_index": [
+        {
+          "attempt": 0,
+          "depends_on": [],
+          "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+          "required_capabilities": [
+            "research",
+            "fact_checking"
+          ],
+          "spec_digest": "2ae360ad96ecc81a52cdd8f6b4323bf490521613153b4c15f8cb65880935db67",
+          "state": "READY",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 1,
+          "title": "Claude 联网研究与事实核查资料包",
+          "title_truncated": false
+        },
+        {
+          "attempt": 0,
+          "depends_on": [
+            "TASK-RESEARCH"
+          ],
+          "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+          "required_capabilities": [
+            "writing",
+            "documentation"
+          ],
+          "spec_digest": "5059653931df2abab65d7bd3205639d07bb603b25626f16ce2dd08253a9923b1",
+          "state": "READY",
+          "task_id": "TASK-WRITING",
+          "task_version": 1,
+          "title": "Pi 撰写公众号深度文与抖音科普口播稿",
+          "title_truncated": false
+        }
+      ],
+      "tasks": [
+        {
+          "attempt": 0,
+          "spec": {
+            "acceptance": [
+              {
+                "description": "Runtime 收集两个声明的研究文件，确认文件存在、可读取、内容完整，并以哈希绑定后续写作使用的研究产物。",
+                "evidence": [
+                  "artifact-hash-report"
+                ],
+                "id": "AC-RESEARCH-FILES",
+                "verifier": {
+                  "kind": "artifact"
+                }
+              },
+              {
+                "description": "由 worker-3 Codex 独立审查：指定原文及至少 6 个额外相关一手来源有真实访问与阅读依据，元数据和证据摘要准确，无法访问的来源明确标注且不充作已核实证据；数字可追溯到来源及其分母，64%/92%/100% 按来源核对为模拟有害请求响应指标而非真实攻击成功率；不同评测不混用，厂商说法、独立证据、事实、推论及不确定性清楚区分。资料充分覆盖六个讨论主题，英文逐字引用每个来源累计不超过 25 词，无攻击代码、漏洞复现或绕过措施教程。检查来源、事实、可读性和资料完整性；修订由 Claude 完成。",
+                "evidence": [
+                  "review.md"
+                ],
+                "id": "AC-RESEARCH-QUALITY",
+                "verifier": {
+                  "kind": "independent_review"
+                }
+              }
+            ],
+            "allowed_paths": [
+              "research/"
+            ],
+            "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+            "completion": {
+              "type": "artifact_delivered"
+            },
+            "depends_on": [],
+            "description": "由 worker-1 Claude 资料研究员执行，main 仅负责调度。实际访问并阅读指定 Anthropic 原文，另检索至少 6 个相关一手来源，优先覆盖 Anthropic、NIST/CAISI、ExploitBench 论文、Z.ai 官方资料及可信防守建议。记录来源元数据、证据摘要、对应论点和局限；访问失败须如实记录，不得将未读来源计入已核实证据。逐项核对关键数字、分母、评测设置、实测与模拟差异及证据归属，特别查明 64%/92%/100% 的模拟有害请求响应指标，无法确认的内容明确保留不确定性。形成能力提升、可获得性、补丁窗口、开放权重利弊、评测局限及防守启示的研究依据。仅输出两个研究业务文件；Runtime 收集文件、生成哈希报告并交由 worker-3 Codex 独立审查。审查所需修订仍由 worker-1 完成。研究资料须先验收并以受控产物交付，再供 TASK-WRITING 使用。",
+            "forbidden_paths": [
+              ".git/",
+              ".xingshu/",
+              "articles/"
+            ],
+            "id": "TASK-RESEARCH",
+            "kind": "documentation",
+            "outputs": [
+              {
+                "description": "指定原文与至少 6 个相关一手来源的研究清单，包含标题、发布者、日期、URL、证据摘要、局限及访问情况，提供可用于后续写作的来源索引。",
+                "kind": "document",
+                "path": "research/sources.md"
+              },
+              {
+                "description": "可追溯事实核查表及分析笔记，包含关键数字与分母、评测条件、实测与模拟区别、厂商说法与独立证据、事实与推论、争议及不确定性。",
+                "kind": "document",
+                "path": "research/fact-check.md"
+              }
+            ],
+            "required_capabilities": [
+              "research",
+              "fact_checking"
+            ],
+            "retry_policy": {
+              "max_attempts": 2,
+              "max_concurrency": 1
+            },
+            "title": "Claude 联网研究与事实核查资料包"
+          },
+          "state": "READY",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 1
+        },
+        {
+          "attempt": 0,
+          "spec": {
+            "acceptance": [
+              {
+                "description": "Runtime 收集两个声明的成稿文件，确认文件存在、可读取且内容完整，以哈希绑定实际交付版本；交付包可定位两份成稿及已验收研究资料。",
+                "evidence": [
+                  "artifact-hash-report"
+                ],
+                "id": "AC-WRITING-FILES",
+                "verifier": {
+                  "kind": "artifact"
+                }
+              },
+              {
+                "description": "由 worker-3 Codex 独立审查：写作使用已验收的受控研究资料，引用和关键数字可追溯，所有六个主题均有充分讨论；64%/92%/100% 不被写成真实攻击成功率，评测分数与分母不混用，厂商说法与独立证据、事实与推论清楚区分，保留必要争议和不确定性。确认原创综合分析而非单篇逐段改写，每个来源英文逐字引用累计不超过 25 词，无夸张普遍攻击断言或攻击操作教程。实际统计公众号中文字符，说明统计口径并核对 3000 至 4500 要求，检查 3 个标题、摘要、正文与参考来源齐全；依据可朗读正文长度和明确语速估算或试读核对口播约 3 至 5 分钟，检查 3 个标题、前 5 秒开场、完整朗读稿、分段画面提示和来源齐全。评估中文可读性、叙事连贯性、事实准确性及文件完整性，修订由 Pi 完成。",
+                "evidence": [
+                  "review.md"
+                ],
+                "id": "AC-WRITING-QUALITY",
+                "verifier": {
+                  "kind": "independent_review"
+                }
+              }
+            ],
+            "allowed_paths": [
+              "articles/"
+            ],
+            "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+            "completion": {
+              "type": "artifact_delivered"
+            },
+            "depends_on": [
+              "TASK-RESEARCH"
+            ],
+            "description": "由 worker-2 Pi 主笔执行，main 不代写正文。仅在 TASK-RESEARCH 经独立审查、文件哈希验证并验收交付后开始，使用 Runtime 提供的受控研究文件及其来源索引，确保依赖版本与已验收哈希一致。依据资料原创综合分析，完成公众号深度文和约 3 至 5 分钟口播稿，讨论能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示。所有数字与实质性事实可回溯研究证据，不以未经核实材料补足论点；研究缺口交回原研究执行者处理，Pi 不修改研究文件。避免逐段翻译或改写单篇来源，每个来源的英文逐字引用累计不超过 25 词。明确区分模拟响应与真实攻击成功、不同评测分母、厂商说法与独立证据、事实与推论，不做普遍一键攻破的夸张表述，不提供攻击操作教程。Runtime 收集成稿并交 worker-3 Codex 独立编辑审查，成稿修改由 Pi 完成；最终文件产物包提供两份成稿与受控研究资料位置，不发布到外部平台。",
+            "forbidden_paths": [
+              ".git/",
+              ".xingshu/",
+              "research/"
+            ],
+            "id": "TASK-WRITING",
+            "kind": "documentation",
+            "outputs": [
+              {
+                "description": "3000 至 4500 中文字符的公众号原创深度文，含 3 个备选标题、摘要、完整正文及可追溯参考来源。",
+                "kind": "document",
+                "path": "articles/wechat.md"
+              },
+              {
+                "description": "约 3 至 5 分钟的科普口播稿，含 3 个标题、前 5 秒开场、完整可朗读正文、分段画面提示及来源；画面提示与朗读内容清楚分开。",
+                "kind": "document",
+                "path": "articles/douyin.md"
+              }
+            ],
+            "required_capabilities": [
+              "writing",
+              "documentation"
+            ],
+            "retry_policy": {
+              "max_attempts": 2,
+              "max_concurrency": 1
+            },
+            "title": "Pi 撰写公众号深度文与抖音科普口播稿"
+          },
+          "state": "READY",
+          "task_id": "TASK-WRITING",
+          "task_version": 1
+        }
+      ]
     },
     "results_reviews": {
-      "authorized_ready_candidates": [],
+      "authorized_ready_candidates": [
+        "TASK-RESEARCH"
+      ],
       "needs_attention": [],
-      "next_action": "wait_for_event",
+      "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
       "omitted_quality_summaries": 0,
       "quality_index": [],
       "report_bodies_included": false,
@@ -240,16 +423,23 @@
     },
     "feedback_index": {
       "archive_references": [],
-      "authorized_candidates": [],
+      "authorized_candidates": [
+        {
+          "result_id": null,
+          "state": "READY",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 1
+        }
+      ],
       "authorized_repairs": [],
-      "control_rev": 1,
-      "event_watermark": 1220,
+      "control_rev": 2,
+      "event_watermark": 1253,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
       ],
       "needs_attention": [],
-      "next_action": "wait_for_event",
+      "next_action": "consider_only_authorized_tasks_after_live_checks",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
       "pending_results": [],

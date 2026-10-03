@@ -1,15 +1,22 @@
 {
   "archive_references": [],
-  "authorized_candidates": [],
+  "authorized_candidates": [
+    {
+      "result_id": null,
+      "state": "READY",
+      "task_id": "TASK-RESEARCH",
+      "task_version": 1
+    }
+  ],
   "authorized_repairs": [],
-  "control_rev": 1,
-  "event_watermark": 1220,
+  "control_rev": 2,
+  "event_watermark": 1253,
   "history_count": 0,
   "missing": [
     "full_report_bodies"
   ],
   "needs_attention": [],
-  "next_action": "wait_for_event",
+  "next_action": "consider_only_authorized_tasks_after_live_checks",
   "next_history_before_event_seq": null,
   "omitted_recent_entries": 0,
   "pending_results": [],

@@ -4,6 +4,176 @@
   "omitted_spec_task_ids": [],
   "recent_runs": [],
   "runs_omitted": 0,
-  "task_index": [],
-  "tasks": []
+  "task_index": [
+    {
+      "attempt": 0,
+      "depends_on": [],
+      "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+      "required_capabilities": [
+        "research",
+        "fact_checking"
+      ],
+      "spec_digest": "2ae360ad96ecc81a52cdd8f6b4323bf490521613153b4c15f8cb65880935db67",
+      "state": "READY",
+      "task_id": "TASK-RESEARCH",
+      "task_version": 1,
+      "title": "Claude 联网研究与事实核查资料包",
+      "title_truncated": false
+    },
+    {
+      "attempt": 0,
+      "depends_on": [
+        "TASK-RESEARCH"
+      ],
+      "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+      "required_capabilities": [
+        "writing",
+        "documentation"
+      ],
+      "spec_digest": "5059653931df2abab65d7bd3205639d07bb603b25626f16ce2dd08253a9923b1",
+      "state": "READY",
+      "task_id": "TASK-WRITING",
+      "task_version": 1,
+      "title": "Pi 撰写公众号深度文与抖音科普口播稿",
+      "title_truncated": false
+    }
+  ],
+  "tasks": [
+    {
+      "attempt": 0,
+      "spec": {
+        "acceptance": [
+          {
+            "description": "Runtime 收集两个声明的研究文件，确认文件存在、可读取、内容完整，并以哈希绑定后续写作使用的研究产物。",
+            "evidence": [
+              "artifact-hash-report"
+            ],
+            "id": "AC-RESEARCH-FILES",
+            "verifier": {
+              "kind": "artifact"
+            }
+          },
+          {
+            "description": "由 worker-3 Codex 独立审查：指定原文及至少 6 个额外相关一手来源有真实访问与阅读依据，元数据和证据摘要准确，无法访问的来源明确标注且不充作已核实证据；数字可追溯到来源及其分母，64%/92%/100% 按来源核对为模拟有害请求响应指标而非真实攻击成功率；不同评测不混用，厂商说法、独立证据、事实、推论及不确定性清楚区分。资料充分覆盖六个讨论主题，英文逐字引用每个来源累计不超过 25 词，无攻击代码、漏洞复现或绕过措施教程。检查来源、事实、可读性和资料完整性；修订由 Claude 完成。",
+            "evidence": [
+              "review.md"
+            ],
+            "id": "AC-RESEARCH-QUALITY",
+            "verifier": {
+              "kind": "independent_review"
+            }
+          }
+        ],
+        "allowed_paths": [
+          "research/"
+        ],
+        "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+        "completion": {
+          "type": "artifact_delivered"
+        },
+        "depends_on": [],
+        "description": "由 worker-1 Claude 资料研究员执行，main 仅负责调度。实际访问并阅读指定 Anthropic 原文，另检索至少 6 个相关一手来源，优先覆盖 Anthropic、NIST/CAISI、ExploitBench 论文、Z.ai 官方资料及可信防守建议。记录来源元数据、证据摘要、对应论点和局限；访问失败须如实记录，不得将未读来源计入已核实证据。逐项核对关键数字、分母、评测设置、实测与模拟差异及证据归属，特别查明 64%/92%/100% 的模拟有害请求响应指标，无法确认的内容明确保留不确定性。形成能力提升、可获得性、补丁窗口、开放权重利弊、评测局限及防守启示的研究依据。仅输出两个研究业务文件；Runtime 收集文件、生成哈希报告并交由 worker-3 Codex 独立审查。审查所需修订仍由 worker-1 完成。研究资料须先验收并以受控产物交付，再供 TASK-WRITING 使用。",
+        "forbidden_paths": [
+          ".git/",
+          ".xingshu/",
+          "articles/"
+        ],
+        "id": "TASK-RESEARCH",
+        "kind": "documentation",
+        "outputs": [
+          {
+            "description": "指定原文与至少 6 个相关一手来源的研究清单，包含标题、发布者、日期、URL、证据摘要、局限及访问情况，提供可用于后续写作的来源索引。",
+            "kind": "document",
+            "path": "research/sources.md"
+          },
+          {
+            "description": "可追溯事实核查表及分析笔记，包含关键数字与分母、评测条件、实测与模拟区别、厂商说法与独立证据、事实与推论、争议及不确定性。",
+            "kind": "document",
+            "path": "research/fact-check.md"
+          }
+        ],
+        "required_capabilities": [
+          "research",
+          "fact_checking"
+        ],
+        "retry_policy": {
+          "max_attempts": 2,
+          "max_concurrency": 1
+        },
+        "title": "Claude 联网研究与事实核查资料包"
+      },
+      "state": "READY",
+      "task_id": "TASK-RESEARCH",
+      "task_version": 1
+    },
+    {
+      "attempt": 0,
+      "spec": {
+        "acceptance": [
+          {
+            "description": "Runtime 收集两个声明的成稿文件，确认文件存在、可读取且内容完整，以哈希绑定实际交付版本；交付包可定位两份成稿及已验收研究资料。",
+            "evidence": [
+              "artifact-hash-report"
+            ],
+            "id": "AC-WRITING-FILES",
+            "verifier": {
+              "kind": "artifact"
+            }
+          },
+          {
+            "description": "由 worker-3 Codex 独立审查：写作使用已验收的受控研究资料，引用和关键数字可追溯，所有六个主题均有充分讨论；64%/92%/100% 不被写成真实攻击成功率，评测分数与分母不混用，厂商说法与独立证据、事实与推论清楚区分，保留必要争议和不确定性。确认原创综合分析而非单篇逐段改写，每个来源英文逐字引用累计不超过 25 词，无夸张普遍攻击断言或攻击操作教程。实际统计公众号中文字符，说明统计口径并核对 3000 至 4500 要求，检查 3 个标题、摘要、正文与参考来源齐全；依据可朗读正文长度和明确语速估算或试读核对口播约 3 至 5 分钟，检查 3 个标题、前 5 秒开场、完整朗读稿、分段画面提示和来源齐全。评估中文可读性、叙事连贯性、事实准确性及文件完整性，修订由 Pi 完成。",
+            "evidence": [
+              "review.md"
+            ],
+            "id": "AC-WRITING-QUALITY",
+            "verifier": {
+              "kind": "independent_review"
+            }
+          }
+        ],
+        "allowed_paths": [
+          "articles/"
+        ],
+        "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+        "completion": {
+          "type": "artifact_delivered"
+        },
+        "depends_on": [
+          "TASK-RESEARCH"
+        ],
+        "description": "由 worker-2 Pi 主笔执行，main 不代写正文。仅在 TASK-RESEARCH 经独立审查、文件哈希验证并验收交付后开始，使用 Runtime 提供的受控研究文件及其来源索引，确保依赖版本与已验收哈希一致。依据资料原创综合分析，完成公众号深度文和约 3 至 5 分钟口播稿，讨论能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示。所有数字与实质性事实可回溯研究证据，不以未经核实材料补足论点；研究缺口交回原研究执行者处理，Pi 不修改研究文件。避免逐段翻译或改写单篇来源，每个来源的英文逐字引用累计不超过 25 词。明确区分模拟响应与真实攻击成功、不同评测分母、厂商说法与独立证据、事实与推论，不做普遍一键攻破的夸张表述，不提供攻击操作教程。Runtime 收集成稿并交 worker-3 Codex 独立编辑审查，成稿修改由 Pi 完成；最终文件产物包提供两份成稿与受控研究资料位置，不发布到外部平台。",
+        "forbidden_paths": [
+          ".git/",
+          ".xingshu/",
+          "research/"
+        ],
+        "id": "TASK-WRITING",
+        "kind": "documentation",
+        "outputs": [
+          {
+            "description": "3000 至 4500 中文字符的公众号原创深度文，含 3 个备选标题、摘要、完整正文及可追溯参考来源。",
+            "kind": "document",
+            "path": "articles/wechat.md"
+          },
+          {
+            "description": "约 3 至 5 分钟的科普口播稿，含 3 个标题、前 5 秒开场、完整可朗读正文、分段画面提示及来源；画面提示与朗读内容清楚分开。",
+            "kind": "document",
+            "path": "articles/douyin.md"
+          }
+        ],
+        "required_capabilities": [
+          "writing",
+          "documentation"
+        ],
+        "retry_policy": {
+          "max_attempts": 2,
+          "max_concurrency": 1
+        },
+        "title": "Pi 撰写公众号深度文与抖音科普口播稿"
+      },
+      "state": "READY",
+      "task_id": "TASK-WRITING",
+      "task_version": 1
+    }
+  ]
 }
