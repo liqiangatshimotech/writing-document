@@ -2,17 +2,15 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 7,
-  "snapshot_revision": 68,
-  "event_watermark": 10434,
+  "snapshot_revision": 69,
+  "event_watermark": 10621,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T19:52:44.674102+00:00",
+  "generated_at": "2026-10-03T19:55:09.908310+00:00",
   "source_event_ids": [
-    "quality-e4e9890fbfe97dbda3f623e2c33221084dd302dcab818feb8ded59ff41320f74",
-    "quality-ebb12aac2888f3801f9e1776e134dd19d8f264d687e1f62b1e152d19071ba9b9",
-    "config-7432592d880765e3081ff53c936013b51b5761652f776803056eaf4fa033cac1"
+    "config-eccdd74d42491e5bf68b550f80b29dbcc8e274639e033e481e5c1540066cbe7a"
   ],
   "documents": {
-    "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n当前TASK-RESEARCH v5已保存next_attempt=2的修复授权，材料已发布，作者为worker-1；修复仅需落实现有独立review的具体意见，不增加资料主题。worker修订应保留正文来源访问证据；目前Runtime按当前Run记录访问，研究者本次仍需实际读取所用七个已指定来源，不伪称继承了不存在的访问证明。所有产物使用当前cwd相对路径并Read核对。",
+    "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
     "project": {
       "active_plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
       "code_ref": "main",
@@ -96,7 +94,7 @@
       },
       "runtime_paused": true,
       "shared_context_redacted_fields": [],
-      "shared_context_revision": 1
+      "shared_context_revision": 2
     },
     "roadmap": "# 当前已接受路线\n计划：PLAN-04d0d0cf06cdf3ae6ac90ffb\n目标：围绕 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities 的议题完成原创中文深度研究和两份成稿。严格由Codex总编调度，worker-1 Claude资料研究员实际联网搜索核实，worker-2 Pi主笔写作，worker-3 Codex独立编辑审查验收；主Agent不得代替指定作者写正文。\n仅规划两个有依赖的纯documentation任务、document输出，以文件产物包artifact_delivered交付：\n任务1交给research能力的Claude：阅读指定原文，检索至少6个相关一手来源，优先Anthropic、NIST/CAISI、ExploitBench论文、Z.ai官方资料与可信防守建议。输出research/sources.md（标题、发布者、日期、URL、证据摘要与局限）和research/fact-check.md（关键数字/分母、实测与模拟区别、争议与不确定性）。无法访问来源应如实标注，不伪造阅读或引用。\n任务2依赖任务1验收交付，交给writing能力的Pi，依据受控依赖资料输出：articles/wechat.md，3000至4500中文字符的公众号深度文，含3个备选标题、摘要、完整正文与参考来源；articles/douyin.md，约3至5分钟的科普口播稿，含3个标题、前5秒开场、完整可朗读正文、分段画面提示与来源。\n讨论能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示。原创综合分析，不逐段翻译或改写单篇来源；英文逐字引用每个来源不超过25词。数字可追溯，区分厂商说法/独立证据、事实/推论。特别核对64%/92%/100%的模拟有害请求响应指标，不能称为真实攻击成功率；不同评测分数/分母不可混用，不写“人人一键攻破所有系统”。不提供攻击代码、复现漏洞或绕过安全措施的操作教程。\n写入范围仅research/与articles/。验收采用artifact文件哈希（artifact-hash-report）与独立内容审查（review.md），核对来源、事实、长度、可读性和文件完整性；纯文档不需虚构代码测试命令。研究先验收交付，Pi再写作；修改由原执行者完成。不合并main、不部署，不向公众号或抖音发布。最终提供两篇成稿和研究资料位置。\n授权范围：仅提议两个串行、有依赖的纯 documentation 任务，由 main Codex 总编调度，worker-1 Claude 实际联网研究并核实，worker-2 Pi 根据研究验收交付的受控文件撰写两份成稿，worker-3 Codex 通过 Runtime 独立审查两阶段产物。主 Agent 不代写正文，修改由原执行者完成。业务文件写入仅限 research/ 与 articles/，交付类型仅为 artifact_delivered；不合并 main、不部署、不向公众号或抖音发布。Runtime 收集真实业务文件并生成 artifact-hash-report 和 review.md，工作者不制作验收报告。当前反馈未提供待处理审查或授权事项；执行调度与实时依赖核查以 SQLite Runtime 为准，本计划不授予进程、shell、审批或交付权限。\n\n先处理现有待审结果；只推进已接受任务。没有可执行任务时等待事件。\n",
     "agent_registry": {
@@ -1217,7 +1215,7 @@
       ],
       "authorized_repairs": [],
       "control_rev": 7,
-      "event_watermark": 10434,
+      "event_watermark": 10621,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
