@@ -1,8 +1,8 @@
 {
-  "authorized_ready_candidates": [],
-  "needs_attention": [
+  "authorized_ready_candidates": [
     "TASK-RESEARCH"
   ],
+  "needs_attention": [],
   "next_action": "wait_for_user_resume",
   "omitted_quality_summaries": 0,
   "quality_index": [

@@ -35,17 +35,17 @@
   "runs_omitted": 0,
   "task_index": [
     {
-      "attempt": 1,
+      "attempt": 0,
       "depends_on": [],
       "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
       "required_capabilities": [
         "research",
         "fact_checking"
       ],
-      "spec_digest": "5983408c66248413272501481a8f0d8f44cc9869060992d374f573cb38b55cc8",
-      "state": "BLOCKED",
+      "spec_digest": "5a59aec13cf564efaedc3b09f2fdd7929da6b2237aeca68d203f0035d82d43db",
+      "state": "READY",
       "task_id": "TASK-RESEARCH",
-      "task_version": 2,
+      "task_version": 3,
       "title": "Claude 联网研究与事实核查资料包",
       "title_truncated": false
     },
@@ -62,14 +62,14 @@
       "spec_digest": "5059653931df2abab65d7bd3205639d07bb603b25626f16ce2dd08253a9923b1",
       "state": "READY",
       "task_id": "TASK-WRITING",
-      "task_version": 2,
+      "task_version": 3,
       "title": "Pi 撰写公众号深度文与抖音科普口播稿",
       "title_truncated": false
     }
   ],
   "tasks": [
     {
-      "attempt": 1,
+      "attempt": 0,
       "spec": {
         "acceptance": [
           {
@@ -101,7 +101,7 @@
           "type": "artifact_delivered"
         },
         "depends_on": [],
-        "description": "由 worker-1 Claude 资料研究员执行，main 仅负责调度。实际访问并阅读指定 Anthropic 原文 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities ，另检索至少6个相关一手来源，优先覆盖NIST/CAISI、ExploitBench论文、Z.ai官方资料及可信防守建议。仅输出 research/sources.md 和 research/fact-check.md，供 Pi 后续创作。记录准确元数据、证据摘要、对应论点、局限和原文章节/表图定位；访问失败不得当作已核实。数字可追溯，区分模拟/实测、厂商/独立、事实/推论；覆盖能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示。不要长篇复述单一来源，两个文件去重使用来源ID交叉引用；每一来源的直接概要合计控制在约400汉字以内，英文逐字引用每个来源合计不超过25词。不提供攻击代码或操作教程。\n本次须针对上轮独立审查逐项修订并真实重新核验：\n1. Mandiant 2023数据：138个漏洞是分析样本；5天平均TTE剔除15个异常值，实际纳入123个；不剔除时47天。TTE相对补丁发布前后计算，不要写成所有漏洞披露后平均5天。写出这些限制。\n2. Anthropic原文正文与图5已明确64%/92%/100%归属GLM-5.3，消除“型号未确认”的内部矛盾；这些是模拟恶意请求响应/接触目标指标，不是真实攻击成功率。\n3. GLM-5.3-Flash案例的8小时是模型工作时长，不是从公开披露到可用攻击的日历窗口；研究者给了两个已知漏洞的信息；20.40美元是按API价格估算的单次案例成本，不是平均攻击成本。\n4. Z.ai自报54.4的具体计分口径若无一手证据，不得断言是分级分数或等同端到端成功率；不把推论升级为事实。\n5. 修正不精确的逐字引用，可改成明确归属的中文转述。\n6. 实际访问依据以本次Runtime记录的工具调用及配对返回为准，不能自己编造调用次数或已阅PDF页数。每项来源在文内给真实URL、访问情况、关键原文位置及必要短摘录；若只读到WebFetch摘要就如实注明，不声称完整原文/PDF逐页阅读。核验失败或来源内容冲突必须明确保留不确定性。\nRuntime采集文件和访问摘要，由 worker-3 Codex 独立审查。需修改仍由Claude执行。只有资料通过审查并以受控产物包交付后，Pi才可使用。",
+        "description": "由 worker-1 Claude 资料研究员完成本次针对性修订，保留已核实的核心事实，勿继续扩大材料范围或加入新的统计。只产出research/sources.md和research/fact-check.md，供Pi撰稿；后续仍由worker-3 Codex独立审查，再以产物包交付。\n仅保留以下指定原文与六个额外一手来源作为主要已核实论据，实际重新访问并给出准确章节/表图/段落定位；访问失败须标明且不计作已读，可用同机构等价官方页面补足：\nS1 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities\nS3 https://arxiv.org/abs/2605.14153\nS4 https://huggingface.co/zai-org/GLM-5.3\nS5 https://docs.z.ai/guides/llm/glm-5.3\nS6 https://cloud.google.com/blog/topics/threat-intelligence/time-to-exploit-trends-2023\nS9 https://arxiv.org/abs/2406.11717\nS10 https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai\nNIST/CAISI若依然无法直接核验，只列访问情况和不确定性，不使用未核实数字。\n按第二轮独立审查收口：\n1. 去掉S4/F11的54.4等基准分数论据，不必为文章解释尚有误读风险的汇总分。S4只保留直接可核验的权重可获取性/许可/模型卡信息；不以仓库创建日期推断发布日期。S3用于说明分层能力评分与端到端成功率不同，不混用不同口径。\n2. 从两个文件删除S7/F16的N-days额外实验统计，以及S8 Glasswing初步更新的6202/1752/1094/530/75等额外数字和因果解释。这些不是本次成稿所必需，防守主题由S6与S10支撑；如保留为拓展链接须注明不作论据，不扩写。\n3. 压缩S1的重复复述：sources.md仅放元数据、原文位置和约120字简述；S1必要数字只在fact-check.md集中出现一次，其他主题只交叉引用条目ID。两文件S1直接概要总计约400汉字以内。保留50/410与56/410的特定评测语境；64%/92%/100%明确是GLM-5.3的模拟有害请求指标、不是现实攻击成功率；Flash单案例20分钟人工+8小时模型及20.40美元估算不等于披露窗口/平均攻击成本，研究者提供两项已知漏洞信息。其他S1统计可删，避免堆砌。\n4. 保留已改正的Mandiant口径：138分析样本，剔除15异常值后123个的平均TTE为5天，不剔除为47天；TTE相对补丁发布前后，非所有漏洞披露后的平均。给出Time-to-Exploit章节定位。\n5. 所有其余来源均补准确原文章节/表图/段落位置，区分厂商说法、独立证据、事实、推论和限制；S10在野案例不是GLM-5.3滥用证据。每来源英文逐字引用合计不超25词，尽量中文转述。访问证据由本次Runtime配对工具调用与返回提供；不要自编访问次数、完整PDF阅读页数，不把WebFetch摘要当逐字全文。\n资料要足以支持能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示的原创分析，无攻击代码或操作教程。不要生成Runtime验收报告，不改articles/或扩大任务。",
         "forbidden_paths": [
           ".git/",
           ".xingshu/",
@@ -131,9 +131,9 @@
         },
         "title": "Claude 联网研究与事实核查资料包"
       },
-      "state": "BLOCKED",
+      "state": "READY",
       "task_id": "TASK-RESEARCH",
-      "task_version": 2
+      "task_version": 3
     },
     {
       "attempt": 0,
@@ -202,7 +202,7 @@
       },
       "state": "READY",
       "task_id": "TASK-WRITING",
-      "task_version": 2
+      "task_version": 3
     }
   ]
 }
