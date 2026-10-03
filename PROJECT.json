@@ -1,0 +1,18 @@
+{
+  "active_plan_id": null,
+  "code_ref": "main",
+  "collaboration_entry": "共享任务入口（project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b）：先固定读取 Runtime 发布的控制提交及其 AGENTS.md/CONTROL_SNAPSHOT.json；不得修改控制分支或从快照自行领取租约。\n规划提案使用 xingshu/repository-proposal/1，唯一文件 PROPOSAL.json；字段 schema、project_id、proposal_id、observed_control_commit、plan（agentplan/1，observed_control_commit 与外层相同）。独立不可变 ref 为 refs/heads/xingshu/inbox/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/<proposal_id 的 UTF-8 SHA-256>；只创建，不覆盖或删除旧提案。提案需绑定所读控制修订和代码基线，不得携带状态、审批、结果或任意执行命令。Git 作者不是 Agent 身份。Runtime 自动发现后核验权限与当前版本；只有其正式派发才允许执行。读取代码和成果时，先在同一固定控制提交读取 CODE_INDEX.json.shared_materials；RESULTS_REVIEWS.json.shared_materials_index 指向该目录。只读取其中对应主体的不可变 reference/commit_sha 和 MANIFEST.json，核对文件摘要；真实业务代码提交是 source_head_sha。材料载体 commit 只用于传递代码对象和有界报告，不能作为业务执行基线或合入业务分支。未列出所需共享材料时等待 Runtime 发布，不能只凭 SHA 或报告索引声称已取得正文。读取失败应报告缺失，不能声称已读。\n",
+  "control_ref": "ai-control",
+  "lifecycle": "active",
+  "live_resource_checks_required": true,
+  "missing": [
+    "full_report_bodies",
+    "business_rules",
+    "shared_materials_unavailable"
+  ],
+  "name": "写作",
+  "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+  "runtime_paused": false,
+  "shared_context_redacted_fields": [],
+  "shared_context_revision": null
+}

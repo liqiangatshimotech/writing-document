@@ -1,0 +1,10 @@
+{
+  "authorized_ready_candidates": [],
+  "needs_attention": [],
+  "next_action": "wait_for_event",
+  "omitted_quality_summaries": 0,
+  "quality_index": [],
+  "report_bodies_included": false,
+  "shared_materials_index": "CODE_INDEX.json",
+  "waiting_review": []
+}

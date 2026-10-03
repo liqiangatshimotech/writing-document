@@ -1,0 +1,20 @@
+{
+  "archive_references": [],
+  "authorized_candidates": [],
+  "authorized_repairs": [],
+  "control_rev": 1,
+  "event_watermark": 64,
+  "history_count": 0,
+  "missing": [
+    "full_report_bodies"
+  ],
+  "needs_attention": [],
+  "next_action": "wait_for_event",
+  "next_history_before_event_seq": null,
+  "omitted_recent_entries": 0,
+  "pending_results": [],
+  "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+  "recent_deliveries": [],
+  "requires_live_checks": true,
+  "schema": "xingshu/feedback-index/1"
+}

@@ -1,0 +1,91 @@
+{
+  "agents": [
+    {
+      "capabilities": [
+        "planning"
+      ],
+      "duties": "负责本次 GLM-5.3 网络安全能力议题的任务规划、依赖、质量控制和交付。必须调度 Claude 搜索与核实资料，再由 Pi 撰写公众号深度文及抖音科普口播稿；不得用自己的正文替代指定执行者。区分厂商主张、独立证据和评论；只做公开资料研究与科普，不运行攻击或发布内容。",
+      "enabled": true,
+      "executor_id": "codex",
+      "id": "main",
+      "max_parallel": 1,
+      "model": "",
+      "name": "Codex 总编调度",
+      "role": "coordinator",
+      "version": 1
+    },
+    {
+      "capabilities": [
+        "research",
+        "fact_checking"
+      ],
+      "duties": "搜索并阅读用户指定的 Anthropic GLM-5.3 文章及至少六个相关一手来源，优先 NIST/CAISI、原始评测论文、Z.ai 官方模型说明和防御建议。核对日期、统计口径、试验环境、分母与局限，区分攻击成功率和模拟有害请求响应率。输出 research/sources.md 与 research/fact-check.md，给出可点击链接、证据摘要、争议和待核实项，供 Pi 写作；不提供攻击复现代码或操作步骤。",
+      "enabled": true,
+      "executor_id": "executor-ff8bfb46-a126-4953-bb27-3a2b94242550",
+      "id": "worker-1",
+      "max_parallel": 1,
+      "model": "",
+      "name": "Claude 资料研究员",
+      "role": "custom",
+      "version": 1
+    },
+    {
+      "capabilities": [
+        "writing",
+        "documentation"
+      ],
+      "duties": "依据 Claude 的有来源研究资料撰写两份原创中文成稿：articles/wechat.md 为适合公众号的3000至4500字深度文，articles/douyin.md 为适合抖音的约3至5分钟科普口播稿。自行组织论证与通俗解释，不全文翻译任何来源，不编造数字、引用或模型能力；文末列来源，口播另附标题、开场钩子和画面提示。区分事实与观点，按审查意见修订。",
+      "enabled": true,
+      "executor_id": "executor-c61ca708-067c-4923-8d1f-55e7dbb2b637",
+      "id": "worker-2",
+      "max_parallel": 1,
+      "model": "",
+      "name": "Pi 主笔",
+      "role": "documenter",
+      "version": 1
+    },
+    {
+      "capabilities": [
+        "review"
+      ],
+      "duties": "独立核对本次文档产物：来源可追溯、数字与语境准确、模拟指标不冒充真实攻击成功率、区分事实与观点；公众号深度与抖音口播表达匹配各自读者，没有整段照搬来源、夸大或可操作攻击教程。不要直接代写文章，给出逐项可验证审查结论和必要修改意见。",
+      "enabled": true,
+      "executor_id": "codex",
+      "id": "worker-3",
+      "max_parallel": 1,
+      "model": "",
+      "name": "Codex 独立编辑审查",
+      "role": "reviewer",
+      "version": 1
+    }
+  ],
+  "availability": "requires_live_runtime_check",
+  "executors": [
+    {
+      "display_name": "Codex CLI",
+      "enabled": true,
+      "id": "codex",
+      "kind": "custom",
+      "verification": "unverified",
+      "version": 1
+    },
+    {
+      "display_name": "Claude 资料研究",
+      "enabled": true,
+      "id": "executor-ff8bfb46-a126-4953-bb27-3a2b94242550",
+      "kind": "custom",
+      "verification": "unverified",
+      "version": 1
+    },
+    {
+      "display_name": "Pi 内容写作",
+      "enabled": true,
+      "id": "executor-c61ca708-067c-4923-8d1f-55e7dbb2b637",
+      "kind": "custom",
+      "verification": "unverified",
+      "version": 1
+    }
+  ],
+  "primary_agent_id": "main",
+  "revision": 1
+}

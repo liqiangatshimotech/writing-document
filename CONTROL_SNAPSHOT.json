@@ -1,0 +1,194 @@
+{
+  "schema": "xingshu-control-snapshot/2",
+  "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+  "control_rev": 1,
+  "snapshot_revision": 1,
+  "event_watermark": 64,
+  "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+  "generated_at": "2026-10-03T16:38:17.335910+00:00",
+  "source_event_ids": [
+    "config-d35864b8a0b2ff5d163217eddc71cd5af625c8f43f468dc4a34c34559029513c",
+    "config-b2263b146c51cb00b63a715f257146f861201d82cd2d0bc414140777c317b839",
+    "config-602f5da33d97d432b6917d4e1bd1222c0d1a30776a673fa5cb2f86b24b814273",
+    "config-5dee7258fc2080691e93f6e105671aeab19bf8d80533fbc075c6798f7cdb17a5",
+    "config-55fef4de6cb19aa5283504c4c3f5c1cb84e7a3c258845360547592377f23ece5",
+    "config-71692535c25d4bcf53d9934e76f8995c845422f2b7b73284580fd2a5d926dccd",
+    "config-21b835d7b9a49e804d184c13f1051f2fb6a131f69f6233db863397e1be36db6f",
+    "config-8fe0927bc5c7e8e8fa62656729da0fba69f623424e61de380eda986181f4ba31",
+    "config-4ee000d4b40e1494a76cb48d4740f814820ad3e0be10ce2761a2df65aacebbba",
+    "config-07abdbb56b6cc61cc243a66162bef16674d266d0df09406bb27d991980480bbe",
+    "config-c3ff6313124028f579d7ab47e04116c090cacfd66f5ebd285a9d928162700b7b",
+    "config-2b3af80ded5728df899287355ba044632571d52e022134c92f95affdd5e176eb",
+    "config-0f6e95f1b84ad466965e1f29fedc3312b9da9be821fe6472a72770f8330e9ad2",
+    "config-b30266af71b17aa36191d27f8566c6aca9c4f3fec7e975a7a25d2ca35a7f3db1",
+    "config-5ad963a6e64f4b76164fe09f02695f6075ecfde9f4fa477aff60a77046272e94",
+    "config-43efc192bc4a51089f81bf7ca2f9de97e6bce97b4cd228ef51a8c56361875987",
+    "config-1ed1065294a16fa1128e00a52c90d59bf5c31aeeca343194a432aa4e58b34aaa",
+    "config-965869bf41d9984a58561a28dc8b6fac082fe00ffcb8e85359e05b4ee4933ddb",
+    "config-c759783197ef9a4f18891586a99f272534356bcbf9b5b1279a7e6c7a09651b24"
+  ],
+  "documents": {
+    "rules": null,
+    "project": {
+      "active_plan_id": null,
+      "code_ref": "main",
+      "collaboration_entry": "共享任务入口（project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b）：先固定读取 Runtime 发布的控制提交及其 AGENTS.md/CONTROL_SNAPSHOT.json；不得修改控制分支或从快照自行领取租约。\n规划提案使用 xingshu/repository-proposal/1，唯一文件 PROPOSAL.json；字段 schema、project_id、proposal_id、observed_control_commit、plan（agentplan/1，observed_control_commit 与外层相同）。独立不可变 ref 为 refs/heads/xingshu/inbox/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/<proposal_id 的 UTF-8 SHA-256>；只创建，不覆盖或删除旧提案。提案需绑定所读控制修订和代码基线，不得携带状态、审批、结果或任意执行命令。Git 作者不是 Agent 身份。Runtime 自动发现后核验权限与当前版本；只有其正式派发才允许执行。读取代码和成果时，先在同一固定控制提交读取 CODE_INDEX.json.shared_materials；RESULTS_REVIEWS.json.shared_materials_index 指向该目录。只读取其中对应主体的不可变 reference/commit_sha 和 MANIFEST.json，核对文件摘要；真实业务代码提交是 source_head_sha。材料载体 commit 只用于传递代码对象和有界报告，不能作为业务执行基线或合入业务分支。未列出所需共享材料时等待 Runtime 发布，不能只凭 SHA 或报告索引声称已取得正文。读取失败应报告缺失，不能声称已读。\n",
+      "control_ref": "ai-control",
+      "lifecycle": "active",
+      "live_resource_checks_required": true,
+      "missing": [
+        "full_report_bodies",
+        "business_rules",
+        "shared_materials_unavailable"
+      ],
+      "name": "写作",
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "runtime_paused": false,
+      "shared_context_redacted_fields": [],
+      "shared_context_revision": null
+    },
+    "roadmap": null,
+    "agent_registry": {
+      "agents": [
+        {
+          "capabilities": [
+            "planning"
+          ],
+          "duties": "负责本次 GLM-5.3 网络安全能力议题的任务规划、依赖、质量控制和交付。必须调度 Claude 搜索与核实资料，再由 Pi 撰写公众号深度文及抖音科普口播稿；不得用自己的正文替代指定执行者。区分厂商主张、独立证据和评论；只做公开资料研究与科普，不运行攻击或发布内容。",
+          "enabled": true,
+          "executor_id": "codex",
+          "id": "main",
+          "max_parallel": 1,
+          "model": "",
+          "name": "Codex 总编调度",
+          "role": "coordinator",
+          "version": 1
+        },
+        {
+          "capabilities": [
+            "research",
+            "fact_checking"
+          ],
+          "duties": "搜索并阅读用户指定的 Anthropic GLM-5.3 文章及至少六个相关一手来源，优先 NIST/CAISI、原始评测论文、Z.ai 官方模型说明和防御建议。核对日期、统计口径、试验环境、分母与局限，区分攻击成功率和模拟有害请求响应率。输出 research/sources.md 与 research/fact-check.md，给出可点击链接、证据摘要、争议和待核实项，供 Pi 写作；不提供攻击复现代码或操作步骤。",
+          "enabled": true,
+          "executor_id": "executor-ff8bfb46-a126-4953-bb27-3a2b94242550",
+          "id": "worker-1",
+          "max_parallel": 1,
+          "model": "",
+          "name": "Claude 资料研究员",
+          "role": "custom",
+          "version": 1
+        },
+        {
+          "capabilities": [
+            "writing",
+            "documentation"
+          ],
+          "duties": "依据 Claude 的有来源研究资料撰写两份原创中文成稿：articles/wechat.md 为适合公众号的3000至4500字深度文，articles/douyin.md 为适合抖音的约3至5分钟科普口播稿。自行组织论证与通俗解释，不全文翻译任何来源，不编造数字、引用或模型能力；文末列来源，口播另附标题、开场钩子和画面提示。区分事实与观点，按审查意见修订。",
+          "enabled": true,
+          "executor_id": "executor-c61ca708-067c-4923-8d1f-55e7dbb2b637",
+          "id": "worker-2",
+          "max_parallel": 1,
+          "model": "",
+          "name": "Pi 主笔",
+          "role": "documenter",
+          "version": 1
+        },
+        {
+          "capabilities": [
+            "review"
+          ],
+          "duties": "独立核对本次文档产物：来源可追溯、数字与语境准确、模拟指标不冒充真实攻击成功率、区分事实与观点；公众号深度与抖音口播表达匹配各自读者，没有整段照搬来源、夸大或可操作攻击教程。不要直接代写文章，给出逐项可验证审查结论和必要修改意见。",
+          "enabled": true,
+          "executor_id": "codex",
+          "id": "worker-3",
+          "max_parallel": 1,
+          "model": "",
+          "name": "Codex 独立编辑审查",
+          "role": "reviewer",
+          "version": 1
+        }
+      ],
+      "availability": "requires_live_runtime_check",
+      "executors": [
+        {
+          "display_name": "Codex CLI",
+          "enabled": true,
+          "id": "codex",
+          "kind": "custom",
+          "verification": "unverified",
+          "version": 1
+        },
+        {
+          "display_name": "Claude 资料研究",
+          "enabled": true,
+          "id": "executor-ff8bfb46-a126-4953-bb27-3a2b94242550",
+          "kind": "custom",
+          "verification": "unverified",
+          "version": 1
+        },
+        {
+          "display_name": "Pi 内容写作",
+          "enabled": true,
+          "id": "executor-c61ca708-067c-4923-8d1f-55e7dbb2b637",
+          "kind": "custom",
+          "verification": "unverified",
+          "version": 1
+        }
+      ],
+      "primary_agent_id": "main",
+      "revision": 1
+    },
+    "active_tasks": {
+      "full_specs_included": true,
+      "omitted_index_entries": 0,
+      "omitted_spec_task_ids": [],
+      "recent_runs": [],
+      "runs_omitted": 0,
+      "task_index": [],
+      "tasks": []
+    },
+    "results_reviews": {
+      "authorized_ready_candidates": [],
+      "needs_attention": [],
+      "next_action": "wait_for_event",
+      "omitted_quality_summaries": 0,
+      "quality_index": [],
+      "report_bodies_included": false,
+      "shared_materials_index": "CODE_INDEX.json",
+      "waiting_review": []
+    },
+    "decisions": null,
+    "code_index": {
+      "business_code_included": false,
+      "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "effective_bases": [],
+      "material_commit_is_business_source": false,
+      "omitted_effective_base_proofs": 0,
+      "omitted_shared_material_refs": 0,
+      "requires_live_dependency_revalidation": true,
+      "shared_materials": [],
+      "source": "fixed_project_baseline"
+    },
+    "feedback_index": {
+      "archive_references": [],
+      "authorized_candidates": [],
+      "authorized_repairs": [],
+      "control_rev": 1,
+      "event_watermark": 64,
+      "history_count": 0,
+      "missing": [
+        "full_report_bodies"
+      ],
+      "needs_attention": [],
+      "next_action": "wait_for_event",
+      "next_history_before_event_seq": null,
+      "omitted_recent_entries": 0,
+      "pending_results": [],
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "recent_deliveries": [],
+      "requires_live_checks": true,
+      "schema": "xingshu/feedback-index/1"
+    }
+  }
+}
