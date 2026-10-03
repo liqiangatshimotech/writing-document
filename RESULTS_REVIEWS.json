@@ -1,7 +1,9 @@
 {
   "authorized_ready_candidates": [],
-  "needs_attention": [],
-  "next_action": "review_existing_results_first",
+  "needs_attention": [
+    "TASK-RESEARCH"
+  ],
+  "next_action": "wait_for_event",
   "omitted_quality_summaries": 0,
   "quality_index": [
     {
@@ -14,11 +16,11 @@
         "task_version": 2
       },
       "collected_at": "2026-10-03T18:08:18.723563+00:00",
-      "current_status": "current",
+      "current_status": "stale",
       "evidence_id": "artifact-evidence-b053c2b0c891defbd9e3195591e7b8b8210f67d9c85e806126178bf6cffb1f54",
       "exit_code": null,
       "fact_kind": "evidence",
-      "invalidated": false,
+      "invalidated": true,
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
       "report_digest": "29ac7cd81a1c11f1908dafc00c6478a2266f2510e432ab35c603b4ea860456e7",
       "run_id": null,
@@ -40,84 +42,6 @@
         "reviewer_id": null,
         "target_base_sha": null,
         "verification_succeeded": true
-      }
-    },
-    {
-      "attempt": 1,
-      "binding": {
-        "content": {
-          "artifact_hash": "a76be4cec842e939cd991a5cd7b1a0e43f60a07be6a62524f3c4b048195296bc",
-          "kind": "artifact"
-        },
-        "task_version": 2
-      },
-      "collected_at": "2026-10-03T18:14:09.019731+00:00",
-      "current_status": "current",
-      "evidence_id": "verification-evidence-e0e6b8ca406b77105446777b06521f9e25bbf0475cf2e893920dad678d1bb289",
-      "exit_code": null,
-      "fact_kind": "evidence",
-      "invalidated": false,
-      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-      "report_digest": "bf7427929aa5d34593f347dd8afb6a9a7cf0e4af817e933f08787fd623c25301",
-      "run_id": "inv-d244cacf298de80c8ed7e82dde9ac877414280b742569876f01e967c5ca9f3ac",
-      "source": "independent_review",
-      "status": "current",
-      "task_id": "TASK-RESEARCH",
-      "task_version": 2,
-      "verification": {
-        "acceptance_ids": [
-          "AC-RESEARCH-FILES",
-          "AC-RESEARCH-QUALITY"
-        ],
-        "command_id": null,
-        "covered_requirements": [
-          "review.md"
-        ],
-        "result_id": "result-e13e36f3e5ebc6280fadd74646d35cf3db1d2407140e9403c0328a97147310ca",
-        "review_conclusion": "changes_requested",
-        "reviewer_config_version": 1,
-        "reviewer_id": "worker-3",
-        "target_base_sha": null,
-        "verification_succeeded": true
-      }
-    },
-    {
-      "artifacts": [
-        {
-          "content_hash": "96f734505355918e48d83e39e7ea254cf1862ec67a0257469784e8120c4683cf",
-          "kind": "document",
-          "location": "research/sources.md"
-        },
-        {
-          "content_hash": "6565960d6bab468779a5650a2d702264d6e14b488460e8944f6deb66e6e9e307",
-          "kind": "document",
-          "location": "research/fact-check.md"
-        }
-      ],
-      "attempt": 1,
-      "binding": {
-        "content": {
-          "artifact_hash": "a76be4cec842e939cd991a5cd7b1a0e43f60a07be6a62524f3c4b048195296bc",
-          "kind": "artifact"
-        },
-        "task_version": 2
-      },
-      "change_summary": "Runtime observed 2 declared output files",
-      "current_status": "submitted",
-      "fact_kind": "result",
-      "failure": null,
-      "invalidated": false,
-      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-      "report_digest": "ed5d59f3dcb1714508f59ff3d3b367e328ec35c622e29a6fdd6d4c787492699b",
-      "result_id": "result-e13e36f3e5ebc6280fadd74646d35cf3db1d2407140e9403c0328a97147310ca",
-      "risks": [],
-      "run_id": "run-ae691ec5d55163bfff7c7205493a896525613f184effce2fe5b47bd3e7607966",
-      "status": "submitted",
-      "submitted_at": "2026-10-03T18:08:18.417952+00:00",
-      "task_id": "TASK-RESEARCH",
-      "task_version": 2,
-      "verification": {
-        "target_base_sha": null
       }
     },
     {
@@ -198,6 +122,45 @@
       }
     },
     {
+      "attempt": 1,
+      "binding": {
+        "content": {
+          "artifact_hash": "a76be4cec842e939cd991a5cd7b1a0e43f60a07be6a62524f3c4b048195296bc",
+          "kind": "artifact"
+        },
+        "task_version": 2
+      },
+      "collected_at": "2026-10-03T18:14:09.019731+00:00",
+      "current_status": "stale",
+      "evidence_id": "verification-evidence-e0e6b8ca406b77105446777b06521f9e25bbf0475cf2e893920dad678d1bb289",
+      "exit_code": null,
+      "fact_kind": "evidence",
+      "invalidated": true,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": "bf7427929aa5d34593f347dd8afb6a9a7cf0e4af817e933f08787fd623c25301",
+      "run_id": "inv-d244cacf298de80c8ed7e82dde9ac877414280b742569876f01e967c5ca9f3ac",
+      "source": "independent_review",
+      "status": "current",
+      "task_id": "TASK-RESEARCH",
+      "task_version": 2,
+      "verification": {
+        "acceptance_ids": [
+          "AC-RESEARCH-FILES",
+          "AC-RESEARCH-QUALITY"
+        ],
+        "command_id": null,
+        "covered_requirements": [
+          "review.md"
+        ],
+        "result_id": "result-e13e36f3e5ebc6280fadd74646d35cf3db1d2407140e9403c0328a97147310ca",
+        "review_conclusion": "changes_requested",
+        "reviewer_config_version": 1,
+        "reviewer_id": "worker-3",
+        "target_base_sha": null,
+        "verification_succeeded": true
+      }
+    },
+    {
       "artifacts": [
         {
           "content_hash": "2932faa0916b6af04ab818ebfcaa86e1cdcb29d7e84854b0021022ea276fb53a",
@@ -235,11 +198,48 @@
       "verification": {
         "target_base_sha": null
       }
+    },
+    {
+      "artifacts": [
+        {
+          "content_hash": "96f734505355918e48d83e39e7ea254cf1862ec67a0257469784e8120c4683cf",
+          "kind": "document",
+          "location": "research/sources.md"
+        },
+        {
+          "content_hash": "6565960d6bab468779a5650a2d702264d6e14b488460e8944f6deb66e6e9e307",
+          "kind": "document",
+          "location": "research/fact-check.md"
+        }
+      ],
+      "attempt": 1,
+      "binding": {
+        "content": {
+          "artifact_hash": "a76be4cec842e939cd991a5cd7b1a0e43f60a07be6a62524f3c4b048195296bc",
+          "kind": "artifact"
+        },
+        "task_version": 2
+      },
+      "change_summary": "Runtime observed 2 declared output files",
+      "current_status": "rejected",
+      "fact_kind": "result",
+      "failure": null,
+      "invalidated": true,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": "ed5d59f3dcb1714508f59ff3d3b367e328ec35c622e29a6fdd6d4c787492699b",
+      "result_id": "result-e13e36f3e5ebc6280fadd74646d35cf3db1d2407140e9403c0328a97147310ca",
+      "risks": [],
+      "run_id": "run-ae691ec5d55163bfff7c7205493a896525613f184effce2fe5b47bd3e7607966",
+      "status": "submitted",
+      "submitted_at": "2026-10-03T18:08:18.417952+00:00",
+      "task_id": "TASK-RESEARCH",
+      "task_version": 2,
+      "verification": {
+        "target_base_sha": null
+      }
     }
   ],
   "report_bodies_included": false,
   "shared_materials_index": "CODE_INDEX.json",
-  "waiting_review": [
-    "TASK-RESEARCH"
-  ]
+  "waiting_review": []
 }

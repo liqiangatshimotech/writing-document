@@ -43,7 +43,7 @@
         "fact_checking"
       ],
       "spec_digest": "5983408c66248413272501481a8f0d8f44cc9869060992d374f573cb38b55cc8",
-      "state": "VERIFYING",
+      "state": "BLOCKED",
       "task_id": "TASK-RESEARCH",
       "task_version": 2,
       "title": "Claude 联网研究与事实核查资料包",
@@ -131,7 +131,7 @@
         },
         "title": "Claude 联网研究与事实核查资料包"
       },
-      "state": "VERIFYING",
+      "state": "BLOCKED",
       "task_id": "TASK-RESEARCH",
       "task_version": 2
     },
