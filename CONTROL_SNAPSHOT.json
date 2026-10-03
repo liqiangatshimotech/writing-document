@@ -2,12 +2,15 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 2,
-  "snapshot_revision": 11,
-  "event_watermark": 1382,
+  "snapshot_revision": 12,
+  "event_watermark": 1615,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T17:09:21.271950+00:00",
+  "generated_at": "2026-10-03T17:11:49.852789+00:00",
   "source_event_ids": [
-    "config-54c6784126bab3d45cc532bd0b4983add488f82b124d48b69bf6dead5260e17d"
+    "pause-a53c897ac7eb5cefd46a64270ee266efbb7bee29a98a15a198da307628e568e9",
+    "config-e30c62f15fdd8581ca2a0ce227519cbec8c0f75d51c2863e7648589c03243457",
+    "config-a56533514dd1ef9cf89e115f2df9c35f4843c540c971c77d335aa07701986f65",
+    "config-8d9bcf705e84662a909eb2a5f6708093fdf6502f341cde1aaa1db6fbde2af91a"
   ],
   "documents": {
     "rules": null,
@@ -18,7 +21,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-        "state": "blocked"
+        "state": "stopped"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -93,7 +96,7 @@
         "request_id": "PLANREQ-04d0d0cf06cdf3ae6ac90ffb",
         "schema": "xingshu/repository-goal/1"
       },
-      "runtime_paused": false,
+      "runtime_paused": true,
       "shared_context_redacted_fields": [],
       "shared_context_revision": null
     },
@@ -373,7 +376,7 @@
         "TASK-RESEARCH"
       ],
       "needs_attention": [],
-      "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
+      "next_action": "wait_for_user_resume",
       "omitted_quality_summaries": 0,
       "quality_index": [],
       "report_bodies_included": false,
@@ -448,13 +451,13 @@
       ],
       "authorized_repairs": [],
       "control_rev": 2,
-      "event_watermark": 1382,
+      "event_watermark": 1615,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
       ],
       "needs_attention": [],
-      "next_action": "consider_only_authorized_tasks_after_live_checks",
+      "next_action": "wait_for_user_resume",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
       "pending_results": [],
