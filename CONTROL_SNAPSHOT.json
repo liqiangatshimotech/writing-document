@@ -2,12 +2,12 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 5,
-  "snapshot_revision": 41,
-  "event_watermark": 7303,
+  "snapshot_revision": 42,
+  "event_watermark": 7410,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T18:54:48.403352+00:00",
+  "generated_at": "2026-10-03T18:55:47.952475+00:00",
   "source_event_ids": [
-    "config-75c97407775910fd35e056d48f53312335f12f7e5e71f988fa10fa310be0cac8"
+    "config-392896f6c473b24394222d3a8e1050369c0e9e68cc15259faa86387ea8c35c70"
   ],
   "documents": {
     "rules": null,
@@ -773,6 +773,24 @@
       "shared_materials": [
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "802e2a0aaad4556cd87293c610eeef05fde1bd6b",
+          "content_digest": "9b8ce8617874d71da70552dceb2e0b47dc4b2295912cef256585a53fa8383f05",
+          "manifest_hash": "09395d4bf7fc8b1f87b2fa7df31148a8c623eb4a42a56c2490f788a2ab8f8146",
+          "observed_at": "2026-10-03T18:55:29.172324+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/9b8ce8617874d71da70552dceb2e0b47dc4b2295912cef256585a53fa8383f05",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "kind": "task_result",
+            "result_id": "result-7697a0de1a3bce88fe3c74eae696e682cd3f8aacc7617871400b3a27737ff73a",
+            "run_id": "run-18f9bd744703d394158fb8855c8b9212e2cc908bb292b3cbd51c83a26dbb9b02",
+            "stage": "verification",
+            "task_id": "TASK-RESEARCH",
+            "task_version": 4
+          },
+          "subject_hash": "b25195546260cd6b42ed6b9ac444c9c9ff2fcd549cac45ba7ae5a0fa0244a3f2"
+        },
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "b226f1bbffeb7f24e2f86943c8f701225d338880",
           "content_digest": "8e3ff545d6abbdb2c9d8ccbe37fb17fe8af038b23d240854138d1baea347e441",
           "manifest_hash": "3102d2b2825489a8758f7bc43a04fef740b5728dc4993e0af685523ea9685b13",
@@ -827,7 +845,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 5,
-      "event_watermark": 7303,
+      "event_watermark": 7410,
       "history_count": 0,
       "missing": [
         "full_report_bodies"
