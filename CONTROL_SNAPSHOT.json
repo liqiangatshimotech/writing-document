@@ -2,27 +2,12 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 9,
-  "snapshot_revision": 101,
-  "event_watermark": 29951,
+  "snapshot_revision": 102,
+  "event_watermark": 31267,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T06:49:14.873098+00:00",
+  "generated_at": "2026-10-04T07:22:34.329636+00:00",
   "source_event_ids": [
-    "config-931a02af403f50b9ba051e2ac7128715a6b1581d250f4445126835804d6774c2",
-    "quality-54f584aae582b54f4b6d9f7d9dd37894222643a7d0a17ee05c836536b26928eb",
-    "config-30a8842dc8d291237815aa79ef38e83d985a105c5b8ecd06eeba548ed0722c3d",
-    "config-2bdf474e741510a729002189f602fa64d336a471e545bd7dd24879fda2ef0abf",
-    "config-8bf28cf2f9e7022eb3fb77d0dd625f0e1e38d15634aea50d15d698e0a25775a8",
-    "invoke-9c5cd769e9822f5ebb4b350728961e58d126058d5fc3514540513a48859652b0",
-    "config-347728f1e1ecec4bf714735efa95f185acdc93a5021c895a909a6b9b82818f7e",
-    "config-83f644d67335296deed504667df4f1dfb151feb11310c8fb1c4451445911ccf3",
-    "invoke-629ac4cd0136f50431d4dd1fe214272cc1772c6bb561d4b82c4d1ff873403d6b",
-    "config-361c4467387b42200c859cf49819042256a9439e2d6ec20b557219f59373cc02",
-    "config-7bc04a28c8527972317f678c9482350a0ed72e6ed6a7e58ba3a49edbbf8cf6ee",
-    "invoke-0d5a246d07f82d5ecca68e1c3a1417b875e5852f1c6650300116baf2be398d91",
-    "config-8ea0558129d0e91129d0cfadd2b1869a73a8b8ec5bde54300fa79f8cf5e9a938",
-    "config-7abbafceaaf027f77e29d6fbd7e0d50f085336d1d7184a299b4b611705e04afd",
-    "config-3bf9dd26ab6b50ddbc4d56569c9b068adde9410551f7a555159900eefe3fc510",
-    "config-11f4098e490e431656dcf3d9a97ef71b77802999ab1f4ec45521855c72de1b15"
+    "config-6646e2891d317561d9909c9e176abf72e0ad9646ad93ef6fba2cc5605115008f"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -173,6 +158,21 @@
           "name": "Codex 独立编辑审查",
           "role": "reviewer",
           "version": 1
+        },
+        {
+          "capabilities": [
+            "documentation",
+            "artifact_delivery"
+          ],
+          "duties": "仅负责把已验收交付的研究资料与文章，按Runtime挂载的只读依赖逐字节复制到当前任务工作区的research/和articles/。使用标准文件复制工具，不重新生成、不改写正文，不修改只读输入；复制前后核对约定SHA-256。由Runtime形成源提交，独立审查候选后通过星枢具体批准合入main。不得自行操作主仓库、推送远端、合并ai-control或改动其他文件。",
+          "enabled": true,
+          "executor_id": "codex",
+          "id": "worker-7ae85f4a-9a7a-450e-bdf6-7b3a634ffebf",
+          "max_parallel": 1,
+          "model": "",
+          "name": "Codex 文件交付员",
+          "role": "documenter",
+          "version": 1
         }
       ],
       "availability": "requires_live_runtime_check",
@@ -203,7 +203,7 @@
         }
       ],
       "primary_agent_id": "main",
-      "revision": 2
+      "revision": 3
     },
     "active_tasks": {
       "full_specs_included": true,
@@ -2046,7 +2046,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 9,
-      "event_watermark": 29951,
+      "event_watermark": 31267,
       "history_count": 2,
       "missing": [
         "full_report_bodies"

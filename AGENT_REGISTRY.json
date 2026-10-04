@@ -58,6 +58,21 @@
       "name": "Codex 独立编辑审查",
       "role": "reviewer",
       "version": 1
+    },
+    {
+      "capabilities": [
+        "documentation",
+        "artifact_delivery"
+      ],
+      "duties": "仅负责把已验收交付的研究资料与文章，按Runtime挂载的只读依赖逐字节复制到当前任务工作区的research/和articles/。使用标准文件复制工具，不重新生成、不改写正文，不修改只读输入；复制前后核对约定SHA-256。由Runtime形成源提交，独立审查候选后通过星枢具体批准合入main。不得自行操作主仓库、推送远端、合并ai-control或改动其他文件。",
+      "enabled": true,
+      "executor_id": "codex",
+      "id": "worker-7ae85f4a-9a7a-450e-bdf6-7b3a634ffebf",
+      "max_parallel": 1,
+      "model": "",
+      "name": "Codex 文件交付员",
+      "role": "documenter",
+      "version": 1
     }
   ],
   "availability": "requires_live_runtime_check",
@@ -88,5 +103,5 @@
     }
   ],
   "primary_agent_id": "main",
-  "revision": 2
+  "revision": 3
 }
