@@ -200,7 +200,7 @@
         "documentation"
       ],
       "spec_digest": "0f6f713ec616c0d4846bf6d8ed29714e42a5e3faa6ea63ee744f662e85472896",
-      "state": "VERIFYING",
+      "state": "AWAITING_APPROVAL",
       "task_id": "TASK-WRITING",
       "task_version": 8,
       "title": "Pi 撰写公众号深度文与抖音科普口播稿",
@@ -340,7 +340,7 @@
         },
         "title": "Pi 撰写公众号深度文与抖音科普口播稿"
       },
-      "state": "VERIFYING",
+      "state": "AWAITING_APPROVAL",
       "task_id": "TASK-WRITING",
       "task_version": 8
     }
