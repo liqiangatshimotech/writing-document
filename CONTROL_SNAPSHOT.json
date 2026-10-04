@@ -2,15 +2,14 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 8,
-  "snapshot_revision": 86,
-  "event_watermark": 27639,
+  "snapshot_revision": 87,
+  "event_watermark": 28248,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T05:33:20.986626+00:00",
+  "generated_at": "2026-10-04T05:46:07.396174+00:00",
   "source_event_ids": [
-    "config-635b7b83ee592080f3fe9fff14bf9f750fd91a24bab917da07d137bbefd7a3d8",
-    "config-852a2dce518da379e753374ca78e15123130c82f6f4d31666b09c5bb20f2d6f7",
-    "config-4236e8163dc919aed8e37a394546419018614c305118562ba1150a996d083dbb",
-    "pause-9ff02e2ffafd59d00b39ec6b39ce75b945f6fa9beeffbc3fcfd49e4428d69e46"
+    "pause-0579f63e9a566c5760cb466e712b8041d014d9e031d680edb9fcf3d125ac7fab",
+    "config-c1e7b71a567f47d7a31a18e8a0133b4274cf8f4621c55eff65e4fe8fe238de3c",
+    "config-6e0028752848b38cf6d7e789be6e30bda78d353d5e4dffa8b22d58ae685226a3"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -21,7 +20,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-        "state": "awaiting_publication"
+        "state": "stopped"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -99,7 +98,7 @@
         "request_id": "PLANREQ-04d0d0cf06cdf3ae6ac90ffb",
         "schema": "xingshu/repository-goal/1"
       },
-      "runtime_paused": false,
+      "runtime_paused": true,
       "shared_context_redacted_fields": [],
       "shared_context_revision": 2
     },
@@ -521,7 +520,7 @@
         "TASK-WRITING"
       ],
       "needs_attention": [],
-      "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
+      "next_action": "wait_for_user_resume",
       "omitted_quality_summaries": 0,
       "quality_index": [
         {
@@ -1632,13 +1631,13 @@
       ],
       "authorized_repairs": [],
       "control_rev": 8,
-      "event_watermark": 27639,
+      "event_watermark": 28248,
       "history_count": 1,
       "missing": [
         "full_report_bodies"
       ],
       "needs_attention": [],
-      "next_action": "wait_for_user_route_resume",
+      "next_action": "wait_for_user_resume",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
       "pending_results": [],
