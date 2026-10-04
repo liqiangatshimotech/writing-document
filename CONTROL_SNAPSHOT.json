@@ -2,29 +2,12 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 9,
-  "snapshot_revision": 89,
-  "event_watermark": 28557,
+  "snapshot_revision": 90,
+  "event_watermark": 28633,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T05:51:44.403902+00:00",
+  "generated_at": "2026-10-04T05:53:44.705048+00:00",
   "source_event_ids": [
-    "config-33f35014209047385321f272e5327d1c3a0a0be625358465f5a34767e204fbc6",
-    "config-6f0d79806a77b1f9caadb9326f4de6eb79124231211fca4a9d6efcb4fc3d6e1e",
-    "config-9187f70293e85800f781eeb65064c005308bbfdd461526f3ef85eed547ce030f",
-    "pause-febde04ddacb8d1c623a8f304b40e8fcd870e14b95f4298f4d1d7c1bfa79af61",
-    "config-cf38b008f5a13c9826b2140de833e0f399410b97d1e4e3fbe4509dcc46568095",
-    "effective-base-46869543afa52f16d5b9476d0dc80ff88630407f57e616ce0a7debbb8d236afc",
-    "invoke-fe5eca91925fe4cb498bb88ba5ab79a2916cce011feaecb97762d127f2376d3f",
-    "config-75c57ba9e0f8f34f30a44e88434834ffde1101dce20c1ac2b58d3c9c6bb5837e",
-    "config-b474fad6db7bd96ddd83b77e6c125f2e9a54f49f5722f0d8a0c140dd6803f3cd",
-    "invoke-2549ee50707d35a93f4cb1abc14abe3b8c7b44e1e94d3e14d796f2aa07c3af1b",
-    "config-2c25a5adb013f6c28b30f9835de7251e352b389223b1c37be0758e32e98d9178",
-    "config-65e6dd29352902b91e5e28f911dea8b9813061c33e09ae052236461ae4474afc",
-    "config-8cfd5c850b781024e28564dc0e554ed06a087457bb3d88cb88a61f8db6d7601c",
-    "config-99041aedad65ff2f0e1ff2d7b72f67f7dd715780589db2968b18cda499b125e1",
-    "invoke-2990444e2a133810c0733c2e4853170bcf5b27a472b543635e8ff32d5146216f",
-    "config-0919b29006f2b6397daecbfaa0244eef307fae5b15ffb3db4e11897d6aa48b08",
-    "config-d7434450cb92325ceb3b09ec4d54919d7b8e72da3e7553d6e14e3cd342626274",
-    "config-4ba5e40bc6f0950277ced4536c41f581a5bae1493a5fe273b77109abe17915bd"
+    "config-823260d2378bd8ead9354be4b01b70cfb2bfd50b37e49e116e2444a6c21ff5eb"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -1549,6 +1532,22 @@
       "shared_materials": [
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "98c06789036a73342682aab7fd67b39c5e3c38b5",
+          "content_digest": "700d1ab4bf49b9aabf8d4483d80f7b9f6fc75b768304e65958712c97038d347f",
+          "manifest_hash": "e906a67b9f22c54d36f84f8bb9d1317e8899ee6e0f453c0bd0c1164c9abbc7dd",
+          "observed_at": "2026-10-04T05:53:06.212984+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/700d1ab4bf49b9aabf8d4483d80f7b9f6fc75b768304e65958712c97038d347f",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "kind": "execution_base",
+            "proof_digest": "46869543afa52f16d5b9476d0dc80ff88630407f57e616ce0a7debbb8d236afc",
+            "task_id": "TASK-WRITING",
+            "task_version": 8
+          },
+          "subject_hash": "797646163778becde7b3aee1bfac98a8a031d1df85a4dc2bc322bcb267f06aaa"
+        },
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "977cf7b5dac1a8a98189c3b74875b51ab16d8640",
           "content_digest": "e7c010f7692ac57690d1274b7e5f8abb23f3fce039532f260dc1a12d9b724f49",
           "manifest_hash": "687700a8bcb264543f9eb9770d6d36e93326ce96b4f82b7b50a7a3907987c543",
@@ -1675,7 +1674,7 @@
       ],
       "authorized_repairs": [],
       "control_rev": 9,
-      "event_watermark": 28557,
+      "event_watermark": 28633,
       "history_count": 1,
       "missing": [
         "full_report_bodies"
