@@ -104,6 +104,24 @@
   "shared_materials": [
     {
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "commit_sha": "63ca62d41216700f13d6322ca43c8fa173ed4e90",
+      "content_digest": "7062f93c20af724f9754ea287b38ec9c87628e01170122ab7164f685b44228fa",
+      "manifest_hash": "5e2f741984cd723abbbe7a926361d6cc38dad588880554b5252d099103b47b43",
+      "observed_at": "2026-10-04T08:04:53.040225+00:00",
+      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/7062f93c20af724f9754ea287b38ec9c87628e01170122ab7164f685b44228fa",
+      "source_head_sha": "7c60849c8c6d8bd4cd651d8d503427e46dcec89f",
+      "subject": {
+        "kind": "merge_candidate",
+        "proposal_digest": "4b068886707fa2b7b9bf3a2946e0c9ed3beb38b40e6f6a02bc2d4486f7c55bb2",
+        "proposal_id": "merge-03ccf8cd7c04083ba357586e74fa223fdf598dad2f92c56630e9100a7e5c9f7e",
+        "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
+        "task_id": "TASK-MAIN-DELIVERY",
+        "task_version": 2
+      },
+      "subject_hash": "81ca293808e9647d0fbd86c6a3aabaa251b6038afc93a98927d3f976802cd9a9"
+    },
+    {
+      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "commit_sha": "2331fa70d781979ca59d7ba7c14f435fbf99b06e",
       "content_digest": "5b78a7c20122f9980b3ad1e260136e30bd2b405589f7078a42337af3991a378b",
       "manifest_hash": "cfdb0a1e2b78d23e915e8a049b2d271c9dd0d8e819568c0fc11beb8ca5190ef3",
