@@ -1,11 +1,86 @@
 {
-  "authorized_ready_candidates": [
-    "TASK-WRITING"
-  ],
+  "authorized_ready_candidates": [],
   "needs_attention": [],
-  "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
+  "next_action": "review_existing_results_first",
   "omitted_quality_summaries": 0,
   "quality_index": [
+    {
+      "attempt": 1,
+      "binding": {
+        "content": {
+          "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
+          "kind": "artifact"
+        },
+        "task_version": 8
+      },
+      "collected_at": "2026-10-04T06:12:43.599936+00:00",
+      "current_status": "current",
+      "evidence_id": "artifact-evidence-4027053457c585759d69eab6ceb8f0c1be76af1735e30327cc5ad719944943bc",
+      "exit_code": null,
+      "fact_kind": "evidence",
+      "invalidated": false,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": "1491e1179aeebeb074f2720c76ff801da05b9cc6d8a1a618868121fda5f98d73",
+      "run_id": null,
+      "source": "artifact",
+      "status": "current",
+      "task_id": "TASK-WRITING",
+      "task_version": 8,
+      "verification": {
+        "acceptance_ids": [
+          "AC-WRITING-FILES"
+        ],
+        "command_id": null,
+        "covered_requirements": [
+          "artifact-hash-report"
+        ],
+        "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
+        "review_conclusion": null,
+        "reviewer_config_version": null,
+        "reviewer_id": null,
+        "target_base_sha": null,
+        "verification_succeeded": true
+      }
+    },
+    {
+      "artifacts": [
+        {
+          "content_hash": "85b7f8920d518ffc0540206231c2e100e6094c53b356461ea83a709516507ab8",
+          "kind": "document",
+          "location": "articles/wechat.md"
+        },
+        {
+          "content_hash": "7ed8e7910469e0dddf0cbdf543e238955842bfb2109e216b0071dfa96a4f3948",
+          "kind": "document",
+          "location": "articles/douyin.md"
+        }
+      ],
+      "attempt": 1,
+      "binding": {
+        "content": {
+          "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
+          "kind": "artifact"
+        },
+        "task_version": 8
+      },
+      "change_summary": "Runtime observed 2 declared output files",
+      "current_status": "submitted",
+      "fact_kind": "result",
+      "failure": null,
+      "invalidated": false,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": "2462d9ebef55b9d8f031db3873ee39e7646e1fc98c9149ae57dea781b2ea1823",
+      "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
+      "risks": [],
+      "run_id": "run-367ad6eafd238c41df1acd28d2164c7b990d69728eb47391c53d90ebb048068e",
+      "status": "submitted",
+      "submitted_at": "2026-10-04T06:12:42.747682+00:00",
+      "task_id": "TASK-WRITING",
+      "task_version": 8,
+      "verification": {
+        "target_base_sha": null
+      }
+    },
     {
       "action": "deliver",
       "approval_id": "approval-ca9233f17543797cb4d38147c82b0052ec8669d17ed11854882dd6de7140cca3",
@@ -961,5 +1036,7 @@
   ],
   "report_bodies_included": false,
   "shared_materials_index": "CODE_INDEX.json",
-  "waiting_review": []
+  "waiting_review": [
+    "TASK-WRITING"
+  ]
 }
