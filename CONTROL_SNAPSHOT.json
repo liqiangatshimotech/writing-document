@@ -2,12 +2,27 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 9,
-  "snapshot_revision": 100,
-  "event_watermark": 29818,
+  "snapshot_revision": 101,
+  "event_watermark": 29951,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T06:46:53.135884+00:00",
+  "generated_at": "2026-10-04T06:49:14.873098+00:00",
   "source_event_ids": [
-    "quality-89c34ba7970278b7c8d349ce1a21a447bcd9e562a280bc8e8124c1832dabe82f"
+    "config-931a02af403f50b9ba051e2ac7128715a6b1581d250f4445126835804d6774c2",
+    "quality-54f584aae582b54f4b6d9f7d9dd37894222643a7d0a17ee05c836536b26928eb",
+    "config-30a8842dc8d291237815aa79ef38e83d985a105c5b8ecd06eeba548ed0722c3d",
+    "config-2bdf474e741510a729002189f602fa64d336a471e545bd7dd24879fda2ef0abf",
+    "config-8bf28cf2f9e7022eb3fb77d0dd625f0e1e38d15634aea50d15d698e0a25775a8",
+    "invoke-9c5cd769e9822f5ebb4b350728961e58d126058d5fc3514540513a48859652b0",
+    "config-347728f1e1ecec4bf714735efa95f185acdc93a5021c895a909a6b9b82818f7e",
+    "config-83f644d67335296deed504667df4f1dfb151feb11310c8fb1c4451445911ccf3",
+    "invoke-629ac4cd0136f50431d4dd1fe214272cc1772c6bb561d4b82c4d1ff873403d6b",
+    "config-361c4467387b42200c859cf49819042256a9439e2d6ec20b557219f59373cc02",
+    "config-7bc04a28c8527972317f678c9482350a0ed72e6ed6a7e58ba3a49edbbf8cf6ee",
+    "invoke-0d5a246d07f82d5ecca68e1c3a1417b875e5852f1c6650300116baf2be398d91",
+    "config-8ea0558129d0e91129d0cfadd2b1869a73a8b8ec5bde54300fa79f8cf5e9a938",
+    "config-7abbafceaaf027f77e29d6fbd7e0d50f085336d1d7184a299b4b611705e04afd",
+    "config-3bf9dd26ab6b50ddbc4d56569c9b068adde9410551f7a555159900eefe3fc510",
+    "config-11f4098e490e431656dcf3d9a97ef71b77802999ab1f4ec45521855c72de1b15"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -18,7 +33,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-        "state": "coordinating"
+        "state": "completed"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -392,7 +407,7 @@
             "documentation"
           ],
           "spec_digest": "0f6f713ec616c0d4846bf6d8ed29714e42a5e3faa6ea63ee744f662e85472896",
-          "state": "AWAITING_APPROVAL",
+          "state": "DONE",
           "task_id": "TASK-WRITING",
           "task_version": 8,
           "title": "Pi 撰写公众号深度文与抖音科普口播稿",
@@ -532,7 +547,7 @@
             },
             "title": "Pi 撰写公众号深度文与抖音科普口播稿"
           },
-          "state": "AWAITING_APPROVAL",
+          "state": "DONE",
           "task_id": "TASK-WRITING",
           "task_version": 8
         }
@@ -541,265 +556,9 @@
     "results_reviews": {
       "authorized_ready_candidates": [],
       "needs_attention": [],
-      "next_action": "review_existing_results_first",
+      "next_action": "wait_for_event",
       "omitted_quality_summaries": 0,
       "quality_index": [
-        {
-          "action": "deliver",
-          "approval_id": "approval-89c34ba7970278b7c8d349ce1a21a447bcd9e562a280bc8e8124c1832dabe82f",
-          "approved_at": "2026-10-04T06:46:21.003329+00:00",
-          "binding": {
-            "content": {
-              "artifact_hash": "989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
-              "kind": "artifact"
-            },
-            "task_version": 8
-          },
-          "current_status": "active",
-          "fact_kind": "approval",
-          "invalidated": false,
-          "object_version": 3,
-          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-          "report_digest": null,
-          "status": "active",
-          "task_id": "TASK-WRITING",
-          "verification": {
-            "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
-            "target_base_sha": null
-          }
-        },
-        {
-          "attempt": 2,
-          "binding": {
-            "content": {
-              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
-              "kind": "artifact"
-            },
-            "task_version": 8
-          },
-          "collected_at": "2026-10-04T06:33:53.103196+00:00",
-          "current_status": "current",
-          "evidence_id": "artifact-evidence-fdcd329042368f16148f623514bad009dc74cd452f1ae176012c3239dff20d52",
-          "exit_code": null,
-          "fact_kind": "evidence",
-          "invalidated": false,
-          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-          "report_digest": "2b378c8f6f5b1cb56b0c2c053719c32a80660f45dfc996a846f016d2384c3a40",
-          "run_id": null,
-          "source": "artifact",
-          "status": "current",
-          "task_id": "TASK-WRITING",
-          "task_version": 8,
-          "verification": {
-            "acceptance_ids": [
-              "AC-WRITING-FILES"
-            ],
-            "command_id": null,
-            "covered_requirements": [
-              "artifact-hash-report"
-            ],
-            "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
-            "review_conclusion": null,
-            "reviewer_config_version": null,
-            "reviewer_id": null,
-            "target_base_sha": null,
-            "verification_succeeded": true
-          }
-        },
-        {
-          "attempt": 2,
-          "binding": {
-            "content": {
-              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
-              "kind": "artifact"
-            },
-            "task_version": 8
-          },
-          "collected_at": "2026-10-04T06:40:36.530615+00:00",
-          "current_status": "current",
-          "evidence_id": "verification-evidence-c00fafabf246b48f1ea96c2cc98113bf9d4c09a7e55cf2cacab2009503fd4d92",
-          "exit_code": null,
-          "fact_kind": "evidence",
-          "invalidated": false,
-          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-          "report_digest": "559170292de4c0bb4d27f1ebbdf2805208880f10d46ed06e306f83976db9a659",
-          "run_id": "inv-7ade214844c25d2ae407735bf677b842ae54916495f144e9d659115e51401b78",
-          "source": "independent_review",
-          "status": "current",
-          "task_id": "TASK-WRITING",
-          "task_version": 8,
-          "verification": {
-            "acceptance_ids": [
-              "AC-WRITING-FILES",
-              "AC-WRITING-QUALITY"
-            ],
-            "command_id": null,
-            "covered_requirements": [
-              "review.md"
-            ],
-            "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
-            "review_conclusion": "approved",
-            "reviewer_config_version": 1,
-            "reviewer_id": "worker-3",
-            "target_base_sha": null,
-            "verification_succeeded": true
-          }
-        },
-        {
-          "artifacts": [
-            {
-              "content_hash": "25867460ad62fcd94d3de172e7fa733a1e113e1378d4e43b7d2f5c6c95c8a5a0",
-              "kind": "document",
-              "location": "articles/wechat.md"
-            },
-            {
-              "content_hash": "ea7a49f67ce02d74a6cbbe9126e625011275984d4d30fb5d5385767de56ae1b0",
-              "kind": "document",
-              "location": "articles/douyin.md"
-            }
-          ],
-          "attempt": 2,
-          "binding": {
-            "content": {
-              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
-              "kind": "artifact"
-            },
-            "task_version": 8
-          },
-          "change_summary": "Runtime observed 2 declared output files",
-          "current_status": "submitted",
-          "fact_kind": "result",
-          "failure": null,
-          "invalidated": false,
-          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-          "report_digest": "76d0434d7c8e60ed19009568a3e8908a5ef4db5fb55236a1c001de0a3ff35326",
-          "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
-          "risks": [],
-          "run_id": "run-ca9378295f6912f54a8c1af60d295bfd41d689d25df2f09319aba57c6df1d280",
-          "status": "submitted",
-          "submitted_at": "2026-10-04T06:33:52.250326+00:00",
-          "task_id": "TASK-WRITING",
-          "task_version": 8,
-          "verification": {
-            "target_base_sha": null
-          }
-        },
-        {
-          "attempt": 1,
-          "binding": {
-            "content": {
-              "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
-              "kind": "artifact"
-            },
-            "task_version": 8
-          },
-          "collected_at": "2026-10-04T06:12:43.599936+00:00",
-          "current_status": "stale",
-          "evidence_id": "artifact-evidence-4027053457c585759d69eab6ceb8f0c1be76af1735e30327cc5ad719944943bc",
-          "exit_code": null,
-          "fact_kind": "evidence",
-          "invalidated": true,
-          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-          "report_digest": "1491e1179aeebeb074f2720c76ff801da05b9cc6d8a1a618868121fda5f98d73",
-          "run_id": null,
-          "source": "artifact",
-          "status": "current",
-          "task_id": "TASK-WRITING",
-          "task_version": 8,
-          "verification": {
-            "acceptance_ids": [
-              "AC-WRITING-FILES"
-            ],
-            "command_id": null,
-            "covered_requirements": [
-              "artifact-hash-report"
-            ],
-            "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
-            "review_conclusion": null,
-            "reviewer_config_version": null,
-            "reviewer_id": null,
-            "target_base_sha": null,
-            "verification_succeeded": true
-          }
-        },
-        {
-          "attempt": 1,
-          "binding": {
-            "content": {
-              "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
-              "kind": "artifact"
-            },
-            "task_version": 8
-          },
-          "collected_at": "2026-10-04T06:19:31.366403+00:00",
-          "current_status": "stale",
-          "evidence_id": "verification-evidence-b2cc95678d51620903d9e2c7472c4b65625fa3c396878a7537f640ac79c83370",
-          "exit_code": null,
-          "fact_kind": "evidence",
-          "invalidated": true,
-          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-          "report_digest": "7b19fca0e6c2cfebc3bd7be7cc50dcbea5b5b64f9c28cb4c35f88c389a842fd2",
-          "run_id": "inv-bb9da5f2ce0a29473b0ad36f10383beff94c4241f4e6b51f0167bc363973de78",
-          "source": "independent_review",
-          "status": "current",
-          "task_id": "TASK-WRITING",
-          "task_version": 8,
-          "verification": {
-            "acceptance_ids": [
-              "AC-WRITING-FILES",
-              "AC-WRITING-QUALITY"
-            ],
-            "command_id": null,
-            "covered_requirements": [
-              "review.md"
-            ],
-            "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
-            "review_conclusion": "changes_requested",
-            "reviewer_config_version": 1,
-            "reviewer_id": "worker-3",
-            "target_base_sha": null,
-            "verification_succeeded": true
-          }
-        },
-        {
-          "artifacts": [
-            {
-              "content_hash": "85b7f8920d518ffc0540206231c2e100e6094c53b356461ea83a709516507ab8",
-              "kind": "document",
-              "location": "articles/wechat.md"
-            },
-            {
-              "content_hash": "7ed8e7910469e0dddf0cbdf543e238955842bfb2109e216b0071dfa96a4f3948",
-              "kind": "document",
-              "location": "articles/douyin.md"
-            }
-          ],
-          "attempt": 1,
-          "binding": {
-            "content": {
-              "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
-              "kind": "artifact"
-            },
-            "task_version": 8
-          },
-          "change_summary": "Runtime observed 2 declared output files",
-          "current_status": "rejected",
-          "fact_kind": "result",
-          "failure": null,
-          "invalidated": true,
-          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-          "report_digest": "2462d9ebef55b9d8f031db3873ee39e7646e1fc98c9149ae57dea781b2ea1823",
-          "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
-          "risks": [],
-          "run_id": "run-367ad6eafd238c41df1acd28d2164c7b990d69728eb47391c53d90ebb048068e",
-          "status": "submitted",
-          "submitted_at": "2026-10-04T06:12:42.747682+00:00",
-          "task_id": "TASK-WRITING",
-          "task_version": 8,
-          "verification": {
-            "target_base_sha": null
-          }
-        },
         {
           "action": "deliver",
           "approval_id": "approval-ca9233f17543797cb4d38147c82b0052ec8669d17ed11854882dd6de7140cca3",
@@ -936,6 +695,146 @@
           "submitted_at": "2026-10-03T20:13:35.006084+00:00",
           "task_id": "TASK-RESEARCH",
           "task_version": 6,
+          "verification": {
+            "target_base_sha": null
+          }
+        },
+        {
+          "action": "deliver",
+          "approval_id": "approval-89c34ba7970278b7c8d349ce1a21a447bcd9e562a280bc8e8124c1832dabe82f",
+          "approved_at": "2026-10-04T06:46:21.003329+00:00",
+          "binding": {
+            "content": {
+              "artifact_hash": "989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "current_status": "consumed",
+          "fact_kind": "approval",
+          "invalidated": false,
+          "object_version": 3,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": null,
+          "status": "active",
+          "task_id": "TASK-WRITING",
+          "verification": {
+            "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+            "target_base_sha": null
+          }
+        },
+        {
+          "attempt": 2,
+          "binding": {
+            "content": {
+              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "collected_at": "2026-10-04T06:33:53.103196+00:00",
+          "current_status": "current",
+          "evidence_id": "artifact-evidence-fdcd329042368f16148f623514bad009dc74cd452f1ae176012c3239dff20d52",
+          "exit_code": null,
+          "fact_kind": "evidence",
+          "invalidated": false,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "2b378c8f6f5b1cb56b0c2c053719c32a80660f45dfc996a846f016d2384c3a40",
+          "run_id": null,
+          "source": "artifact",
+          "status": "current",
+          "task_id": "TASK-WRITING",
+          "task_version": 8,
+          "verification": {
+            "acceptance_ids": [
+              "AC-WRITING-FILES"
+            ],
+            "command_id": null,
+            "covered_requirements": [
+              "artifact-hash-report"
+            ],
+            "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+            "review_conclusion": null,
+            "reviewer_config_version": null,
+            "reviewer_id": null,
+            "target_base_sha": null,
+            "verification_succeeded": true
+          }
+        },
+        {
+          "attempt": 2,
+          "binding": {
+            "content": {
+              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "collected_at": "2026-10-04T06:40:36.530615+00:00",
+          "current_status": "current",
+          "evidence_id": "verification-evidence-c00fafabf246b48f1ea96c2cc98113bf9d4c09a7e55cf2cacab2009503fd4d92",
+          "exit_code": null,
+          "fact_kind": "evidence",
+          "invalidated": false,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "559170292de4c0bb4d27f1ebbdf2805208880f10d46ed06e306f83976db9a659",
+          "run_id": "inv-7ade214844c25d2ae407735bf677b842ae54916495f144e9d659115e51401b78",
+          "source": "independent_review",
+          "status": "current",
+          "task_id": "TASK-WRITING",
+          "task_version": 8,
+          "verification": {
+            "acceptance_ids": [
+              "AC-WRITING-FILES",
+              "AC-WRITING-QUALITY"
+            ],
+            "command_id": null,
+            "covered_requirements": [
+              "review.md"
+            ],
+            "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+            "review_conclusion": "approved",
+            "reviewer_config_version": 1,
+            "reviewer_id": "worker-3",
+            "target_base_sha": null,
+            "verification_succeeded": true
+          }
+        },
+        {
+          "artifacts": [
+            {
+              "content_hash": "25867460ad62fcd94d3de172e7fa733a1e113e1378d4e43b7d2f5c6c95c8a5a0",
+              "kind": "document",
+              "location": "articles/wechat.md"
+            },
+            {
+              "content_hash": "ea7a49f67ce02d74a6cbbe9126e625011275984d4d30fb5d5385767de56ae1b0",
+              "kind": "document",
+              "location": "articles/douyin.md"
+            }
+          ],
+          "attempt": 2,
+          "binding": {
+            "content": {
+              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "change_summary": "Runtime observed 2 declared output files",
+          "current_status": "accepted",
+          "fact_kind": "result",
+          "failure": null,
+          "invalidated": false,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "76d0434d7c8e60ed19009568a3e8908a5ef4db5fb55236a1c001de0a3ff35326",
+          "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+          "risks": [],
+          "run_id": "run-ca9378295f6912f54a8c1af60d295bfd41d689d25df2f09319aba57c6df1d280",
+          "status": "submitted",
+          "submitted_at": "2026-10-04T06:33:52.250326+00:00",
+          "task_id": "TASK-WRITING",
+          "task_version": 8,
           "verification": {
             "target_base_sha": null
           }
@@ -1751,13 +1650,127 @@
           "verification": {
             "target_base_sha": null
           }
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "content": {
+              "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "collected_at": "2026-10-04T06:12:43.599936+00:00",
+          "current_status": "stale",
+          "evidence_id": "artifact-evidence-4027053457c585759d69eab6ceb8f0c1be76af1735e30327cc5ad719944943bc",
+          "exit_code": null,
+          "fact_kind": "evidence",
+          "invalidated": true,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "1491e1179aeebeb074f2720c76ff801da05b9cc6d8a1a618868121fda5f98d73",
+          "run_id": null,
+          "source": "artifact",
+          "status": "current",
+          "task_id": "TASK-WRITING",
+          "task_version": 8,
+          "verification": {
+            "acceptance_ids": [
+              "AC-WRITING-FILES"
+            ],
+            "command_id": null,
+            "covered_requirements": [
+              "artifact-hash-report"
+            ],
+            "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
+            "review_conclusion": null,
+            "reviewer_config_version": null,
+            "reviewer_id": null,
+            "target_base_sha": null,
+            "verification_succeeded": true
+          }
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "content": {
+              "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "collected_at": "2026-10-04T06:19:31.366403+00:00",
+          "current_status": "stale",
+          "evidence_id": "verification-evidence-b2cc95678d51620903d9e2c7472c4b65625fa3c396878a7537f640ac79c83370",
+          "exit_code": null,
+          "fact_kind": "evidence",
+          "invalidated": true,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "7b19fca0e6c2cfebc3bd7be7cc50dcbea5b5b64f9c28cb4c35f88c389a842fd2",
+          "run_id": "inv-bb9da5f2ce0a29473b0ad36f10383beff94c4241f4e6b51f0167bc363973de78",
+          "source": "independent_review",
+          "status": "current",
+          "task_id": "TASK-WRITING",
+          "task_version": 8,
+          "verification": {
+            "acceptance_ids": [
+              "AC-WRITING-FILES",
+              "AC-WRITING-QUALITY"
+            ],
+            "command_id": null,
+            "covered_requirements": [
+              "review.md"
+            ],
+            "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
+            "review_conclusion": "changes_requested",
+            "reviewer_config_version": 1,
+            "reviewer_id": "worker-3",
+            "target_base_sha": null,
+            "verification_succeeded": true
+          }
+        },
+        {
+          "artifacts": [
+            {
+              "content_hash": "85b7f8920d518ffc0540206231c2e100e6094c53b356461ea83a709516507ab8",
+              "kind": "document",
+              "location": "articles/wechat.md"
+            },
+            {
+              "content_hash": "7ed8e7910469e0dddf0cbdf543e238955842bfb2109e216b0071dfa96a4f3948",
+              "kind": "document",
+              "location": "articles/douyin.md"
+            }
+          ],
+          "attempt": 1,
+          "binding": {
+            "content": {
+              "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "change_summary": "Runtime observed 2 declared output files",
+          "current_status": "rejected",
+          "fact_kind": "result",
+          "failure": null,
+          "invalidated": true,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "2462d9ebef55b9d8f031db3873ee39e7646e1fc98c9149ae57dea781b2ea1823",
+          "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
+          "risks": [],
+          "run_id": "run-367ad6eafd238c41df1acd28d2164c7b990d69728eb47391c53d90ebb048068e",
+          "status": "submitted",
+          "submitted_at": "2026-10-04T06:12:42.747682+00:00",
+          "task_id": "TASK-WRITING",
+          "task_version": 8,
+          "verification": {
+            "target_base_sha": null
+          }
         }
       ],
       "report_bodies_included": false,
       "shared_materials_index": "CODE_INDEX.json",
-      "waiting_review": [
-        "TASK-WRITING"
-      ]
+      "waiting_review": []
     },
     "decisions": null,
     "code_index": {
@@ -1814,6 +1827,24 @@
       "omitted_shared_material_refs": 0,
       "requires_live_dependency_revalidation": true,
       "shared_materials": [
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "6072396c535242405dd4aa59dc60923f46efcb0d",
+          "content_digest": "a79b25511051d0be4acfe60c685f9eed2bb740c97bd413c20543644fe355b4aa",
+          "manifest_hash": "e091d128a3dddebf765017fedc39e21f5adc9a389d9e453461f170beaac0cf33",
+          "observed_at": "2026-10-04T06:48:48.316308+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/a79b25511051d0be4acfe60c685f9eed2bb740c97bd413c20543644fe355b4aa",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "kind": "task_result",
+            "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+            "run_id": "run-ca9378295f6912f54a8c1af60d295bfd41d689d25df2f09319aba57c6df1d280",
+            "stage": "delivery",
+            "task_id": "TASK-WRITING",
+            "task_version": 8
+          },
+          "subject_hash": "78084d14f6fa604ec76000c72aabd3efdf3d8a55fc836a93cc283e76410ceff9"
+        },
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "74d3c9f815abd12c852ccb40ddae714cf9c26115",
@@ -1992,6 +2023,16 @@
     "feedback_index": {
       "archive_references": [
         {
+          "completed_at": "2026-10-04T06:47:19.842029+00:00",
+          "completion_type": "artifact_delivered",
+          "current_task_version": true,
+          "delivery_id": "delivery-989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+          "done_event_seq": 29880,
+          "feedback_id": "delivery-feedback-6d12bb773d91c7e0120201363c7c7859ea1f589c6f8d3e2be1168cdee291d88a",
+          "task_id": "TASK-WRITING",
+          "task_version": 8
+        },
+        {
           "completed_at": "2026-10-03T20:21:55.209088+00:00",
           "completion_type": "artifact_delivered",
           "current_task_version": true,
@@ -2005,25 +2046,112 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 9,
-      "event_watermark": 29818,
-      "history_count": 1,
+      "event_watermark": 29951,
+      "history_count": 2,
       "missing": [
         "full_report_bodies"
       ],
       "needs_attention": [],
-      "next_action": "review_existing_results_first",
+      "next_action": "wait_for_event",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
-      "pending_results": [
-        {
-          "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
-          "state": "AWAITING_APPROVAL",
-          "task_id": "TASK-WRITING",
-          "task_version": 8
-        }
-      ],
+      "pending_results": [],
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
       "recent_deliveries": [
+        {
+          "approval_id": "approval-89c34ba7970278b7c8d349ce1a21a447bcd9e562a280bc8e8124c1832dabe82f",
+          "attempt": 2,
+          "completed_at": "2026-10-04T06:47:19.842029+00:00",
+          "completion_type": "artifact_delivered",
+          "delivery_binding": {
+            "content": {
+              "artifact_hash": "989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "delivery_digest": "4871cbf6a8f82aa4f9c2452d2f51b39d20752e8333cd46ac3d2eb521b7372a3f",
+          "delivery_id": "delivery-989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+          "done_event_id": "quality-54f584aae582b54f4b6d9f7d9dd37894222643a7d0a17ee05c836536b26928eb",
+          "done_event_seq": 29880,
+          "evidence": [
+            {
+              "acceptance_ids": [
+                "AC-WRITING-FILES"
+              ],
+              "binding": {
+                "content": {
+                  "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+                  "kind": "artifact"
+                },
+                "task_version": 8
+              },
+              "command_id": null,
+              "command_registry_revision": null,
+              "evidence_id": "artifact-evidence-fdcd329042368f16148f623514bad009dc74cd452f1ae176012c3239dff20d52",
+              "exit_code": null,
+              "integration_proposal_id": null,
+              "invocation_id": null,
+              "report_bytes": 590,
+              "report_hash": "2b378c8f6f5b1cb56b0c2c053719c32a80660f45dfc996a846f016d2384c3a40",
+              "review_conclusion": null,
+              "reviewer_config_version": null,
+              "reviewer_id": null,
+              "source": "artifact",
+              "verification_succeeded": true
+            },
+            {
+              "acceptance_ids": [
+                "AC-WRITING-FILES",
+                "AC-WRITING-QUALITY"
+              ],
+              "binding": {
+                "content": {
+                  "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+                  "kind": "artifact"
+                },
+                "task_version": 8
+              },
+              "command_id": null,
+              "command_registry_revision": null,
+              "evidence_id": "verification-evidence-c00fafabf246b48f1ea96c2cc98113bf9d4c09a7e55cf2cacab2009503fd4d92",
+              "exit_code": null,
+              "integration_proposal_id": null,
+              "invocation_id": "inv-7ade214844c25d2ae407735bf677b842ae54916495f144e9d659115e51401b78",
+              "report_bytes": 1450,
+              "report_hash": "559170292de4c0bb4d27f1ebbdf2805208880f10d46ed06e306f83976db9a659",
+              "review_conclusion": "approved",
+              "reviewer_config_version": 1,
+              "reviewer_id": "worker-3",
+              "source": "independent_review",
+              "verification_succeeded": true
+            }
+          ],
+          "feedback_id": "delivery-feedback-6d12bb773d91c7e0120201363c7c7859ea1f589c6f8d3e2be1168cdee291d88a",
+          "merge_sha": null,
+          "missing": [
+            "full_report_bodies"
+          ],
+          "object_version": 3,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "pull_request": null,
+          "recorded_at": "2026-10-04T06:47:19.846Z",
+          "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+          "run_id": "run-ca9378295f6912f54a8c1af60d295bfd41d689d25df2f09319aba57c6df1d280",
+          "schema": "xingshu/delivery-feedback/1",
+          "source_binding": {
+            "content": {
+              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "target_branch": null,
+          "task_id": "TASK-WRITING",
+          "task_spec_digest": "0f6f713ec616c0d4846bf6d8ed29714e42a5e3faa6ea63ee744f662e85472896",
+          "task_title": "Pi 撰写公众号深度文与抖音科普口播稿",
+          "task_version": 8
+        },
         {
           "approval_id": "approval-ca9233f17543797cb4d38147c82b0052ec8669d17ed11854882dd6de7140cca3",
           "attempt": 2,

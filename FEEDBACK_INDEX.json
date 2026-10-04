@@ -1,6 +1,16 @@
 {
   "archive_references": [
     {
+      "completed_at": "2026-10-04T06:47:19.842029+00:00",
+      "completion_type": "artifact_delivered",
+      "current_task_version": true,
+      "delivery_id": "delivery-989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+      "done_event_seq": 29880,
+      "feedback_id": "delivery-feedback-6d12bb773d91c7e0120201363c7c7859ea1f589c6f8d3e2be1168cdee291d88a",
+      "task_id": "TASK-WRITING",
+      "task_version": 8
+    },
+    {
       "completed_at": "2026-10-03T20:21:55.209088+00:00",
       "completion_type": "artifact_delivered",
       "current_task_version": true,
@@ -14,25 +24,112 @@
   "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 9,
-  "event_watermark": 29818,
-  "history_count": 1,
+  "event_watermark": 29951,
+  "history_count": 2,
   "missing": [
     "full_report_bodies"
   ],
   "needs_attention": [],
-  "next_action": "review_existing_results_first",
+  "next_action": "wait_for_event",
   "next_history_before_event_seq": null,
   "omitted_recent_entries": 0,
-  "pending_results": [
-    {
-      "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
-      "state": "AWAITING_APPROVAL",
-      "task_id": "TASK-WRITING",
-      "task_version": 8
-    }
-  ],
+  "pending_results": [],
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "recent_deliveries": [
+    {
+      "approval_id": "approval-89c34ba7970278b7c8d349ce1a21a447bcd9e562a280bc8e8124c1832dabe82f",
+      "attempt": 2,
+      "completed_at": "2026-10-04T06:47:19.842029+00:00",
+      "completion_type": "artifact_delivered",
+      "delivery_binding": {
+        "content": {
+          "artifact_hash": "989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+          "kind": "artifact"
+        },
+        "task_version": 8
+      },
+      "delivery_digest": "4871cbf6a8f82aa4f9c2452d2f51b39d20752e8333cd46ac3d2eb521b7372a3f",
+      "delivery_id": "delivery-989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+      "done_event_id": "quality-54f584aae582b54f4b6d9f7d9dd37894222643a7d0a17ee05c836536b26928eb",
+      "done_event_seq": 29880,
+      "evidence": [
+        {
+          "acceptance_ids": [
+            "AC-WRITING-FILES"
+          ],
+          "binding": {
+            "content": {
+              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "command_id": null,
+          "command_registry_revision": null,
+          "evidence_id": "artifact-evidence-fdcd329042368f16148f623514bad009dc74cd452f1ae176012c3239dff20d52",
+          "exit_code": null,
+          "integration_proposal_id": null,
+          "invocation_id": null,
+          "report_bytes": 590,
+          "report_hash": "2b378c8f6f5b1cb56b0c2c053719c32a80660f45dfc996a846f016d2384c3a40",
+          "review_conclusion": null,
+          "reviewer_config_version": null,
+          "reviewer_id": null,
+          "source": "artifact",
+          "verification_succeeded": true
+        },
+        {
+          "acceptance_ids": [
+            "AC-WRITING-FILES",
+            "AC-WRITING-QUALITY"
+          ],
+          "binding": {
+            "content": {
+              "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+              "kind": "artifact"
+            },
+            "task_version": 8
+          },
+          "command_id": null,
+          "command_registry_revision": null,
+          "evidence_id": "verification-evidence-c00fafabf246b48f1ea96c2cc98113bf9d4c09a7e55cf2cacab2009503fd4d92",
+          "exit_code": null,
+          "integration_proposal_id": null,
+          "invocation_id": "inv-7ade214844c25d2ae407735bf677b842ae54916495f144e9d659115e51401b78",
+          "report_bytes": 1450,
+          "report_hash": "559170292de4c0bb4d27f1ebbdf2805208880f10d46ed06e306f83976db9a659",
+          "review_conclusion": "approved",
+          "reviewer_config_version": 1,
+          "reviewer_id": "worker-3",
+          "source": "independent_review",
+          "verification_succeeded": true
+        }
+      ],
+      "feedback_id": "delivery-feedback-6d12bb773d91c7e0120201363c7c7859ea1f589c6f8d3e2be1168cdee291d88a",
+      "merge_sha": null,
+      "missing": [
+        "full_report_bodies"
+      ],
+      "object_version": 3,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "pull_request": null,
+      "recorded_at": "2026-10-04T06:47:19.846Z",
+      "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+      "run_id": "run-ca9378295f6912f54a8c1af60d295bfd41d689d25df2f09319aba57c6df1d280",
+      "schema": "xingshu/delivery-feedback/1",
+      "source_binding": {
+        "content": {
+          "artifact_hash": "df75bb5eff8f984ad568f812534f893d54afd6a597dab1eb4769d7f560cbdff9",
+          "kind": "artifact"
+        },
+        "task_version": 8
+      },
+      "target_branch": null,
+      "task_id": "TASK-WRITING",
+      "task_spec_digest": "0f6f713ec616c0d4846bf6d8ed29714e42a5e3faa6ea63ee744f662e85472896",
+      "task_title": "Pi 撰写公众号深度文与抖音科普口播稿",
+      "task_version": 8
+    },
     {
       "approval_id": "approval-ca9233f17543797cb4d38147c82b0052ec8669d17ed11854882dd6de7140cca3",
       "attempt": 2,
