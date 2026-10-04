@@ -6,6 +6,20 @@
     {
       "agent_config_version": 1,
       "agent_id": "worker-2",
+      "attempt": 2,
+      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "ended_at": "2026-10-04T06:33:47.058448+00:00",
+      "exit_reason": "completed",
+      "observed_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "run_id": "run-ca9378295f6912f54a8c1af60d295bfd41d689d25df2f09319aba57c6df1d280",
+      "started_at": "2026-10-04T06:25:52.492475+00:00",
+      "state": "FINISHED",
+      "task_id": "TASK-WRITING",
+      "task_version": 8
+    },
+    {
+      "agent_config_version": 1,
+      "agent_id": "worker-2",
       "attempt": 1,
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "ended_at": "2026-10-04T06:12:37.419818+00:00",
@@ -176,7 +190,7 @@
       "title_truncated": false
     },
     {
-      "attempt": 1,
+      "attempt": 2,
       "depends_on": [
         "TASK-RESEARCH"
       ],
@@ -186,7 +200,7 @@
         "documentation"
       ],
       "spec_digest": "0f6f713ec616c0d4846bf6d8ed29714e42a5e3faa6ea63ee744f662e85472896",
-      "state": "NEEDS_CHANGES",
+      "state": "VERIFYING",
       "task_id": "TASK-WRITING",
       "task_version": 8,
       "title": "Pi 撰写公众号深度文与抖音科普口播稿",
@@ -262,7 +276,7 @@
       "task_version": 6
     },
     {
-      "attempt": 1,
+      "attempt": 2,
       "spec": {
         "acceptance": [
           {
@@ -326,7 +340,7 @@
         },
         "title": "Pi 撰写公众号深度文与抖音科普口播稿"
       },
-      "state": "NEEDS_CHANGES",
+      "state": "VERIFYING",
       "task_id": "TASK-WRITING",
       "task_version": 8
     }
