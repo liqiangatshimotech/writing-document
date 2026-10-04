@@ -24,7 +24,7 @@
   "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 11,
-  "event_watermark": 32642,
+  "event_watermark": 32761,
   "history_count": 2,
   "missing": [
     "full_report_bodies"
