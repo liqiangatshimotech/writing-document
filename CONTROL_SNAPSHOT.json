@@ -2,12 +2,42 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 11,
-  "snapshot_revision": 113,
-  "event_watermark": 33153,
+  "snapshot_revision": 114,
+  "event_watermark": 33304,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T08:05:35.358672+00:00",
+  "generated_at": "2026-10-04T08:11:10.952069+00:00",
   "source_event_ids": [
-    "config-bebf3354fca0d3b38abb92f5f5b1b7875d2a4d04629c1944efb8cf3bbe27e006"
+    "config-3d00b306e2af5cf0b8c98fa9c70b78c6fa40775a450df2400bf297a36b64d43e",
+    "invoke-6853e7aa296acb8e3d7faf2f4abfc8c6ca9cb1be93d3fbbad785791bf7c5788a",
+    "config-49bfea59b264ca801ac11fb2b78ff7e2687f92355e8fee44e251de72c6ca80f6",
+    "config-ef208052ea9c938dac7ffcace0a93257a5ed5cd959b7a6eb9035b7616f7bc5aa",
+    "invoke-1f00cac14a5a95996bc8b379067cc2b031e747eeaaea3e62dc8cc5b5901171ea",
+    "config-b75ff7e7466677eda092ede9377e82823d15ba2e40b0889fc69e4b3bc33531fd",
+    "config-5a4e969a9288145ee7ab317b47ecf3492341091f23b8992e65d2a124c335de62",
+    "invoke-71386e6c78e8240a2f7ac6e56d93aff3c167e9cdb51439be84488a552ad201da",
+    "config-d3b1ae057b04a7cefdb62415c829472a14acd0f0aa179952fa68404530621a3f",
+    "invoke-fffae3b6c3c4ed8aa3516e78ea47cf0bb42bd99ce37c18072def29a6539aebff",
+    "config-4a36ec0110893c46b4036f9c86ea7a0af91632501a31494ed757a1c17a790dec",
+    "config-2d14c890bac48dcfeb5c6d8e32520c39f8a2cc1ed6dae5869481ca742cf42618",
+    "invoke-a980e658d144ea9e6a1f0a5f3f66047031703237f3ad57baf08dd2d67f45fe9f",
+    "config-13ce84fb263b62b585ec2c363da5939e025cef12e32400d719064c122b41832f",
+    "config-82b7333191935e4adf23295f7af4a7e5042ab123774162fe3ffe8aee77dc39be",
+    "config-fb96954ed73e271150ca229a1719564c5b7266c37c7978295c2d23c6005d9c4a",
+    "invoke-377caedd85b8e339a2c7b3e7f0f59e637a724c4a6ae92dd41d819b46d832a280",
+    "quality-3543526c6b6748fefb2251897999a954ce7f2d12f91a69b66bd391bc0c093ec6",
+    "quality-979a04beb2aef530a9da4fcadd72bb68eadfe589e9593a3f337dd530da15a3aa",
+    "config-8295743f9c54916d414dfcb40ce0ea9f59bc56ae7ca1a55ec4b63af055b2961c",
+    "invoke-12f9aa95fb5f594dc33821129d20e4c4c3a4acab85c236e8a792073be2b5002b",
+    "config-02036751c54406d07e6980d3c66a1e3bf4e2d366e7e463255da74110181c74a8",
+    "config-c690e176f5ffcddf2860d510b05cb518702991c2ff7ebd04531f32da2d55a10a",
+    "invoke-19c358d09313cc42660c840fd4ea27eb2417c03811a7634fa69449814ee626dd",
+    "config-266712f929ad93cdbc7f09ef848a4aba74a929cc2fd7316987bba959a81ce5e8",
+    "config-a828a065b2c44f893e06a004daa3484a292baf8167b79c67478ba01854712c34",
+    "invoke-9d4b95f49e4365bb7edc1edbedd2d4d0c5213cdd19dd5054e556bca18bef846e",
+    "config-c7c573c8b64262b7b9bd573da0587c88edf2215858e0aea88cfffc34e3ba7582",
+    "config-5a269e0a822327609a5997e11de62b427bff359e2c3b1c2e83071402fb6d80f2",
+    "config-ad544222ed7a2764066a9b66a4d7ced9f58eb558e2e989575f1283f0e8785def",
+    "config-7f407e359b22c83732b3b86996f1ecceb538272fde41e5394eb1cccacafeaeeb"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -418,7 +448,7 @@
             "artifact_delivery"
           ],
           "spec_digest": "6060e407cf8872b9f3ab6d57883b1004a5fb185e968946c02cc2542a5791437f",
-          "state": "VERIFYING",
+          "state": "AWAITING_APPROVAL",
           "task_id": "TASK-MAIN-DELIVERY",
           "task_version": 2,
           "title": "将四份已审定GLM-5.3文档逐字节交付至本地main",
@@ -537,7 +567,7 @@
             },
             "title": "将四份已审定GLM-5.3文档逐字节交付至本地main"
           },
-          "state": "VERIFYING",
+          "state": "AWAITING_APPROVAL",
           "task_id": "TASK-MAIN-DELIVERY",
           "task_version": 2
         }
@@ -660,6 +690,45 @@
             "review_conclusion": null,
             "reviewer_config_version": null,
             "reviewer_id": null,
+            "target_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+            "verification_succeeded": true
+          }
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "content": {
+              "head_sha": "7c60849c8c6d8bd4cd651d8d503427e46dcec89f",
+              "kind": "git"
+            },
+            "task_version": 2
+          },
+          "collected_at": "2026-10-04T08:08:40.545011+00:00",
+          "current_status": "current",
+          "evidence_id": "verification-evidence-e5baf6a2c4c74c295522d301d6afa07d0a08bbd1df4406685d6db8bbaaa209fb",
+          "exit_code": null,
+          "fact_kind": "evidence",
+          "invalidated": false,
+          "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+          "report_digest": "6d58d00c0856973c04e940affd2abcbd68624962178c0f719e23e21dc0ba2019",
+          "run_id": "inv-cdf0264be7099196de6f9aff2d1ebf5d01acf34d07168c4656364d9a1b611a4d",
+          "source": "independent_review",
+          "status": "current",
+          "task_id": "TASK-MAIN-DELIVERY",
+          "task_version": 2,
+          "verification": {
+            "acceptance_ids": [
+              "AC-DELIVERY-HASH",
+              "AC-DELIVERY-INDEPENDENT-REVIEW"
+            ],
+            "command_id": null,
+            "covered_requirements": [
+              "review.md"
+            ],
+            "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
+            "review_conclusion": "approved",
+            "reviewer_config_version": 1,
+            "reviewer_id": "worker-3",
             "target_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
             "verification_succeeded": true
           }
@@ -2035,6 +2104,24 @@
       "shared_materials": [
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "7fb6a6b4cac44cef984b08e7dadef1a439b9d8c9",
+          "content_digest": "6dd0ed7f4ad1a33c9d79872e62ea4f9e23f73578874ee97bc16d8f522db4c68b",
+          "manifest_hash": "7c5cab0b840dbf780a7418873346b4d943acfa2e49e09f9c87d00067fedcb4bf",
+          "observed_at": "2026-10-04T08:10:28.111998+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/6dd0ed7f4ad1a33c9d79872e62ea4f9e23f73578874ee97bc16d8f522db4c68b",
+          "source_head_sha": "7c60849c8c6d8bd4cd651d8d503427e46dcec89f",
+          "subject": {
+            "kind": "task_result",
+            "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
+            "run_id": "run-6b4fcfa24bf0aa91c61d72878dee8ccc89ef93cb5cbcd267b9b3dab93c8caa93",
+            "stage": "verification",
+            "task_id": "TASK-MAIN-DELIVERY",
+            "task_version": 2
+          },
+          "subject_hash": "58be5b31717728e8dd21467df420f76224d34d4aa06f5601de45b4433a43ccc0"
+        },
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "63ca62d41216700f13d6322ca43c8fa173ed4e90",
           "content_digest": "7062f93c20af724f9754ea287b38ec9c87628e01170122ab7164f685b44228fa",
           "manifest_hash": "5e2f741984cd723abbbe7a926361d6cc38dad588880554b5252d099103b47b43",
@@ -2358,7 +2445,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 11,
-      "event_watermark": 33153,
+      "event_watermark": 33304,
       "history_count": 2,
       "missing": [
         "full_report_bodies"
@@ -2370,7 +2457,7 @@
       "pending_results": [
         {
           "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
-          "state": "VERIFYING",
+          "state": "AWAITING_APPROVAL",
           "task_id": "TASK-MAIN-DELIVERY",
           "task_version": 2
         }

@@ -24,7 +24,7 @@
   "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 11,
-  "event_watermark": 33153,
+  "event_watermark": 33304,
   "history_count": 2,
   "missing": [
     "full_report_bodies"
@@ -36,7 +36,7 @@
   "pending_results": [
     {
       "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
-      "state": "VERIFYING",
+      "state": "AWAITING_APPROVAL",
       "task_id": "TASK-MAIN-DELIVERY",
       "task_version": 2
     }

@@ -200,7 +200,7 @@
         "artifact_delivery"
       ],
       "spec_digest": "6060e407cf8872b9f3ab6d57883b1004a5fb185e968946c02cc2542a5791437f",
-      "state": "VERIFYING",
+      "state": "AWAITING_APPROVAL",
       "task_id": "TASK-MAIN-DELIVERY",
       "task_version": 2,
       "title": "将四份已审定GLM-5.3文档逐字节交付至本地main",
@@ -319,7 +319,7 @@
         },
         "title": "将四份已审定GLM-5.3文档逐字节交付至本地main"
       },
-      "state": "VERIFYING",
+      "state": "AWAITING_APPROVAL",
       "task_id": "TASK-MAIN-DELIVERY",
       "task_version": 2
     }

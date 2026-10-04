@@ -120,6 +120,45 @@
       }
     },
     {
+      "attempt": 1,
+      "binding": {
+        "content": {
+          "head_sha": "7c60849c8c6d8bd4cd651d8d503427e46dcec89f",
+          "kind": "git"
+        },
+        "task_version": 2
+      },
+      "collected_at": "2026-10-04T08:08:40.545011+00:00",
+      "current_status": "current",
+      "evidence_id": "verification-evidence-e5baf6a2c4c74c295522d301d6afa07d0a08bbd1df4406685d6db8bbaaa209fb",
+      "exit_code": null,
+      "fact_kind": "evidence",
+      "invalidated": false,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": "6d58d00c0856973c04e940affd2abcbd68624962178c0f719e23e21dc0ba2019",
+      "run_id": "inv-cdf0264be7099196de6f9aff2d1ebf5d01acf34d07168c4656364d9a1b611a4d",
+      "source": "independent_review",
+      "status": "current",
+      "task_id": "TASK-MAIN-DELIVERY",
+      "task_version": 2,
+      "verification": {
+        "acceptance_ids": [
+          "AC-DELIVERY-HASH",
+          "AC-DELIVERY-INDEPENDENT-REVIEW"
+        ],
+        "command_id": null,
+        "covered_requirements": [
+          "review.md"
+        ],
+        "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
+        "review_conclusion": "approved",
+        "reviewer_config_version": 1,
+        "reviewer_id": "worker-3",
+        "target_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+        "verification_succeeded": true
+      }
+    },
+    {
       "artifacts": [
         {
           "content_hash": "164c0bd0bca0e1cfeb2d6cbff11eddbb1e989ad9faeda7a7c952822fd74eda78",
