@@ -5,7 +5,7 @@
   "control_ref": "ai-control",
   "goal_progress": {
     "plan_id": "PLAN-b6a7a8d936c6535ece07b140",
-    "state": "awaiting_publication"
+    "state": "paused"
   },
   "lifecycle": "active",
   "live_resource_checks_required": true,
@@ -91,7 +91,7 @@
     "request_id": "PLANREQ-b6a7a8d936c6535ece07b140",
     "schema": "xingshu/repository-goal/1"
   },
-  "runtime_paused": false,
+  "runtime_paused": true,
   "shared_context_redacted_fields": [],
   "shared_context_revision": 2
 }
