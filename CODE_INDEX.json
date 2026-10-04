@@ -13,6 +13,38 @@
       "source_event_watermark": 10728,
       "task_id": "TASK-RESEARCH",
       "task_version": 6
+    },
+    {
+      "artifact_inputs": [
+        {
+          "content_included": false,
+          "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+          "file_count": 2,
+          "identity_digest": "96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a",
+          "manifest_hash": "7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+          "mount_root": ".xingshu-inputs/96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a/",
+          "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
+          "task_id": "TASK-RESEARCH",
+          "task_version": 6
+        }
+      ],
+      "dependencies": [
+        {
+          "delivery_digest": "d9caae0acc36e8cbabffc39aa87507c43837fc9e0cd7f4ac5105fe58b18b6205",
+          "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+          "task_id": "TASK-RESEARCH",
+          "task_spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
+          "task_version": 6
+        }
+      ],
+      "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+      "proof_digest": "46869543afa52f16d5b9476d0dc80ff88630407f57e616ce0a7debbb8d236afc",
+      "source_control_rev": 9,
+      "source_event_watermark": 28543,
+      "task_id": "TASK-WRITING",
+      "task_version": 8
     }
   ],
   "material_commit_is_business_source": false,

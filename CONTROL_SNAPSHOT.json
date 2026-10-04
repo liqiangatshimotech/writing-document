@@ -2,13 +2,29 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 9,
-  "snapshot_revision": 88,
-  "event_watermark": 28436,
+  "snapshot_revision": 89,
+  "event_watermark": 28557,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T05:49:21.182481+00:00",
+  "generated_at": "2026-10-04T05:51:44.403902+00:00",
   "source_event_ids": [
-    "quality-5209a539a2af1c44e0fc1c119175a5558cac4a7e2ec1b03d872f7eb5cf41071c",
-    "config-77eef615fad07886f704aa98621a12ed0470ff894a1c529e80af23ca907d55b1"
+    "config-33f35014209047385321f272e5327d1c3a0a0be625358465f5a34767e204fbc6",
+    "config-6f0d79806a77b1f9caadb9326f4de6eb79124231211fca4a9d6efcb4fc3d6e1e",
+    "config-9187f70293e85800f781eeb65064c005308bbfdd461526f3ef85eed547ce030f",
+    "pause-febde04ddacb8d1c623a8f304b40e8fcd870e14b95f4298f4d1d7c1bfa79af61",
+    "config-cf38b008f5a13c9826b2140de833e0f399410b97d1e4e3fbe4509dcc46568095",
+    "effective-base-46869543afa52f16d5b9476d0dc80ff88630407f57e616ce0a7debbb8d236afc",
+    "invoke-fe5eca91925fe4cb498bb88ba5ab79a2916cce011feaecb97762d127f2376d3f",
+    "config-75c57ba9e0f8f34f30a44e88434834ffde1101dce20c1ac2b58d3c9c6bb5837e",
+    "config-b474fad6db7bd96ddd83b77e6c125f2e9a54f49f5722f0d8a0c140dd6803f3cd",
+    "invoke-2549ee50707d35a93f4cb1abc14abe3b8c7b44e1e94d3e14d796f2aa07c3af1b",
+    "config-2c25a5adb013f6c28b30f9835de7251e352b389223b1c37be0758e32e98d9178",
+    "config-65e6dd29352902b91e5e28f911dea8b9813061c33e09ae052236461ae4474afc",
+    "config-8cfd5c850b781024e28564dc0e554ed06a087457bb3d88cb88a61f8db6d7601c",
+    "config-99041aedad65ff2f0e1ff2d7b72f67f7dd715780589db2968b18cda499b125e1",
+    "invoke-2990444e2a133810c0733c2e4853170bcf5b27a472b543635e8ff32d5146216f",
+    "config-0919b29006f2b6397daecbfaa0244eef307fae5b15ffb3db4e11897d6aa48b08",
+    "config-d7434450cb92325ceb3b09ec4d54919d7b8e72da3e7553d6e14e3cd342626274",
+    "config-4ba5e40bc6f0950277ced4536c41f581a5bae1493a5fe273b77109abe17915bd"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -19,12 +35,13 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-        "state": "stopped"
+        "state": "coordinating"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
       "missing": [
-        "full_report_bodies"
+        "full_report_bodies",
+        "artifact_input_contents"
       ],
       "name": "写作",
       "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
@@ -93,7 +110,7 @@
         "request_id": "PLANREQ-04d0d0cf06cdf3ae6ac90ffb",
         "schema": "xingshu/repository-goal/1"
       },
-      "runtime_paused": true,
+      "runtime_paused": false,
       "shared_context_redacted_fields": [],
       "shared_context_revision": 2
     },
@@ -515,7 +532,7 @@
         "TASK-WRITING"
       ],
       "needs_attention": [],
-      "next_action": "wait_for_user_resume",
+      "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
       "omitted_quality_summaries": 0,
       "quality_index": [
         {
@@ -1491,6 +1508,38 @@
           "source_event_watermark": 10728,
           "task_id": "TASK-RESEARCH",
           "task_version": 6
+        },
+        {
+          "artifact_inputs": [
+            {
+              "content_included": false,
+              "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "file_count": 2,
+              "identity_digest": "96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a",
+              "manifest_hash": "7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "mount_root": ".xingshu-inputs/96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a/",
+              "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
+              "task_id": "TASK-RESEARCH",
+              "task_version": 6
+            }
+          ],
+          "dependencies": [
+            {
+              "delivery_digest": "d9caae0acc36e8cbabffc39aa87507c43837fc9e0cd7f4ac5105fe58b18b6205",
+              "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "task_id": "TASK-RESEARCH",
+              "task_spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
+              "task_version": 6
+            }
+          ],
+          "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+          "proof_digest": "46869543afa52f16d5b9476d0dc80ff88630407f57e616ce0a7debbb8d236afc",
+          "source_control_rev": 9,
+          "source_event_watermark": 28543,
+          "task_id": "TASK-WRITING",
+          "task_version": 8
         }
       ],
       "material_commit_is_business_source": false,
@@ -1626,13 +1675,13 @@
       ],
       "authorized_repairs": [],
       "control_rev": 9,
-      "event_watermark": 28436,
+      "event_watermark": 28557,
       "history_count": 1,
       "missing": [
         "full_report_bodies"
       ],
       "needs_attention": [],
-      "next_action": "wait_for_user_resume",
+      "next_action": "consider_only_authorized_tasks_after_live_checks",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
       "pending_results": [],
