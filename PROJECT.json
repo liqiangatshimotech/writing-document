@@ -4,8 +4,8 @@
   "collaboration_entry": "共享任务入口（project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b）：先固定读取 Runtime 发布的控制提交及其 AGENTS.md/CONTROL_SNAPSHOT.json；不得修改控制分支或从快照自行领取租约。\n规划提案使用 xingshu/repository-proposal/1，唯一文件 PROPOSAL.json；字段 schema、project_id、proposal_id、observed_control_commit、plan（agentplan/1，observed_control_commit 与外层相同）。独立不可变 ref 为 refs/heads/xingshu/inbox/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/<proposal_id 的 UTF-8 SHA-256>；只创建，不覆盖或删除旧提案。提案需绑定所读控制修订和代码基线，不得携带状态、审批、结果或任意执行命令。Git 作者不是 Agent 身份。Runtime 自动发现后核验权限与当前版本；只有其正式派发才允许执行。读取代码和成果时，先在同一固定控制提交读取 CODE_INDEX.json.shared_materials；RESULTS_REVIEWS.json.shared_materials_index 指向该目录。只读取其中对应主体的不可变 reference/commit_sha 和 MANIFEST.json，核对文件摘要；真实业务代码提交是 source_head_sha。材料载体 commit 只用于传递代码对象和有界报告，不能作为业务执行基线或合入业务分支。未列出所需共享材料时等待 Runtime 发布，不能只凭 SHA 或报告索引声称已取得正文。读取失败应报告缺失，不能声称已读。\n",
   "control_ref": "ai-control",
   "goal_progress": {
-    "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-    "state": "completed"
+    "plan_id": null,
+    "state": "authorized"
   },
   "lifecycle": "active",
   "live_resource_checks_required": true,
@@ -23,7 +23,8 @@
     "capability_registry": [
       {
         "capabilities": [
-          "planning"
+          "planning",
+          "coordination"
         ],
         "enabled": true,
         "id": "main",
@@ -58,26 +59,36 @@
         "id": "worker-3",
         "name": "Codex 独立编辑审查",
         "role": "reviewer"
+      },
+      {
+        "capabilities": [
+          "documentation",
+          "artifact_delivery"
+        ],
+        "enabled": true,
+        "id": "worker-7ae85f4a-9a7a-450e-bdf6-7b3a634ffebf",
+        "name": "Codex 文件交付员",
+        "role": "documenter"
       }
     ],
     "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
     "command_ids": [
       "agent.execute"
     ],
-    "expected_control_rev": 1,
+    "expected_control_rev": 9,
     "forbidden_paths": [
       ".git/",
       ".xingshu/"
     ],
-    "goal": "围绕 https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities 的议题完成原创中文深度研究和两份成稿。严格由Codex总编调度，worker-1 Claude资料研究员实际联网搜索核实，worker-2 Pi主笔写作，worker-3 Codex独立编辑审查验收；主Agent不得代替指定作者写正文。\n仅规划两个有依赖的纯documentation任务、document输出，以文件产物包artifact_delivered交付：\n任务1交给research能力的Claude：阅读指定原文，检索至少6个相关一手来源，优先Anthropic、NIST/CAISI、ExploitBench论文、Z.ai官方资料与可信防守建议。输出research/sources.md（标题、发布者、日期、URL、证据摘要与局限）和research/fact-check.md（关键数字/分母、实测与模拟区别、争议与不确定性）。无法访问来源应如实标注，不伪造阅读或引用。\n任务2依赖任务1验收交付，交给writing能力的Pi，依据受控依赖资料输出：articles/wechat.md，3000至4500中文字符的公众号深度文，含3个备选标题、摘要、完整正文与参考来源；articles/douyin.md，约3至5分钟的科普口播稿，含3个标题、前5秒开场、完整可朗读正文、分段画面提示与来源。\n讨论能力提升、可获得性、补丁窗口、开放权重利弊、评测局限和防守启示。原创综合分析，不逐段翻译或改写单篇来源；英文逐字引用每个来源不超过25词。数字可追溯，区分厂商说法/独立证据、事实/推论。特别核对64%/92%/100%的模拟有害请求响应指标，不能称为真实攻击成功率；不同评测分数/分母不可混用，不写“人人一键攻破所有系统”。不提供攻击代码、复现漏洞或绕过安全措施的操作教程。\n写入范围仅research/与articles/。验收采用artifact文件哈希（artifact-hash-report）与独立内容审查（review.md），核对来源、事实、长度、可读性和文件完整性；纯文档不需虚构代码测试命令。研究先验收交付，Pi再写作；修改由原执行者完成。不合并main、不部署，不向公众号或抖音发布。最终提供两篇成稿和研究资料位置。",
-    "goal_run_id": "goal-8f95037e3e1ac16325bdcf76baa3b2a079c571c66278229433df269e46c2d1fc",
+    "goal": "将已完成的GLM-5.3文章case补齐到本地项目目录与main分支。仅新增一个任务TASK-MAIN-DELIVERY，保留旧TASK-RESEARCH和TASK-WRITING的Done状态，不重跑、不修订旧任务。\n新任务kind=documentation，required_capabilities为documentation与artifact_delivery，交给Codex文件交付员worker-7ae85f4a-9a7a-450e-bdf6-7b3a634ffebf。depends_on必须同时包含现有TASK-RESEARCH和TASK-WRITING。完成方式completion=merged_to_target，target_branch=main；不能以产物封存代替main交付。\n全部输出kind=document，共四项：research/sources.md、research/fact-check.md、articles/wechat.md、articles/douyin.md。仅允许改research/与articles/，禁止改.git/、.xingshu/及只读依赖。\n文件交付员仅用标准文件复制工具，从Runtime挂载的只读依赖.xingshu-inputs定位已审定文件，逐字节复制到当前受管任务工作区相应目录，不重新生成、不改写、不重新研究。复制前后必须校验SHA-256：\nresearch/sources.md = 164c0bd0bca0e1cfeb2d6cbff11eddbb1e989ad9faeda7a7c952822fd74eda78\nresearch/fact-check.md = d908e1db9d630e248b6cdeba9d9918ccb0144c3af6ebdb44cdffeffbee926869\narticles/wechat.md = 25867460ad62fcd94d3de172e7fa733a1e113e1378d4e43b7d2f5c6c95c8a5a0\narticles/douyin.md = ea7a49f67ce02d74a6cbbe9126e625011275984d4d30fb5d5385767de56ae1b0\n由Runtime形成源Git提交，文件交付员不得操作原主仓库、原main或推送远端，也不得合并ai-control与同步材料引用。\n验收采用artifact验证器，evidence准确填写artifact-hash-report，检查四文件存在及逐字节哈希；independent_review验证器，evidence准确填写review.md，独立审查四文件与批准依赖一致、变更范围仅这四项、无改写、原有.xingshu等未受影响。纯文档交付，不添加或注册伪造的测试脚本，不把报告列为worker输出。源提交通过后准备隔离合并候选，候选必须有绑定候选SHA的新hash证据与新独立审查，随后通过星枢具体候选批准、CAS合入main并更新本地checkout。只有真实合并回执和本地四文件均存在，才能Done。\n新goal身份和完整goal字段须按已分配值原样复制，不得省略、概述或自造。此次先完成本地main，不推送origin/main。",
+    "goal_run_id": "goal-dd85d8eaa898bf226ff56a7b9e5ed0b204996dfbc0805ea821921e6fb4ffb65c",
     "instructions": "Propose only this bounded goal through the repository inbox. This request does not grant process, shell, approval or delivery authority.",
-    "max_attempts": 2,
+    "max_attempts": 6,
     "max_parallel": 1,
-    "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
+    "plan_id": "PLAN-b6a7a8d936c6535ece07b140",
     "planning_mode": "primary",
     "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-    "request_id": "PLANREQ-04d0d0cf06cdf3ae6ac90ffb",
+    "request_id": "PLANREQ-b6a7a8d936c6535ece07b140",
     "schema": "xingshu/repository-goal/1"
   },
   "runtime_paused": false,
