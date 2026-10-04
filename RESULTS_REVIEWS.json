@@ -43,6 +43,45 @@
       }
     },
     {
+      "attempt": 1,
+      "binding": {
+        "content": {
+          "artifact_hash": "06aa9619fce10e1b8d883eabf65342d781f34ed151e2587f7b20a536dc7963fd",
+          "kind": "artifact"
+        },
+        "task_version": 8
+      },
+      "collected_at": "2026-10-04T06:19:31.366403+00:00",
+      "current_status": "current",
+      "evidence_id": "verification-evidence-b2cc95678d51620903d9e2c7472c4b65625fa3c396878a7537f640ac79c83370",
+      "exit_code": null,
+      "fact_kind": "evidence",
+      "invalidated": false,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": "7b19fca0e6c2cfebc3bd7be7cc50dcbea5b5b64f9c28cb4c35f88c389a842fd2",
+      "run_id": "inv-bb9da5f2ce0a29473b0ad36f10383beff94c4241f4e6b51f0167bc363973de78",
+      "source": "independent_review",
+      "status": "current",
+      "task_id": "TASK-WRITING",
+      "task_version": 8,
+      "verification": {
+        "acceptance_ids": [
+          "AC-WRITING-FILES",
+          "AC-WRITING-QUALITY"
+        ],
+        "command_id": null,
+        "covered_requirements": [
+          "review.md"
+        ],
+        "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
+        "review_conclusion": "changes_requested",
+        "reviewer_config_version": 1,
+        "reviewer_id": "worker-3",
+        "target_base_sha": null,
+        "verification_succeeded": true
+      }
+    },
+    {
       "artifacts": [
         {
           "content_hash": "85b7f8920d518ffc0540206231c2e100e6094c53b356461ea83a709516507ab8",

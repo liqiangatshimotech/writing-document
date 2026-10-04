@@ -54,6 +54,24 @@
   "shared_materials": [
     {
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "commit_sha": "4ba70991084bce828cf33293a0a9ce0a0f6d3d4c",
+      "content_digest": "a8fb068034f28edd9fdaf6bf276b969f3ba159cb38a143465e0e73daf1954a54",
+      "manifest_hash": "424d7407baa56e2833970adf69fa3e847fbd566ba01ffeb5d3f87c4f9799516b",
+      "observed_at": "2026-10-04T06:21:00.143590+00:00",
+      "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/a8fb068034f28edd9fdaf6bf276b969f3ba159cb38a143465e0e73daf1954a54",
+      "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "subject": {
+        "kind": "task_result",
+        "result_id": "result-46a2fc91f096d4280d889cc1c652a25b55c89c5fa304e936f39910ea75e779a9",
+        "run_id": "run-367ad6eafd238c41df1acd28d2164c7b990d69728eb47391c53d90ebb048068e",
+        "stage": "verification",
+        "task_id": "TASK-WRITING",
+        "task_version": 8
+      },
+      "subject_hash": "4d73df0bf119db17a3fd4811b65638dbdbf8369d5864ad5893375339f0437472"
+    },
+    {
+      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "commit_sha": "bf6cfd1516684515844929addb1d0c0f89ed6919",
       "content_digest": "c483ae80e23cb45502153fa3d80bc27531a7f21cacf4aafb1cd660f010bcaa57",
       "manifest_hash": "2c58866425bb029439d47fda74dce91265b2c86720a168aaf225e2541e7579d1",
