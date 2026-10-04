@@ -21,26 +21,26 @@
       "task_version": 6
     }
   ],
-  "authorized_candidates": [
-    {
-      "result_id": null,
-      "state": "READY",
-      "task_id": "TASK-MAIN-DELIVERY",
-      "task_version": 2
-    }
-  ],
+  "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 11,
-  "event_watermark": 32489,
+  "event_watermark": 32642,
   "history_count": 2,
   "missing": [
     "full_report_bodies"
   ],
   "needs_attention": [],
-  "next_action": "consider_only_authorized_tasks_after_live_checks",
+  "next_action": "review_existing_results_first",
   "next_history_before_event_seq": null,
   "omitted_recent_entries": 0,
-  "pending_results": [],
+  "pending_results": [
+    {
+      "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
+      "state": "VERIFYING",
+      "task_id": "TASK-MAIN-DELIVERY",
+      "task_version": 2
+    }
+  ],
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "recent_deliveries": [
     {

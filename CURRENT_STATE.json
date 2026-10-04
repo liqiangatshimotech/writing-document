@@ -5,6 +5,20 @@
   "recent_runs": [
     {
       "agent_config_version": 1,
+      "agent_id": "worker-7ae85f4a-9a7a-450e-bdf6-7b3a634ffebf",
+      "attempt": 1,
+      "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+      "ended_at": "2026-10-04T07:51:36.643262+00:00",
+      "exit_reason": "completed",
+      "observed_head_sha": "a2b6003145174f85578369d3f84908aa1ec86a9e",
+      "run_id": "run-6b4fcfa24bf0aa91c61d72878dee8ccc89ef93cb5cbcd267b9b3dab93c8caa93",
+      "started_at": "2026-10-04T07:50:08.356164+00:00",
+      "state": "FINISHED",
+      "task_id": "TASK-MAIN-DELIVERY",
+      "task_version": 2
+    },
+    {
+      "agent_config_version": 1,
       "agent_id": "worker-2",
       "attempt": 2,
       "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
@@ -175,7 +189,7 @@
   "runs_omitted": 0,
   "task_index": [
     {
-      "attempt": 0,
+      "attempt": 1,
       "depends_on": [
         "TASK-RESEARCH",
         "TASK-WRITING"
@@ -186,7 +200,7 @@
         "artifact_delivery"
       ],
       "spec_digest": "6060e407cf8872b9f3ab6d57883b1004a5fb185e968946c02cc2542a5791437f",
-      "state": "READY",
+      "state": "VERIFYING",
       "task_id": "TASK-MAIN-DELIVERY",
       "task_version": 2,
       "title": "将四份已审定GLM-5.3文档逐字节交付至本地main",
@@ -227,7 +241,7 @@
   ],
   "tasks": [
     {
-      "attempt": 0,
+      "attempt": 1,
       "spec": {
         "acceptance": [
           {
@@ -305,7 +319,7 @@
         },
         "title": "将四份已审定GLM-5.3文档逐字节交付至本地main"
       },
-      "state": "READY",
+      "state": "VERIFYING",
       "task_id": "TASK-MAIN-DELIVERY",
       "task_version": 2
     }
