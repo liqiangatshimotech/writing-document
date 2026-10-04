@@ -2,22 +2,16 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 11,
-  "snapshot_revision": 115,
-  "event_watermark": 33377,
+  "snapshot_revision": 116,
+  "event_watermark": 41650,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T08:13:14.747319+00:00",
+  "generated_at": "2026-10-04T11:49:51.789825+00:00",
   "source_event_ids": [
-    "config-c5e161472be0531e9383efe436f4b9bda955c40445414de9d0e82c26029add37",
-    "invoke-371f03abf3adf428c31ca6d1108529f76000adc6bd932bf5971ce5c8740bf39d",
-    "config-c3b3b45f4ca416435c17b263f3238fa30cc3b076ec31872bc4b74a37d84912e2",
-    "config-438914449907e92d2cb6e84b3c28df4d7ec190c6f75628de19d93f8d18b08662",
-    "invoke-ca4623eb7150318ca34343111c68c15b67a63aec6a1b57f1fb753f327571fbb7",
-    "config-24d9b79a45d05e5f125670a923e021a2cd22094cd0627222809e19cce8151d2b",
-    "config-f8960c98febada6e502fe438ef4af67cd4f1760b66b3a37096a5edd1ffccafae",
-    "invoke-a9db50b6082c45c339e06f525fcf6fbde2eb4370d71d80ecdebfac55a18642ba",
-    "config-3734f8e4470e4ed0ca15590d5dba6350f2decf79107b26c6a9f942e320313e58",
-    "config-8d0eee4329081154bf3d3ae9344f62de4d7d92312b44ee314136cbb9dde29ee6",
-    "config-a281238d473a8641e3c6f05b3b268ea61113a8a160154164310bee4368a01a5f"
+    "pause-9b8b3b46cb3676375dae6a4285900900362a2c925e664e40245f4f21534425f2",
+    "config-98b7ec0a430dd692c8cf4d2aeecf02ede3cfc0356ad64d36a1454d83ca0d2107",
+    "config-3309585adf0e965c3047742c230c4e88319d1717a6f82e81e0f229a7e583cab6",
+    "config-054486333b1d5dd2560b0c76554332d207d273df7c865001ca8e4f5692c484a8",
+    "config-d3bd4d567f97af71dcb3f0f880458f09fbce80af4acdd5c1b146ac2c2fe73727"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -28,7 +22,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-b6a7a8d936c6535ece07b140",
-        "state": "coordinating"
+        "state": "paused"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -114,7 +108,7 @@
         "request_id": "PLANREQ-b6a7a8d936c6535ece07b140",
         "schema": "xingshu/repository-goal/1"
       },
-      "runtime_paused": false,
+      "runtime_paused": true,
       "shared_context_redacted_fields": [],
       "shared_context_revision": 2
     },
@@ -556,7 +550,7 @@
     "results_reviews": {
       "authorized_ready_candidates": [],
       "needs_attention": [],
-      "next_action": "review_existing_results_first",
+      "next_action": "wait_for_user_resume",
       "omitted_quality_summaries": 0,
       "quality_index": [
         {
@@ -2425,13 +2419,13 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 11,
-      "event_watermark": 33377,
+      "event_watermark": 41650,
       "history_count": 2,
       "missing": [
         "full_report_bodies"
       ],
       "needs_attention": [],
-      "next_action": "review_existing_results_first",
+      "next_action": "wait_for_user_resume",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
       "pending_results": [

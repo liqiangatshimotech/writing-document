@@ -24,13 +24,13 @@
   "authorized_candidates": [],
   "authorized_repairs": [],
   "control_rev": 11,
-  "event_watermark": 33377,
+  "event_watermark": 41650,
   "history_count": 2,
   "missing": [
     "full_report_bodies"
   ],
   "needs_attention": [],
-  "next_action": "review_existing_results_first",
+  "next_action": "wait_for_user_resume",
   "next_history_before_event_seq": null,
   "omitted_recent_entries": 0,
   "pending_results": [

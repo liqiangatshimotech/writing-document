@@ -1,7 +1,7 @@
 {
   "authorized_ready_candidates": [],
   "needs_attention": [],
-  "next_action": "review_existing_results_first",
+  "next_action": "wait_for_user_resume",
   "omitted_quality_summaries": 0,
   "quality_index": [
     {
