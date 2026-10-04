@@ -2,41 +2,15 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 7,
-  "snapshot_revision": 82,
-  "event_watermark": 12184,
+  "snapshot_revision": 83,
+  "event_watermark": 26738,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-03T20:42:03.449651+00:00",
+  "generated_at": "2026-10-04T05:16:13.400322+00:00",
   "source_event_ids": [
-    "config-488ed902b88486dd6884595e3d6c1d93d869f9b72bfda3bec94070eb7e364e18",
-    "invoke-065d3a602ce739c4c23f8ba229e3e5b13dd625ed997d428698bd1110500dff5d",
-    "config-1a53779caf23a56b320b79ff0f8d84460266822d6aa67fa8e41bc3c286ab219a",
-    "config-01437333abf856836a1b319ef6ab80ce483b183d38a16f3f1b62563bb02f1f0a",
-    "invoke-bbbc7d8393d70045d07e898be1b6a116d2352885513d278ef450457b432e2e6f",
-    "config-bc5d07a3904cf8f2c8d89fcbccd1249e6b7fe40b5c4db47122d9570a6d917dbe",
-    "config-8278b73db0677167faf34642d0f00879218aae89a635ec7bdd18ac72e65bf621",
-    "invoke-03af091c154ca8c3103cf6ff4f52b83660b35d73a1fb75653905f47e708faa3e",
-    "config-e8b7ce22b5650d9ad322e4a58e7ac3c37cd2e5cc8c9ea8b783716b9dd241f9e0",
-    "launch-37f7195de3b52b3e428a96af27efac81d4a02b3c7e99117db3c32471b33ec88d",
-    "config-b8775137f4105143526b31357c9c86f9a74e81529cc46ab7d74960d8cee46e7a",
-    "config-ecd4ae020406b4126f2a3fd7510ff18612ea804dccd066532bf0c4883ea9ce6f",
-    "config-373ce914798553b9ff20eaaedb5b4b59fa2e61058387c9b7c61eebdfc3b8a016",
-    "launch-19d0af77e4fa2f0c5bec0568ac3512a5505168d1f016579245ddbf4a60aca9e2",
-    "config-c1e93f60428fd33b47f0a088af5eb4d8927502c65c82aed63e6a326c1fde0ee7",
-    "config-fe72e3f93fbf34041ae51996bf13882d2afac6907f3fac84949b0c2bd12e3eba",
-    "config-cba47eef9a0fb871e8a1844afccb383abfc2626b4a4bef785a0e71229a774fc6",
-    "config-5a301f56ae84c5b0a6fafba175191d4f254444e24cf7288e8ca6fd08c47b21da",
-    "config-6663bd65196a028943e2357077d57f878fbb0d4474c24dd15e1d9969abd46f00",
-    "launch-55861f570368056a33ccf2434c856262cff274185eb2c60579d5539fea8b8eec",
-    "invoke-69ab28d69101e3aab0f1dc00327195085c34a1442bb282d31585b33b5d92f458",
-    "config-eff060757adb90dc0d147a46c3832b4a8d405a25b437921fb4c08f6a5e78c07b",
-    "config-75819658f4f88d0c0c0fa1612e8caa09db46c65279dbd7614b62c7c586d067a8",
-    "invoke-60f9318fac18f62d1ba512799f1e0f3c3be9280dc59e23f159d67efe99b9baae",
-    "config-479e87216061c035907d97116da3157a3355dd99d41e1f64ef677a959c45c162",
-    "config-cd733b660a3ca8e794fe432b2f80332b6fc152edd9990721db044666d647791f",
-    "invoke-76b218ff46d1aaab2260a680be06f36cdfda50146f3e17b7de0a7e43cdbc1dbb",
-    "config-5f3ea86c544c0b8fc73a5030169fdb30687f78bba9d2dbb8d6cc75dabf678bf6",
-    "config-a05a5993092f4263368dd8fd72184b0859b43bfb8f2bc5b394e71929fc2a7501",
-    "config-caa20c147f0ad1e798d9063cd84b5439e566b6b2c0062e8f4173e8eba64fd2fb"
+    "pause-163b44f76f8fbff4525e64503fa14f5983575868ef5586fa47c3dffc9440b643",
+    "config-f9693c5d82936ec8c1d0da305a9aabe3cfff4040f7bc0e08e2bd88639432eb9e",
+    "config-aab32f7dcd2b0ecf53e09dc68916edf75834d708e1a1df5120350130829d2893",
+    "config-9460f7c512adce0a357373e5d3029e20bc487f5a1f6105af4b7d840a7834bdaf"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -47,7 +21,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-04d0d0cf06cdf3ae6ac90ffb",
-        "state": "coordinating"
+        "state": "stopped"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -122,7 +96,7 @@
         "request_id": "PLANREQ-04d0d0cf06cdf3ae6ac90ffb",
         "schema": "xingshu/repository-goal/1"
       },
-      "runtime_paused": false,
+      "runtime_paused": true,
       "shared_context_redacted_fields": [],
       "shared_context_revision": 2
     },
@@ -544,7 +518,7 @@
       "needs_attention": [
         "TASK-WRITING"
       ],
-      "next_action": "wait_for_event",
+      "next_action": "wait_for_user_resume",
       "omitted_quality_summaries": 0,
       "quality_index": [
         {
@@ -1696,7 +1670,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 7,
-      "event_watermark": 12184,
+      "event_watermark": 26738,
       "history_count": 1,
       "missing": [
         "full_report_bodies"
@@ -1709,7 +1683,7 @@
           "task_version": 6
         }
       ],
-      "next_action": "wait_for_event",
+      "next_action": "wait_for_user_resume",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
       "pending_results": [],

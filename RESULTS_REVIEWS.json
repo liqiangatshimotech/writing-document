@@ -3,7 +3,7 @@
   "needs_attention": [
     "TASK-WRITING"
   ],
-  "next_action": "wait_for_event",
+  "next_action": "wait_for_user_resume",
   "omitted_quality_summaries": 0,
   "quality_index": [
     {
