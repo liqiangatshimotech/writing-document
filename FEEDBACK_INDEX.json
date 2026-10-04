@@ -26,12 +26,12 @@
       "result_id": null,
       "state": "READY",
       "task_id": "TASK-MAIN-DELIVERY",
-      "task_version": 1
+      "task_version": 2
     }
   ],
   "authorized_repairs": [],
-  "control_rev": 10,
-  "event_watermark": 32294,
+  "control_rev": 11,
+  "event_watermark": 32356,
   "history_count": 2,
   "missing": [
     "full_report_bodies"

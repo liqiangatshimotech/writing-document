@@ -1,30 +1,14 @@
 {
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
-  "control_rev": 10,
-  "snapshot_revision": 106,
-  "event_watermark": 32294,
+  "control_rev": 11,
+  "snapshot_revision": 107,
+  "event_watermark": 32356,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T07:45:11.002076+00:00",
+  "generated_at": "2026-10-04T07:46:09.095357+00:00",
   "source_event_ids": [
-    "config-f4943e8cd575e4746d43943b1e846c56d2e74a85f8bc9e54044b4b934c7910a2",
-    "effective-base-453a041b7812c3ca69154a5de0227e7c71cfc246ca77e5ace13288d57ae8cddc",
-    "invoke-d777dad9cced7843b915680b70cc29451baaa46377867c6051f789ff98aba81f",
-    "config-58c38fbe3f039d5def5f7cbece1d3d3e5c24ac03be299012ab2bff2d403274b0",
-    "config-207996348032cb204ae26dcfedfa8b32cf9548d9095e72c8e7a4e45dd6ed6e17",
-    "invoke-1002c5d974ab8a55f93ec7fc19a4b3060faa8526172178ef1d7751c68b9e5074",
-    "config-86fb02984a2d0e87475a6b4981004ae00a75da08274988dc85843a0f585b64c0",
-    "config-cd6c8781acc6bbc177221d362f81e14335db1fc9d233394e3272a841c818eefe",
-    "config-8f95f8746fd0edfd0f34dab0dde13e45e7214a125c1603150a85b6799dcab6fa",
-    "config-31a612959d10f3181af81cfad49ea0514e44d638a66bb96af5ec7005494b1c15",
-    "invoke-35c52b9bdbc472cca54fffbef2ffccf4eeec16efba6cfda10e64e0ed7e79a9d3",
-    "config-9dbf1161aeab080f8608b01d21e2c2101357024b31a21ea783acfa0f428a2f66",
-    "config-71e023b754b7dc7cc58ada3aa7838b28b3abdf2771fd7b049fadc1ac193fa22d",
-    "config-d4defb9ded14a467359b4d29206b28be0a4ee325287914eeae36ae1c6734dc3c",
-    "config-825c8545268d93f63c3f7732b58f3b25f8b331dc200182ac99aa80e9b50f36a4",
-    "pause-e38402dcabfb2647decc26a0649e22f83368c90aaff3041304699f8f11e8cd58",
-    "config-fcd6b700e92d9d16a307d180a97bbe525c2ca1aedcaddfeda85fcf35c93f851a",
-    "config-bf447abc461151c306b307dc701ae68dea8fdd9202568885ae822297286b0f01"
+    "quality-dc4f252959e6307a507e55668a01a45f5d87c52a7499ec4839143560e804001e",
+    "config-dde119b43a61f5153b05a05ffbc5f1af4d75888004b7fd6ff9d46c929da102ec"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -420,10 +404,10 @@
             "documentation",
             "artifact_delivery"
           ],
-          "spec_digest": "d94781dbcede94f9e914f6bfa1c31b4b149c28c107b57d43f9e926f1a9784dd6",
+          "spec_digest": "6060e407cf8872b9f3ab6d57883b1004a5fb185e968946c02cc2542a5791437f",
           "state": "READY",
           "task_id": "TASK-MAIN-DELIVERY",
-          "task_version": 1,
+          "task_version": 2,
           "title": "将四份已审定GLM-5.3文档逐字节交付至本地main",
           "title_truncated": false
         },
@@ -466,7 +450,7 @@
           "spec": {
             "acceptance": [
               {
-                "description": "Runtime验证四个声明文件存在，复制前的只读依赖与复制后文件逐字节一致，并分别匹配outputs声明的SHA-256。源提交验证通过后，隔离合并候选必须重新生成绑定该候选SHA的哈希证据，不复用历史产物或源提交报告。CAS合并及checkout更新后，本地四文件仍须存在并匹配相同哈希。报告由Runtime生成，不作为worker输出。",
+                "description": "在本次被验证的源提交或隔离合并候选中，Runtime核验四个声明文件存在、逐字节匹配只读批准依赖及outputs声明的SHA-256，生成绑定本次提交SHA的artifact-hash-report。候选阶段须使用绑定候选SHA的新证据，不能复用源提交或历史产物报告。此条件核验当前验证阶段的文件，不要求尚未发生的最终合并回执；最终CAS、checkout更新及本地文件检查属于其后的merged_to_target交付闸门。报告由Runtime产生，不作为worker输出。",
                 "evidence": [
                   "artifact-hash-report"
                 ],
@@ -476,7 +460,7 @@
                 }
               },
               {
-                "description": "由Runtime组织独立审查，核对四文件与批准依赖完全一致、内容完整且无改写，变更范围仅四个声明文件，原有.xingshu/、.git/及只读依赖未被worker修改，无新增测试脚本或伪造报告。源提交通过后，对隔离候选进行绑定候选SHA的新独立审查。交付核验须确认Runtime取得星枢针对具体候选的批准、CAS合入目标main的真实合并回执及本地checkout更新，且四文件存在；不得用历史封存记录代替main交付，不推送origin/main。报告由Runtime产生。",
+                "description": "独立审查本次源提交或隔离候选中已经存在的事实：四文件与批准依赖逐字节一致、哈希匹配、无改写，Git变更仅四个声明文件，无额外测试脚本或伪造报告，worker未修改原有.xingshu、Git管理文件或只读输入。核对本次提交的文件证据与版本绑定；候选阶段使用绑定候选SHA的新独立审查，不能复用源审查。审查只判断当前源或候选是否满足上述要求，不把之后才产生的批准、CAS合并回执、main checkout更新作为本次前置审查条件。最终仍须由Runtime在具体候选批准后完成CAS合入main并更新checkout，取得真实交付回执才能Done；不推送origin/main。",
                 "evidence": [
                   "review.md"
                 ],
@@ -542,7 +526,7 @@
           },
           "state": "READY",
           "task_id": "TASK-MAIN-DELIVERY",
-          "task_version": 1
+          "task_version": 2
         }
       ]
     },
@@ -1773,56 +1757,6 @@
       "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "effective_bases": [
         {
-          "artifact_inputs": [
-            {
-              "content_included": false,
-              "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
-              "file_count": 2,
-              "identity_digest": "96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a",
-              "manifest_hash": "7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
-              "mount_root": ".xingshu-inputs/96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a/",
-              "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
-              "task_id": "TASK-RESEARCH",
-              "task_version": 6
-            },
-            {
-              "content_included": false,
-              "delivery_id": "delivery-989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
-              "file_count": 2,
-              "identity_digest": "ca9874e9b8c25f0d7622bf478c091203647a8855517c7b64781fc36b76f5a26b",
-              "manifest_hash": "989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
-              "mount_root": ".xingshu-inputs/ca9874e9b8c25f0d7622bf478c091203647a8855517c7b64781fc36b76f5a26b/",
-              "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
-              "task_id": "TASK-WRITING",
-              "task_version": 8
-            }
-          ],
-          "dependencies": [
-            {
-              "delivery_digest": "d9caae0acc36e8cbabffc39aa87507c43837fc9e0cd7f4ac5105fe58b18b6205",
-              "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
-              "task_id": "TASK-RESEARCH",
-              "task_spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
-              "task_version": 6
-            },
-            {
-              "delivery_digest": "4871cbf6a8f82aa4f9c2452d2f51b39d20752e8333cd46ac3d2eb521b7372a3f",
-              "delivery_id": "delivery-989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
-              "task_id": "TASK-WRITING",
-              "task_spec_digest": "0f6f713ec616c0d4846bf6d8ed29714e42a5e3faa6ea63ee744f662e85472896",
-              "task_version": 8
-            }
-          ],
-          "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "plan_id": "PLAN-b6a7a8d936c6535ece07b140",
-          "proof_digest": "453a041b7812c3ca69154a5de0227e7c71cfc246ca77e5ace13288d57ae8cddc",
-          "source_control_rev": 10,
-          "source_event_watermark": 32218,
-          "task_id": "TASK-MAIN-DELIVERY",
-          "task_version": 1
-        },
-        {
           "artifact_inputs": [],
           "dependencies": [],
           "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
@@ -1872,22 +1806,6 @@
       "omitted_shared_material_refs": 0,
       "requires_live_dependency_revalidation": true,
       "shared_materials": [
-        {
-          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "commit_sha": "a04168c51ce4a7b111f17764ceccd237f95a4cb5",
-          "content_digest": "cd095176809af1ee4b973c32bd14c45928b48aef1b0a561eb7dcd3360a6b70be",
-          "manifest_hash": "df9007e35642bcc3f41b0ad4dd5020e6cf98ebd7284eac3e7bcdd8ffaa26f9cd",
-          "observed_at": "2026-10-04T07:44:34.326704+00:00",
-          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/cd095176809af1ee4b973c32bd14c45928b48aef1b0a561eb7dcd3360a6b70be",
-          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-          "subject": {
-            "kind": "execution_base",
-            "proof_digest": "453a041b7812c3ca69154a5de0227e7c71cfc246ca77e5ace13288d57ae8cddc",
-            "task_id": "TASK-MAIN-DELIVERY",
-            "task_version": 1
-          },
-          "subject_hash": "ffcc1bada465cb9c3b891316567870429f01584b726787cc8ed59b3c4600a954"
-        },
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "6072396c535242405dd4aa59dc60923f46efcb0d",
@@ -2109,12 +2027,12 @@
           "result_id": null,
           "state": "READY",
           "task_id": "TASK-MAIN-DELIVERY",
-          "task_version": 1
+          "task_version": 2
         }
       ],
       "authorized_repairs": [],
-      "control_rev": 10,
-      "event_watermark": 32294,
+      "control_rev": 11,
+      "event_watermark": 32356,
       "history_count": 2,
       "missing": [
         "full_report_bodies"
