@@ -11,10 +11,13 @@
   "live_resource_checks_required": true,
   "missing": [
     "full_report_bodies",
-    "artifact_input_contents"
+    "redacted_private_text"
   ],
   "name": "写作",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+  "redacted_fields": [
+    "documents.active_tasks.tasks[1].spec.description"
+  ],
   "requested_goal": {
     "allowed_paths": [
       "research/",
