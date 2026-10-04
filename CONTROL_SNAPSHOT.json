@@ -2,13 +2,26 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 11,
-  "snapshot_revision": 107,
-  "event_watermark": 32356,
+  "snapshot_revision": 108,
+  "event_watermark": 32489,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T07:46:09.095357+00:00",
+  "generated_at": "2026-10-04T07:49:03.446580+00:00",
   "source_event_ids": [
-    "quality-dc4f252959e6307a507e55668a01a45f5d87c52a7499ec4839143560e804001e",
-    "config-dde119b43a61f5153b05a05ffbc5f1af4d75888004b7fd6ff9d46c929da102ec"
+    "pause-b7850dd68013c791699e75949b7f982b74b12738182a561a048c615df940a328",
+    "config-74fd245259250285c704e7925f450da116277ea1f916b02dda59c83eb4fddaa6",
+    "config-c5a5d11e1745984f8fe397229c2f6c787a5d05ccb218c867164ecc6077d3514b",
+    "effective-base-d82d498fce0a292a6a328c35f2373ed3e6fdab3c6621bb6f46497b5e8819f290",
+    "invoke-d1421e41c0aede82704fc68e70418967e44c4ce873b215bbdd9f0b61c5cccf9d",
+    "config-fcff3524f7b36fc20232baf2bebea5ea796a47b5e5685fa68d10454aa6ab052e",
+    "config-2d192e9fe677640ffd4bbe0330d47d804b2af85b28daf7ccfbb35e2e1bafe5d7",
+    "invoke-fc4070dd7d923a8251b52db4c83ac013096e627df7287f5cb269147ffb19d186",
+    "config-7efd5deeffdf62dc3c50036057a2de7bba54977999c05b94861ff0fa9af642ce",
+    "config-b7653c7310d43c60aa82806c917da77a0939d99fe4f8d50bbe6c5688e78ddae5",
+    "invoke-7163fb3a63a7314d8f5feb39e0203b017df3b4c480094f784ea0a61359e1dd28",
+    "config-e6e3efcf427f8abc472ce1250cb7bd288f0c20a2ff47b3fdf8b0c56e9855b5ec",
+    "config-1b4da34b087794c2bb42168756458d3a37e11214313098d42167740918f315d6",
+    "config-7e103e65c06a4d97e06dd5257e6bacde6e4389c24aaa4e92c9d78733cf4014b0",
+    "config-d0e489bf7c9204997ee124316663e2da94986ca121e2f8df90a7f5c802b31824"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -19,7 +32,7 @@
       "control_ref": "ai-control",
       "goal_progress": {
         "plan_id": "PLAN-b6a7a8d936c6535ece07b140",
-        "state": "paused"
+        "state": "coordinating"
       },
       "lifecycle": "active",
       "live_resource_checks_required": true,
@@ -105,7 +118,7 @@
         "request_id": "PLANREQ-b6a7a8d936c6535ece07b140",
         "schema": "xingshu/repository-goal/1"
       },
-      "runtime_paused": true,
+      "runtime_paused": false,
       "shared_context_redacted_fields": [],
       "shared_context_revision": 2
     },
@@ -535,7 +548,7 @@
         "TASK-MAIN-DELIVERY"
       ],
       "needs_attention": [],
-      "next_action": "wait_for_user_resume",
+      "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
       "omitted_quality_summaries": 0,
       "quality_index": [
         {
@@ -1757,6 +1770,56 @@
       "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
       "effective_bases": [
         {
+          "artifact_inputs": [
+            {
+              "content_included": false,
+              "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "file_count": 2,
+              "identity_digest": "96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a",
+              "manifest_hash": "7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "mount_root": ".xingshu-inputs/96389389d8895bb036d017a427b2c73a7f029220c3b6348ea2ad56995aa5c76a/",
+              "result_id": "result-b1a671ea10c8542b46448fbb4a9a91859eccc4a64ebb19842e6a2eff5ee5ae25",
+              "task_id": "TASK-RESEARCH",
+              "task_version": 6
+            },
+            {
+              "content_included": false,
+              "delivery_id": "delivery-989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+              "file_count": 2,
+              "identity_digest": "ca9874e9b8c25f0d7622bf478c091203647a8855517c7b64781fc36b76f5a26b",
+              "manifest_hash": "989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+              "mount_root": ".xingshu-inputs/ca9874e9b8c25f0d7622bf478c091203647a8855517c7b64781fc36b76f5a26b/",
+              "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+              "task_id": "TASK-WRITING",
+              "task_version": 8
+            }
+          ],
+          "dependencies": [
+            {
+              "delivery_digest": "d9caae0acc36e8cbabffc39aa87507c43837fc9e0cd7f4ac5105fe58b18b6205",
+              "delivery_id": "delivery-7c4e11f74275d306add08c4f435f068bd45f96cfe20d08bdd8af2f9f8caaa366",
+              "task_id": "TASK-RESEARCH",
+              "task_spec_digest": "e07ab9c720ff0c130c02cbbe0a7513200b648fbb5ff2c3782a33c4d2ca81b98e",
+              "task_version": 6
+            },
+            {
+              "delivery_digest": "4871cbf6a8f82aa4f9c2452d2f51b39d20752e8333cd46ac3d2eb521b7372a3f",
+              "delivery_id": "delivery-989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+              "task_id": "TASK-WRITING",
+              "task_spec_digest": "0f6f713ec616c0d4846bf6d8ed29714e42a5e3faa6ea63ee744f662e85472896",
+              "task_version": 8
+            }
+          ],
+          "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "original_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "plan_id": "PLAN-b6a7a8d936c6535ece07b140",
+          "proof_digest": "d82d498fce0a292a6a328c35f2373ed3e6fdab3c6621bb6f46497b5e8819f290",
+          "source_control_rev": 11,
+          "source_event_watermark": 32419,
+          "task_id": "TASK-MAIN-DELIVERY",
+          "task_version": 2
+        },
+        {
           "artifact_inputs": [],
           "dependencies": [],
           "effective_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
@@ -1806,6 +1869,22 @@
       "omitted_shared_material_refs": 0,
       "requires_live_dependency_revalidation": true,
       "shared_materials": [
+        {
+          "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "commit_sha": "3f01f78809eca573fbf457f464f1bb6d31499077",
+          "content_digest": "cf164c0935c47917bc5315c706370f75d8cc31099f13f000ffb28327f0fa776c",
+          "manifest_hash": "fed549a2586b828987b6bb46cfcbc0af3e3256e02dc9c1d2ba3de315058764db",
+          "observed_at": "2026-10-04T07:48:22.126078+00:00",
+          "reference": "refs/heads/xingshu/materials/dbb42bca4e56aa549a1867aaeedd992fad170fac3e24f002de1635835fa3fb07/cf164c0935c47917bc5315c706370f75d8cc31099f13f000ffb28327f0fa776c",
+          "source_head_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+          "subject": {
+            "kind": "execution_base",
+            "proof_digest": "d82d498fce0a292a6a328c35f2373ed3e6fdab3c6621bb6f46497b5e8819f290",
+            "task_id": "TASK-MAIN-DELIVERY",
+            "task_version": 2
+          },
+          "subject_hash": "06f799262812e510a07b58a70cf14bed5c2961334d4fd3b3fe82a6111aa9deb9"
+        },
         {
           "base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
           "commit_sha": "6072396c535242405dd4aa59dc60923f46efcb0d",
@@ -2032,13 +2111,13 @@
       ],
       "authorized_repairs": [],
       "control_rev": 11,
-      "event_watermark": 32356,
+      "event_watermark": 32489,
       "history_count": 2,
       "missing": [
         "full_report_bodies"
       ],
       "needs_attention": [],
-      "next_action": "wait_for_user_resume",
+      "next_action": "consider_only_authorized_tasks_after_live_checks",
       "next_history_before_event_seq": null,
       "omitted_recent_entries": 0,
       "pending_results": [],
