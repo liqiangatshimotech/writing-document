@@ -16,12 +16,12 @@
       "result_id": null,
       "state": "READY",
       "task_id": "TASK-WRITING",
-      "task_version": 7
+      "task_version": 8
     }
   ],
   "authorized_repairs": [],
-  "control_rev": 8,
-  "event_watermark": 28248,
+  "control_rev": 9,
+  "event_watermark": 28436,
   "history_count": 1,
   "missing": [
     "full_report_bodies"
