@@ -5,6 +5,30 @@
   "omitted_quality_summaries": 0,
   "quality_index": [
     {
+      "action": "deliver",
+      "approval_id": "approval-89c34ba7970278b7c8d349ce1a21a447bcd9e562a280bc8e8124c1832dabe82f",
+      "approved_at": "2026-10-04T06:46:21.003329+00:00",
+      "binding": {
+        "content": {
+          "artifact_hash": "989d1b7fe6356b9bb63750a3d424e4b8d5c3f39b2bf3952d869131ef2f32ac02",
+          "kind": "artifact"
+        },
+        "task_version": 8
+      },
+      "current_status": "active",
+      "fact_kind": "approval",
+      "invalidated": false,
+      "object_version": 3,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": null,
+      "status": "active",
+      "task_id": "TASK-WRITING",
+      "verification": {
+        "result_id": "result-808ed70137c91ecdbaa197f5e2bcb23ec7f5c3427785e2422d13db754ffb310e",
+        "target_base_sha": null
+      }
+    },
+    {
       "attempt": 2,
       "binding": {
         "content": {
