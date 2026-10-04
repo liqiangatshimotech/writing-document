@@ -43,6 +43,83 @@
       }
     },
     {
+      "attempt": 1,
+      "binding": {
+        "content": {
+          "head_sha": "a2b6003145174f85578369d3f84908aa1ec86a9e",
+          "kind": "git"
+        },
+        "task_version": 2
+      },
+      "collected_at": "2026-10-04T07:58:55.847699+00:00",
+      "current_status": "current",
+      "evidence_id": "verification-evidence-27f9f0a34e8976e6f3b965282c95b3d845821b6bac2c7bf7515cbaa9945a9fa1",
+      "exit_code": null,
+      "fact_kind": "evidence",
+      "invalidated": false,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": "c263de9a8b712776832e6e7f62cfbcdcb0e338adb6da6e9c7aa6400c2948b46a",
+      "run_id": "inv-40858df5c88c6fdce983f141658ee8098cd07dfa416182d82c43b4569534e239",
+      "source": "independent_review",
+      "status": "current",
+      "task_id": "TASK-MAIN-DELIVERY",
+      "task_version": 2,
+      "verification": {
+        "acceptance_ids": [
+          "AC-DELIVERY-HASH",
+          "AC-DELIVERY-INDEPENDENT-REVIEW"
+        ],
+        "command_id": null,
+        "covered_requirements": [
+          "review.md"
+        ],
+        "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
+        "review_conclusion": "approved",
+        "reviewer_config_version": 1,
+        "reviewer_id": "worker-3",
+        "target_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+        "verification_succeeded": true
+      }
+    },
+    {
+      "attempt": 1,
+      "binding": {
+        "content": {
+          "head_sha": "7c60849c8c6d8bd4cd651d8d503427e46dcec89f",
+          "kind": "git"
+        },
+        "task_version": 2
+      },
+      "collected_at": "2026-10-04T07:59:10.268855+00:00",
+      "current_status": "current",
+      "evidence_id": "artifact-evidence-bf8a88ade72484ddd38488da6072ca19956446c65f8e1314a3aaf41d9fe52c5c",
+      "exit_code": null,
+      "fact_kind": "evidence",
+      "invalidated": false,
+      "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
+      "report_digest": "db3fe48d9654c160064e8146b8f449d95d43c519788c661d6ad19574da0e40fd",
+      "run_id": null,
+      "source": "artifact",
+      "status": "current",
+      "task_id": "TASK-MAIN-DELIVERY",
+      "task_version": 2,
+      "verification": {
+        "acceptance_ids": [
+          "AC-DELIVERY-HASH"
+        ],
+        "command_id": null,
+        "covered_requirements": [
+          "artifact-hash-report"
+        ],
+        "result_id": "result-c6bf924c45991d2bb78fe2460ad2255a9c845f3bca703f8cb3375c88ec2b0e7d",
+        "review_conclusion": null,
+        "reviewer_config_version": null,
+        "reviewer_id": null,
+        "target_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
+        "verification_succeeded": true
+      }
+    },
+    {
       "artifacts": [
         {
           "content_hash": "164c0bd0bca0e1cfeb2d6cbff11eddbb1e989ad9faeda7a7c952822fd74eda78",
