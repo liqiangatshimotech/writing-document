@@ -1,0 +1,182 @@
+{
+  "schema": "xingshu/project-configuration/1",
+  "project": {
+    "display_name": "写作",
+    "code_ref": "dev",
+    "control_ref": "ai-control",
+    "remote_name": "origin"
+  },
+  "team": {
+    "primary_agent_id": "main",
+    "agents": [
+      {
+        "id": "main",
+        "version": 2,
+        "name": "Codex 总编调度",
+        "role": "coordinator",
+        "duties": "负责本次 GLM-5.3 网络安全能力议题的任务规划、依赖、质量控制和交付。必须调度 Claude 搜索与核实资料，再由 Pi 撰写公众号深度文及抖音科普口播稿；不得用自己的正文替代指定执行者。区分厂商主张、独立证据和评论；只做公开资料研究与科普，不运行攻击或发布内容。",
+        "capabilities": [
+          "planning",
+          "coordination"
+        ],
+        "executor_id": "codex",
+        "model": "",
+        "command_id": null,
+        "enabled": true,
+        "disabled_at": null,
+        "max_parallel": 1
+      },
+      {
+        "id": "worker-1",
+        "version": 1,
+        "name": "Claude 资料研究员",
+        "role": "custom",
+        "duties": "搜索并阅读用户指定的 Anthropic GLM-5.3 文章及至少六个相关一手来源，优先 NIST/CAISI、原始评测论文、Z.ai 官方模型说明和防御建议。核对日期、统计口径、试验环境、分母与局限，区分攻击成功率和模拟有害请求响应率。输出 research/sources.md 与 research/fact-check.md，给出可点击链接、证据摘要、争议和待核实项，供 Pi 写作；不提供攻击复现代码或操作步骤。",
+        "capabilities": [
+          "research",
+          "fact_checking"
+        ],
+        "executor_id": "executor-ff8bfb46-a126-4953-bb27-3a2b94242550",
+        "model": "",
+        "command_id": null,
+        "enabled": true,
+        "disabled_at": null,
+        "max_parallel": 1
+      },
+      {
+        "id": "worker-2",
+        "version": 1,
+        "name": "Pi 主笔",
+        "role": "documenter",
+        "duties": "依据 Claude 的有来源研究资料撰写两份原创中文成稿：articles/wechat.md 为适合公众号的3000至4500字深度文，articles/douyin.md 为适合抖音的约3至5分钟科普口播稿。自行组织论证与通俗解释，不全文翻译任何来源，不编造数字、引用或模型能力；文末列来源，口播另附标题、开场钩子和画面提示。区分事实与观点，按审查意见修订。",
+        "capabilities": [
+          "writing",
+          "documentation"
+        ],
+        "executor_id": "executor-c61ca708-067c-4923-8d1f-55e7dbb2b637",
+        "model": "",
+        "command_id": null,
+        "enabled": true,
+        "disabled_at": null,
+        "max_parallel": 1
+      },
+      {
+        "id": "worker-3",
+        "version": 1,
+        "name": "Codex 独立编辑审查",
+        "role": "reviewer",
+        "duties": "独立核对本次文档产物：来源可追溯、数字与语境准确、模拟指标不冒充真实攻击成功率、区分事实与观点；公众号深度与抖音口播表达匹配各自读者，没有整段照搬来源、夸大或可操作攻击教程。不要直接代写文章，给出逐项可验证审查结论和必要修改意见。",
+        "capabilities": [
+          "review"
+        ],
+        "executor_id": "codex",
+        "model": "",
+        "command_id": null,
+        "enabled": true,
+        "disabled_at": null,
+        "max_parallel": 1
+      },
+      {
+        "id": "worker-7ae85f4a-9a7a-450e-bdf6-7b3a634ffebf",
+        "version": 1,
+        "name": "Codex 文件交付员",
+        "role": "documenter",
+        "duties": "仅负责把已验收交付的研究资料与文章，按Runtime挂载的只读依赖逐字节复制到当前任务工作区的research/和articles/。使用标准文件复制工具，不重新生成、不改写正文，不修改只读输入；复制前后核对约定SHA-256。由Runtime形成源提交，独立审查候选后通过星枢具体批准合入main。不得自行操作主仓库、推送远端、合并ai-control或改动其他文件。",
+        "capabilities": [
+          "documentation",
+          "artifact_delivery"
+        ],
+        "executor_id": "codex",
+        "model": "",
+        "command_id": null,
+        "enabled": true,
+        "disabled_at": null,
+        "max_parallel": 1
+      }
+    ],
+    "executors": [
+      {
+        "id": "codex",
+        "display_name": "Codex CLI",
+        "kind": "custom",
+        "program_name": "codex",
+        "arguments": [],
+        "input": "jsonl",
+        "output": "jsonl",
+        "enabled": true,
+        "notes": "使用本机已有登录；执行前需要真实检测。",
+        "local_arguments_required": false
+      },
+      {
+        "id": "executor-ff8bfb46-a126-4953-bb27-3a2b94242550",
+        "display_name": "Claude 资料研究",
+        "kind": "custom",
+        "program_name": "claude",
+        "arguments": [],
+        "input": "jsonl",
+        "output": "jsonl",
+        "enabled": true,
+        "notes": "",
+        "local_arguments_required": false
+      },
+      {
+        "id": "executor-c61ca708-067c-4923-8d1f-55e7dbb2b637",
+        "display_name": "Pi 内容写作",
+        "kind": "custom",
+        "program_name": "pi",
+        "arguments": [],
+        "input": "jsonl",
+        "output": "jsonl",
+        "enabled": true,
+        "notes": "",
+        "local_arguments_required": false
+      }
+    ],
+    "dispatcher": {
+      "kind": "codex",
+      "program": "codex",
+      "model": ""
+    }
+  },
+  "permission": {
+    "allowed_paths": [
+      "research/",
+      "articles/"
+    ],
+    "forbidden_paths": [
+      ".git/",
+      ".xingshu/"
+    ],
+    "allowed_command_ids": [
+      "agent.execute"
+    ],
+    "sensitive_paths": [],
+    "approval_required_for_sensitive": true,
+    "max_parallel": 1,
+    "max_attempts": 6,
+    "timeout_secs": 1800,
+    "max_calls": 9999
+  },
+  "planning": null,
+  "checks": null,
+  "workflow": {
+    "work_branch": "dev",
+    "work_in_project": true,
+    "automatic_delivery": true,
+    "push_delivery": true
+  },
+  "shared_context": {
+    "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
+    "decisions": null
+  },
+  "repository": {
+    "enabled": false,
+    "share_materials": true,
+    "remote_name": "origin"
+  },
+  "control_sync": {
+    "push_enabled": true,
+    "remote_name": "origin"
+  },
+  "warnings": []
+}
