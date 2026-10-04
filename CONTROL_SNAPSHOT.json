@@ -2,22 +2,12 @@
   "schema": "xingshu-control-snapshot/2",
   "project_id": "project-d85889d35b201287888b76e706591aecba48f7a4d088c48a073009e0e809584b",
   "control_rev": 9,
-  "snapshot_revision": 98,
-  "event_watermark": 29696,
+  "snapshot_revision": 99,
+  "event_watermark": 29799,
   "code_base_sha": "abaa2307d3f980e6e8e5b43aabc891562b37986f",
-  "generated_at": "2026-10-04T06:44:34.105486+00:00",
+  "generated_at": "2026-10-04T06:45:45.246226+00:00",
   "source_event_ids": [
-    "config-0537aa78c417260acc9962e6a9a0a8600c6388b7c969a1295cec5793c9ddaf9a",
-    "invoke-be16b94164c2e6c7ca1db6873f93a762e80df09776e95bec3118322ce93347d9",
-    "config-e8a1af4aa1e66f2ae2eac80c6e1edc925819b55292dc1146f37abe55e49bff7a",
-    "config-9f13f0bbdf7a41b2df41c7f3f4190aab44826163fa738663f8e713f491281a14",
-    "invoke-38b351be1af60e7cb5e0b103edb7e97f19be0c1e3aeb5552d192b545274371fc",
-    "config-26982eb03daf64b7bfaac4cc97f3453fb37f3932efe4a4483cec15ab03b8f61d",
-    "config-5e356134ece4f838700e8c78d21fe3b432c05df560b5099424820ccb5ca45a7a",
-    "invoke-40f5b69b99a50e27f1d81ddc364afe91bafa53bfb47095734c925b06760c5405",
-    "config-4db804de241642427ae141b1fe47e3722abd309fcb432623a4056e64b4e81cce",
-    "config-74c8f4ebbbf1d4d6d6a3a57cbdbe37d99ea8ed62407d3a24a7ac5a62353d472f",
-    "config-f1d9e70e81da631ac9f6bde478808fc975ef36f79290f5a508d969bece01aed7"
+    "config-823dabd1197ef3f6905145f2c78a4f44c32c77480152d88b6ea817e332342ee9"
   ],
   "documents": {
     "rules": "本项目分工固定：Codex调度，Claude研究与修订，Pi写两篇稿，独立Codex审查。完成必须有真实产物、独立审查和交付记录。\n\n调度恢复规则：以本次XINGSHU_COORDINATION_INPUT的实时状态为准。若任务state=NEEDS_CHANGES且dispatchable=true，说明Runtime已保存有限修复授权并准备好修复基线，应直接dispatch给具备所需能力的原作者；不要再次request_repair，也不要重复申请审查旧结果。若dispatchable=false，按照dispatch_error等待材料/权限事件，不凭猜测重复申请修复。request_repair仅用于尚未授权修复的当前有效失败验证事实。\n\n任务版本、尝试和授权状态始终以实时输入为准，不依据历史文字猜测。研究修订先读取本次Runtime传入的完整review结论和失败验收条目，逐项定点修改；不重写无关段落。独立审查一次性列出全部已发现的阻断问题，并区分事实错误与非阻断建议。研究者每次实际读取所用七个指定来源，保留本轮访问证据；文件均用当前cwd相对路径，结束前Read核对。",
@@ -1991,7 +1981,7 @@
       "authorized_candidates": [],
       "authorized_repairs": [],
       "control_rev": 9,
-      "event_watermark": 29696,
+      "event_watermark": 29799,
       "history_count": 1,
       "missing": [
         "full_report_bodies"
