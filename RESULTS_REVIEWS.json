@@ -3,7 +3,7 @@
     "TASK-WRITING"
   ],
   "needs_attention": [],
-  "next_action": "wait_for_user_resume",
+  "next_action": "dispatch_only_authorized_ready_tasks_after_live_checks",
   "omitted_quality_summaries": 0,
   "quality_index": [
     {
